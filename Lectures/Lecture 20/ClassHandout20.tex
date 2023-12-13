@@ -1,0 +1,45 @@
+\documentclass{./../../Latex/handout}
+\usepackage{tasks}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 20 \\ \normalsize{Calculus Review and Functional Forms}}
+\rhead{Class Handout for Lecture 20}
+\vspace{-1em}
+
+For a function $ y = f(x) $, the derivative denoted by $dy/dx$ or $f'(x)$ captures how the value of the function changes due to a small change in $x$.
+
+\underline{Rules of differentiation:}
+\begin{tasks}(2)
+\task $\displaystyle y=a  \rightarrow  \frac{dy}{dx}=0$
+\task $\displaystyle y=ax \rightarrow \frac{dy}{dx}=a$
+\task $\displaystyle y=ax^b \rightarrow  \frac{dy}{dx}=abx^{b-1}$
+\task $\displaystyle y=f(x) \pm g(x) \rightarrow  \frac{dy}{dx}=f'(x) \pm g'(x)$ 
+\task Derivative of a log function:
+$$ y=log(x)  \rightarrow  \frac{dy}{dx}=\dfrac{1}{x}$$
+\task Chain rule:
+$$z=f(y),\ y=g(x) \rightarrow  \frac{d z}{d x}=\dfrac{d z}{d y} \cdot \frac{d y}{d x}$$
+\end{tasks}
+\vspace{-2em}
+
+\textit{Find the derivative for the following functions:}
+\begin{enumerate}
+	\item $ \displaystyle y = 10 \rightarrow  \frac{dy}{dx}=$
+	\item $ \displaystyle y = 5x \rightarrow  \frac{dy}{dx}=$
+	\item $ \displaystyle y = 8x^3 \rightarrow  \frac{dy}{dx}=$
+	\item $ \displaystyle y = 3x^2 + 4 \rightarrow  \frac{dy}{dx}= $
+	\item $ \displaystyle y = 2 + 3 \cdot log(x)\rightarrow  \frac{dy}{dx}= $
+	\item $ \displaystyle y = log(z),\ z = x^2 \rightarrow  \frac{dy}{dx}= $
+	\item $ \displaystyle y = log(x^2) \rightarrow  \frac{dy}{dx}= $
+	\item $ \displaystyle y = log(f(x)) \rightarrow  \frac{dy}{dx}=$
+\end{enumerate}
+
+\newpage 
+Find $\frac{dY}{dX}$ for the following model:
+$$ Y = \beta_0 + \beta_1 X + \beta_2 X^2 + u $$
+What is the interpretation of $\beta_1$ and $\beta_2$?
+\vspace{8cm}
+
+Consider the following model:
+$$ \log(Y) = \beta_0 +  \beta_1 \log(X) + u$$
+Differentiate both sides of the above equation and show that \(\beta_1\) represents the elasticity of \(Y\) with respect to \(X\).
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Problem Set 3}
+\rhead{Problem Set 3}
+
+\textit{Please show your work including the formula you used to calculate your answers.}
+
+\begin{enumerate}
+
+\item (3 pts) Suppose you are given that $X$ follows a normal distribution with mean 20 and variance 49 i.e. $X \sim N(20,49)$. 
+ \begin{enumerate}
+ \item What is the probability that $X$ is equal to 15?
+\item What is the probability that $X$ is less than 15? 
+\item What is the probability that $X$ is between 15 and 25?
+\item The probability that $X$ is more than $x_0$ is 0.8. What is $x_0$?
+\item Your friend is surprised that you were quickly able to solve complex integrals to answer these questions. Can you explain to your friend how you did it? \\
+\end{enumerate} 
+
+\item (3 pts) The table below gives us the joint probability distribution of time taken to read five pages of a book ($Y$)  and caffeine consumption ($X$). \\~\\
+\begin{tabularx}{0.95\textwidth}{cccc}
+\toprule
+	& Caffeine $(X=1)$ & No Caffeine $(X=0)$ & Total \\
+	\midrule
+10-mins ($Y=10$) & 0.2  & 0.1 & 0.3 \\ 
+20-mins ($Y=20$) & 0.3 & 0.4 & 0.7 \\
+\midrule
+ Total & 0.5 & 0.5 & 1 \\
+ \bottomrule \\
+\end{tabularx}
+\begin{enumerate}
+\item Find $E(Y)$, which is the (unconditional) expected value of time taken to read five pages.
+\item Now calculate $E(Y|X=1)$ and $E(Y|X=0)$. (Show your work.)
+\item Given your answer in (b), are $X$ and $Y$ independent variables? Explain.
+\item What can you say about the impact of caffeine on reading speed from your answer in (b)? \\
+\end{enumerate}
+
+\item (2 pts) We have reasons to believe that the distribution of household income
+for the US population is right-skewed. I am thinking about
+taking a random sample of 10,000 individuals from the US population
+and calculating the mean.
+\begin{enumerate}
+  \item Is it possible to ascertain whether the distribution of the sample mean in this case will be normal? If yes, how did you come to this conclusion?
+\item Say the true population mean of income is \$90,000 and the true standard
+deviation is \$68,000. What is the expectation and the variance of the sample mean in this case? \\
+\end{enumerate}
+
+
+\item (2 pts) We took a random sample of 25 CSUF students and asked them how many hours did they spend in front of a screen in the past one week. Say we know that hours in front of the screen for CSUF students is normally distributed with unknown mean and variance $\sigma^2 = 36$.  We found that average hours in front of a screen in our sample was 40. Construct a 95 percent confidence interval for the population mean. \\
+
+\end{enumerate}
+\end{document}

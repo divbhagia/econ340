@@ -1,0 +1,53 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 19 \\ \normalsize{Categorical Variables \& Interaction Terms}}
+\rhead{Class Handout for Lecture 19}
+\vspace{-1em}
+
+\begin{enumerate}
+\item Consider the following regression model:
+$$ Y = \beta_0 + \beta_1 D + \beta_2 X + \beta_3  D\cdot X + u $$
+Here, \( X \) represents a continuous variable, and \( D \) is a dummy variable that takes values 1 or 0. Assume that both $X$ and $D$ are exogenous. Write down the expressions for the following expectations.
+$$ E(Y|D=1, X) =  (\beta_0 + \beta_1) + (\beta_2+\beta_3) X \hspace{4cm} $$
+$$ E(Y|D=0, X) = \beta_0 + \beta_2  X \hspace{6.5cm}  $$ 
+
+What is the impact of changing $D$ from 1 to 0 on $Y$? Does this impact vary by $X$?
+$$ E(Y|D=1, X)-E(Y|D=0, X) = \beta_1 + \beta_3 X $$
+Yes, varies by $X$. \\~\\
+\item Consider the following regression model:$$ wages = \beta_0 + \beta_1 Female + \beta_2 Hispanic + \beta_3 Female \times Hispanic +  u  $$
+Here, \(Female\) is a dummy variable assigned the value of 1 if an individual's gender is female and 0 if not. Similarly, \(Hispanic\) is a dummy variable that is set to 1 if an individual's ethnicity is Hispanic and 0 otherwise. The regression output for this model is given below. Answer the following questions.
+
+\begin{table}
+\centering
+	\input{./../../output/gender_race_wage.tex}	
+\end{table}
+
+\newpage
+\begin{enumerate}
+	\item What is the average wage income for non-Hispanic males in this sample?
+	$$ E(wages |Female = 0, Hispanic = 0)  = \text{\$70,179.09} \hspace{3cm} $$
+	\item What is the average wage income for Hispanic males in this sample? 	
+	$$ E(wages |Female = 0, Hispanic = 1)  = \text{70,179.09-19,367.71} = \text{\$50,811.38}  \hspace{1cm} $$
+	 \item What is the average wage income for non-Hispanic females in this sample?	$$ E(wages |Female = 1, Hispanic = 0)  = \text{70,179.09-16,046.81} = \text{\$54,132.28}  \hspace{1cm} $$
+	\item What is the average wage income for Hispanic females in this sample?
+	\begin{align*}
+		E(wages |Female = 1, Hispanic = 1)  &= \text{70,179.09-19,367.71-16,046.81+8,163.75} \\ &= \text{\$42,928.32} 
+	\end{align*} 	
+	\newpage
+	\item How do we interpret the coefficient on the interaction between $Hispanic$ and $Female$?
+	
+	It is the difference between the gender-wage gap for Hispanic vs non-Hispanic individuals. 
+\begin{align*}
+ E(wages |Female = 0, Hispanic = 1)-& E(wages |Female = 1, Hispanic = 1) \\
+ & = \text{50811.38- 42928.32} = \text{7883.06} \\
+ E(wages |Female = 0, Hispanic = 0)-& E(wages |Female = 1, Hispanic = 0)  \\
+  & = \text{70179.09- 54132.28} = \text{16046.8}  
+\end{align*} 	
+Difference between the two: $\text{16046.8-7883.06}=\text{\$8,163.73}$
+
+Alternatively, can interpret $\beta_3$ as the difference in the impact of being hispanic by gender. 
+\end{enumerate}
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,102 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Reviewing Calculus}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Concept of a Derivative
+\section{The Concept of a Derivative}
+
+Given some function, 
+$$ y = f(x) $$
+We are often interested in how the value for this function changes given a small change in $x$. 
+
+Note that for large changes in $x$, say $x$ increases by $\Delta x$, $y$ increases by $\Delta y$ as follows:
+$$ \Delta y =  f(x+\Delta x) - f(x) $$
+
+Then average change in $y$ per-unit change in $x$ is given by:
+
+$$ \frac{\Delta y}{\Delta x} =  \frac{f(x+\Delta x) - f(x)}{\Delta x} $$
+
+But as I said, we are interested in small changes in $x$. For this purpose we have the concept of derivatives. The derivative of $y$ with respect to $x$, denoted by $d y/ d x$, tells us how $y$ changes with respect to a small change in $x$. 
+
+$$  \frac{d y}{d x}= \lim_{\Delta x \rightarrow 0}  \frac{\Delta y}{\Delta x} =  \lim_{\Delta x \rightarrow 0}  \frac{f(x+\Delta x) - f(x)}{\Delta x} $$
+
+So essentially the derivative is the average change in $y$ per unit change in $x$ for very very small changes in $x$ (i.e. when $\Delta x \rightarrow 0$ or $\Delta x$ \textit{goes to} 0.). 
+
+For most purposes, we don't need to deal with this clumsy definition of the derivative. We have some set of rules that we can follow to find derivatives. Memorizing these (by practicing) will make your life as a student of economics much easier. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% How to find a derivative
+\section{How to Find a Derivative}
+
+\underline{Constant function rule}
+$$ y=k \quad \rightarrow \quad \frac{d y}{d x}=0 $$
+\textit{\textit{Example}}. For $y=2$, $\frac{d y}{d x}=0 $. \\
+
+\underline{Power function rule}
+$$ y=x^{n} \quad \rightarrow \quad \frac{d y}{d x}=n x^{n-1} $$
+\textit{\textit{Example}}. For $y=x^{4}$, $ \frac{d y}{d x}=4 x^3 $.\\
+
+\underline{Generalized power function rule}
+$$ y=cx^{n} \quad \rightarrow \quad \frac{d y}{d x}=cn x^{n-1} $$
+\textit{\textit{Example}}. For $y=3 x^{2}$, $ \frac{d y}{d x}=6 x $.\\
+
+\underline{Sum-Difference Rule} 
+$$ \frac{d}{d x}[f(x) \pm g(x)]=\frac{d f}{d x} \pm \frac{d g}{d x} $$ 
+\textit{Example}. For $y=3 x^{2}+5x+2$, $ \frac{d y}{d x}=6 x+5+0 =6x+5$. \\
+
+\underline{Chain Rule}  \\
+If we have two functions:
+$$ z=f(y),  y=g(x) \quad \rightarrow  \quad  \frac{d z}{d x}=\frac{d z}{d y} \cdot \frac{d y}{d x}$$ 
+\textit{Example}. For $z = y^3$ and $y=1+2x$. Then, $$ \frac{d z}{d x}=3y^2 \cdot 2x = 6x (1+2x)^2$$ 
+
+\newpage
+\underline{Derivative of a Log Function} 
+$$ \frac{d}{d x} \log(x) =\frac{1}{x} $$ \\
+Note that, then by the chain rule:
+ $$ \frac{d}{d x} \log(f(x)) =\frac{f'(x)}{f(x)} $$ \\
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Interpreting Coefficients in Linear Regression Model
+\section{Interpreting Coefficients in Linear Regression Model}
+
+Consider the following estimated model:
+$$ \hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 X  $$
+Now say $X$ changes by $\Delta X$. Then the change in the predicted value of $Y$:
+$$ \Delta \hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 X- [\hat{\beta}_0 + \hat{\beta}_1 (X+\Delta X)] = \hat{\beta}_1 \Delta X  $$ \\
+Since, $ \Delta \hat{Y} =  \hat{\beta}_1 \Delta X $, if $X$ changes by 1 unit i.e., $\Delta X=1$, the predicted value of $Y$ changes by $\hat{\beta}_1$. Alternatively, we can write:
+$$ \frac{\Delta \hat{Y}}{\Delta X} = \hat{\beta_1}  $$
+Note that here, $$\frac{\Delta \hat{Y}}{\Delta X} = \frac{d \hat{Y}}{d X}$$
+
+This is because it's a linear function. Generally the above approach doesn't give us the correct correct answer for small changes in $X$ and we have to rely on the derivative. \\
+
+For the regression model with two variables:
+$$ \hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2    $$
+Say we change $X_1$ by $\Delta X_1$ but keep $X_2$ constant, then change in $\hat{Y}$:
+$$ \Delta \hat{Y} = \hat{\beta}_0 + \hat{\beta}_1 X_1 + \hat{\beta}_2 X_2-\hat{\beta}_0 - \hat{\beta}_1 (X_1+\Delta X_1) - \hat{\beta}_2 X_2 = \hat{\beta}_1 \Delta X_1    $$
+
+So now keeping $X_2$ constant, the predicted value of $Y$ changes by $\hat{\beta}_1$ if $X$ changes by 1 unit. Here again, we have
+$$\frac{\Delta \hat{Y}}{\Delta X} \mid_{X_2 \text{ is constant}} = \frac{d \hat{Y}}{d X} \mid_{X_2 \text{ is constant}} $$ 
+Again, this only works because the function is linear in parameters, but with quadratic or log-functions we will need to take the derivative. 
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Finding Maximum and Minimum of Functions
+\section{Finding Maximum and Minimum of Functions}
+
+Note that the derivative is the slope of the tangent line at a point on the function. \\
+
+\begin{minipage}{\textwidth}
+\begin{minipage}{0.5\textwidth}
+\includegraphics[scale=0.5]{tangent.gif}
+\end{minipage}	
+\begin{minipage}{0.5\textwidth}
+\begin{itemize}
+\item $dy/dx >0$, the function is increasing
+\item $dy/dx<0$, the function is decreasing
+\item $dy/dx=0$, the function is constant
+\end{itemize}
+\end{minipage}
+\end{minipage}
+
+
+Note that at a peak or trough of function, the tangent has to be horizontal, that is $dy/dx = 0$. So when we try to find the maximum or minimum value of a function, we look at points where $dy/dx=0$. In the derivation for the OLS estimator, we minimized the sum of squared residuals $\sum_i u_i^2$ as a function of OLS coefficients $\beta_0$ and $\beta_1$. 
+
+
+\end{document}

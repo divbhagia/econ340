@@ -1,0 +1,70 @@
+\documentclass{./../handout}
+
+\fancyhf{}
+\fancyheadoffset{1cm}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{0.1em}
+     \Large \sc Handout for Lecture 4 \\ \vspace{0.1em}
+     \large Covariance and Correlation \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+\begin{enumerate}
+\item Let $X$ be the average hours of sleep per day you got last week, and let $Y$ be the average hours you exercised per day last week. You want to look at the relationship between these two variables over the last three weeks. \\
+
+\begin{tabularx}{\textwidth}{P{1cm}P{1cm}P{1.5cm}P{2.5cm}P{2.5cm}Y}
+\hline \addlinespace[0.5em]
+Week & $X_i$ & $Y_i$ & $(X_i-\mu_X)^2$ & $(Y_i-\mu_Y)^2$ & $(X_i-\mu_X)(Y_i-\mu_Y)$  \\ \addlinespace[0.5em] \hline \addlinespace[0.5em]
+1 & 6 & 0.5   &  &  &  \\ \hline \addlinespace[0.5em]
+2 & 9 & 0.3   &  &  &  \\ \hline \addlinespace[0.5em]
+3 & 9 & 1   &  &  &  \\ \hline \addlinespace[0.5em]
+Total &  &    &  &  &  \\ \hline \addlinespace[0.5em]
+\end{tabularx}
+
+
+\begin{enumerate}
+\item  Calculate the variance of $X$ and $Y$. \\
+$$ \sigma^2_{X} = \frac{1}{N}\sum_{i=1}^N (X_i-\mu_X)^2 = \hspace{6cm} $$ \\
+$$ \sigma^2_{Y} = \frac{1}{N}\sum_{i=1}^N (Y_i-\mu_Y)^2 = \hspace{6cm} $$ \\
+
+\item Calculate the covariance and correlation between $X$ and $Y$. \\
+
+\textit{Covariance}:
+$$ \sigma_{XY} = \frac{1}{N}\sum_{i=1}^N (X_i-\mu_X)(Y_i-\mu_Y) = \hspace{6cm} $$ \\
+\textit{Correlation}:
+$$ \rho_{XY} = \frac{ \sigma_{XY}}{\sigma_X \sigma_Y}  = \hspace{6cm} $$ \\
+\item In class, we learned that covariance is positive when two variables move together, meaning that they increase or decrease together. Can you explain how the formula you used in (c) ensures that this is the case? Explain it to your peer.
+\vspace{2cm}
+\end{enumerate}
+
+Now say instead of recording the exercise in hours, you had recorded it in minutes. Then your data would look as below, where $Z$ is the average minutes of exercise per day. \\
+
+\begin{tabularx}{\textwidth}{P{1cm}P{1cm}P{1.5cm}P{2.5cm}P{2.5cm}Y}
+\hline \addlinespace[0.5em]
+Week & $X_i$ & $Z_i$ & $(X_i-\mu_X)^2$ & $(Z_i-\mu_Z)^2$ & $(X_i-\mu_X)(Z_i-\mu_Z)$  \\ \addlinespace[0.5em] \hline \addlinespace[0.5em]
+1 & 6 & 30   &  &  &  \\ \hline \addlinespace[0.5em]
+2 & 9 & 18   &  &  &  \\ \hline \addlinespace[0.5em]
+3 & 9 & 60   &  &  &  \\ \hline \addlinespace[0.5em]
+Total &  &    &  &  &  \\ \hline \addlinespace[0.5em]
+\end{tabularx}
+\begin{enumerate}
+\item[(d)] Do you think the covariance between sleep and exercise is going to be larger, smaller or the same now that exercise is measured in minutes instead of hours? 
+\vspace{2cm}
+\item[(e)] Calculate the covariance and correlation between $X$ and $Z$.
+\end{enumerate}
+\vspace{4cm}
+
+\item If a study finds a strong positive correlation between the numberof houses and house prices across US cities, can we conclude thatmore housing supply leads to higher house prices? Why or why not? Discuss.
+\end{enumerate}
+
+\end{document}

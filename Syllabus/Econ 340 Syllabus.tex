@@ -1,0 +1,277 @@
+\documentclass{syllabus}
+
+
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{ \fancyplain{}{Econ 340: Economic Research Methods} }
+\rhead{ \fancyplain{}{\includegraphics[scale=0.15]{CBE-Wordmark-CMYK} } }
+\fancyfoot[c] {\thepage\ }
+\thispagestyle{plain}
+
+%%%%%%%%%%%% LISTING %%%
+\usepackage{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{center}
+\includegraphics[scale=0.22]{CBE-Wordmark-CMYK} \\ \vspace{0.5em}
+{\large \textsc{ECON 340: Economic Research Methods}} \\
+{\large \textsc{Fall 2023}}
+\end{center}
+%\date{September 26, 2014}
+
+\begin{center}
+\begin{minipage}[t]{\textwidth}
+\rule{\textwidth}{0.5pt} \\
+\setstretch{1.15} 
+\textbf{Instructor:} Div Bhagia \\
+\textbf{Office:} SGMH 3361 \\
+\textbf{Email:} dbhagia@fullerton.edu, preferred (usually respond within 48 hours except on weekends) \\
+\textbf{Phone:} (657) 278-2914 \\
+\textbf{Office hours:} Tuesdays, 4-6.45 PM, or by appointment (in-person or on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}) \\
+\textbf{Classroom:} SGMH 2113 \\
+\textbf{Class Schedule:} Tuesdays and Thursdays, 2.30-3.45 PM \\
+\textbf{Technical support:} Call (657) 278-8888 or visit the \href{https://www.fullerton.edu/it/students/helpdesk/index.php}{IT Helpdesk website} \\
+\rule{\textwidth}{0.5pt} 
+\end{minipage}
+\end{center}
+
+\vspace{0.35cm}
+\section*{Instruction Modality}
+All meetings (including the midterm and final exam) for this course are expected to be held in person. You should inform me in advance if you cannot attend the class in any given week. If you test positive or are exposed to Covid, please report it using the \href{https://coronavirus.fullerton.edu/report-covid-19-case-or-exposure/}{CSUF COVID-19 Self Reporting Form}. If we must move the classes online due to unforeseen circumstances, we will meet on \href{https://fullerton.zoom.us/j/81895171931}{Zoom}.
+
+\section*{Course Communication}
+All course announcements and individual emails are sent through Canvas, which only uses CSUF email accounts. Therefore, you MUST check your CSUF email regularly (several times a week) for the course duration.
+
+\section*{Conduct in the Classroom}
+Use of phones, laptops, or other digital devices is not allowed during the lecture except when explicitly instructed to use one. Randomized Controlled Trials (RCTs) conducted at West Point show that in-class computer use inhibits learning. Here is a \href{https://oema.army.mil/pub/2017_Carter_Greenberg_Walker_Computer_Usage_RCT_USMA.pdf}{link} to the paper. Tablets used for taking notes that remain flat on the desk are allowed.
+
+\section*{Course Catalog Description}
+Basics of applied economic research. How to access existing economic knowledge, locate and compile economic data, and analyze economic problems using theory and quantitative methods.
+
+\section*{Course Prerequisites}
+ECON 201, ECON 202, ISDS 361A
+
+\section*{Course Materials}
+There is no textbook for this course. All the material for this course will be posted on Canvas. It is imperative that you review all the posted material, including slides from the lectures, additional handouts, and any assigned readings. 
+
+\section*{Software}
+You are required to use $\mathrm{R}$ for this course. $\mathrm{R}$ is a free software package for statistics and is available for download \href{https://www.r-project.org}{here}. After installing $\mathrm{R}$, you should also install \href{https://posit.co/download/rstudio-desktop/}{$\mathrm{R}$ Studio}, which provides a graphical interface for $\mathrm{R}$.
+
+\section*{Course Overview}
+This course covers the basics of conducting quantitative economic research. The course aims to take you through the steps involved in answering a research question using observational data. You will learn and implement statistical and econometric concepts vital to empirical research. You will select a question, locate data to answer it and use the tools we learn in this class to answer this question.
+
+This course will involve hands-on work with data using $\mathrm{R}$, a statistical software, both inside and outside the classroom. The tools learned in this class will be helpful regardless of whether your goal is to be a researcher, a consultant, run your own business, or work for a non-profit.
+
+\section*{Learning Goals}
+Students who successfully complete this course will be able to:
+\begin{enumerate}
+\itemsep0em 
+  \item Understand and apply basic statistical and econometric methods.
+  \item Analyze data to answer research questions.
+  \item Use $\mathrm{R}$ to transform, describe, and analyze data.
+\end{enumerate}
+
+\section*{Grading Criteria}
+
+Plus/minus grading will be used in this course. You are guaranteed at least the following grade if your weighted average course score falls within the specified range. A curve may be applied to the final grade.
+
+\begin{center}
+\begin{minipage}[t]{0.75\textwidth}
+\begin{tabular}{|ccc|}
+\hline
+Grade & \multicolumn{2}{c|}{Range} \\
+$\mathrm{A}+$ & $100 \%$ & to $97 \%$ \\
+$\mathrm{~A}$ & $<97 \%$ & to $93 \%$ \\
+$\mathrm{~A}-$ & $<93 \%$ & to $90 \%$ \\
+$\mathrm{~B}+$ & $<90 \%$ & to $87 \%$ \\
+$\mathrm{~B}$ & $<87 \%$ & to $84 \%$ \\
+$\mathrm{~B}-$ & $<84 \%$ & to $80 \%$ \\
+$\mathrm{C}+$ & $<80 \%$ & to $77 \%$ \\
+\hline
+\end{tabular} \hspace{2cm}
+\begin{tabular}{|ccc|}
+\hline
+Grade & \multicolumn{2}{c|}{Range} \\
+C & $<77 \%$ & to $74 \%$ \\
+C- & $<74 \%$ & to $70 \%$ \\
+D+ & $<70 \%$ & to $67 \%$ \\
+D & $<67 \%$ & to $64 \%$ \\
+D- & $<64 \%$ & to $61 \%$ \\
+F & $<61 \%$ & to $0 \%$ \\
+ &  &  \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center} 
+
+\newpage
+Your course grade will be determined according to the following breakdown:
+
+\begin{center}
+\begin{tabularx}{0.65\textwidth}{Xr}
+\hline
+
+Active Engagement & 10 \\
+Problem Sets & 20 \\
+Research Paper: Interim Submissions & 15 \\
+Research Paper: Final Submission & 15 \\
+Midterm & 20 \\
+Final Exam & 20 \\
+\hline
+Total & 100 \\
+\hline
+\end{tabularx}
+\end{center}
+
+\subsection*{Active Engagement}
+Active engagement is crucial for success in this class. Please participate in class discussions and ask questions when topics need clarification. You can only do these things if you are in class, so please attend. Attendance might be taken occasionally. The active engagement grade also includes points from peer review from your research partners conducted at the end of the semester.
+
+\subsection*{Problem Sets}
+There will be four problem sets worth 5 points each over the semester. Feel free to seek help from your peers, but each person must submit their answers on Canvas.
+
+\subsection*{Research Paper: Interim and Final Submissions}
+One of the main objectives of this class is to write a research paper using the tools you learn in this class. You are required to complete this project in groups of 2-3 students. In addition to the final submission of the research paper, you are also required to submit two progress reports. The first submission is worth 5 points, and the second submission is worth 10 points. The final submission is worth 15 points. Details on what is expected of the interim submissions and the final research paper are posted on Canvas. I will also guide you through the process of selecting your question and data.
+
+\subsection*{Exams}
+There will be a midterm and a final. The exams will be mostly short answer problems that cover the methods and material presented in the course. The final exam is not cumulative. Both exams will be in-person.
+
+\newgeometry{top=1in, bottom=1in, left=0.5in, right=0.5in} 
+\section*{\centering Tentative Course Schedule} \vspace{1em}
+{\renewcommand{\arraystretch}{1.2}
+\renewcommand\multirowsetup{\centering} 
+\begin{center}
+\begin{tabularx}{1\textwidth}{|c|c|P{2.15cm}X|l|}
+\hline
+Date & Lecture & Module  & Topics & Due \\
+\Xhline{2.2\arrayrulewidth}
+
+Tue 08/22 & 1 & \multirow{5}{=}{Describing Data} & Introduction; Summation notation &  \\
+\cline{1-2} \cline{4-5}
+Thu 08/24 & 2 &  & Distribution, mean, median, percentiles &  \\
+\cline{1-2} \cline{4-5}
+Tue 08/29 & 3 & & Variance, standard deviation, Z-score &  \\
+\cline{1-2} \cline{4-5}
+Thu 08/31 & 4 & & Covariance and correlation & Research Groups \\
+\cline{1-2} \cline{4-5}
+Tue 09/05 & 5 &  & Research questions and data &  Problem Set 1 \\
+\Xhline{2.2\arrayrulewidth}
+
+Thu 09/07 & 6 & \multirow{3}{=}{Coding in R} & Getting started with R &  \\
+\cline{1-2} \cline{4-5}
+Tue 09/12 & 7 & & Importing and cleaning data in \(\mathrm{R}\) & \\
+\cline{1-2} \cline{4-5}
+Thu 09/14 & 8 & & Describing variables in \(\mathrm{R}\) &  \\
+\Xhline{2.2\arrayrulewidth}
+
+Tue 09/19 & 9 & \multirow{3}{=}{Random Variables} & Distribution, expectation, variance & Problem Set 2 \\
+\cline{1-2} \cline{4-5}
+Thu 09/21 & 10 & & Normal distribution, Z-score &  \\
+\cline{1-2} \cline{4-5}
+Tue 09/26 & 11 & & Independence, correlation & RP Submission 1  \\
+\Xhline{2.2\arrayrulewidth}
+
+Thu 09/28 & 12 & \multirow{3}{=}{Sampling and Estimation}  & Sample mean distribution, Good estimators, Confidence intervals &  \\
+\cline{1-2} \cline{4-5}
+Tue 10/03 & 13 & & Confidence intervals (cont.) & Problem Set 3 \\
+\cline{1-2} \cline{4-5}
+Thu 10/05 & 14 & & Hypothesis testing and p-values &  \\
+\Xhline{2.2\arrayrulewidth}
+
+Tue 10/10 &  \multicolumn{3}{l}{\textit{Review Class}} &  \\
+\hline
+Thu 10/12 & \multicolumn{3}{l}{\textit{Midterm Exam}} &  \\
+\hline
+Tue 10/17 & \multicolumn{3}{l}{\textit{Research Project Feedback, Group Meetings (in-person or on Zoom)}} & \\
+\Xhline{2.2\arrayrulewidth}
+
+Thu 10/19 & 15  & \multirow{7}{=}{Linear Regression} & Ordinary least squares (OLS), Goodness of fit: $R^2$ &  \\
+\cline{1-2} \cline{4-5}
+Tue 10/24 & 16 & & Prediction vs. causal inference & \\
+\cline{1-2} \cline{4-5}
+Thu 10/26 & 17 & & Inference (p-values, t-stats, confidence intervals) &  \\
+\cline{1-2} \cline{4-5}
+Tue 10/31 & 18 & & Omitted variable bias; Multiple regression model; Adjusted $R^2$ &  RP Submission 2 \\
+\cline{1-2} \cline{4-5}
+Thu 11/02 & 19 & & Categorical variables; Interaction terms  &  \\
+\cline{1-2} \cline{4-5}
+Tue 11/07 & 20 & & Quadratic and log functional forms &  \\
+\cline{1-2} \cline{4-5}
+Thu 11/09 &  &  & Recap &  \\
+\Xhline{2.2\arrayrulewidth}
+
+Tue 11/14 & 21 & \multirow{2}{=}{Regression in R} & Linear regression in \(\mathrm{R}\) & Problem Set 4  \\
+\cline{1-2} \cline{4-5}
+Thu 11/16 & 22 & & Linear regression in \(\mathrm{R}\) &  \\
+\Xhline{2.2\arrayrulewidth}
+
+ & \multicolumn{3}{l}{\textit{Fall Recess}} & \\
+\Xhline{2.2\arrayrulewidth}
+
+Tue 11/28 & 23 & \multirow{3}{=}{Advanced topics} & Experiments and quasi-experimental methods &  \\
+Thu 11/30 & 24 & & Panel data and event study designs &  \\
+Tue 12/05 & 25 & & Big data and machine learning & Research Paper \\
+\Xhline{2.2\arrayrulewidth}
+
+Thu 12/07 &  \multicolumn{3}{l}{\textit{Review Class}} &  \\
+\hline
+Thu 12/14 & \multicolumn{3}{l}{\textit{Final Exam} (1--2.50 pm)} &  \\
+\hline
+\end{tabularx}
+\end{center}
+\restoregeometry 
+
+\newpage
+\section*{\centering \underline{Other Information and Policies}} \vspace{1em}
+\section*{Examination Policy}
+There will be NO MAKE-UP for missed exams without a documented university-approved excuse such as illness or other verified emergencies. The student is required to submit verifiable documentation supporting the make-up request within three business days of the due date of the missed exam. Please be aware that a letter stating that a student visited a doctor on exam day does not qualify as a valid document.
+
+\section*{Alternative Procedure for Submitting Work}
+In case of technical difficulties with Canvas, the instructor will communicate with students directly through CSUF email, and assignments can be emailed to the instructor.
+
+\section*{Policy On Retention of Student Work}
+Work is submitted through the Canvas course site and shall be retained on the course website for a year after the semester is completed.
+
+\section*{Technical Requirements}
+Students are expected to:
+
+\begin{enumerate}
+\itemsep0pt	
+\item Have basic computer competency, which includes:
+\begin{enumerate}
+\itemsep0pt
+\item the ability to use a personal computer to locate, create, move, copy, delete, name, rename, and save files and folders on hard drives, secondary storage devices such as USB drives, and cloud such as Google Drive (Titan Apps) and Dropbox;
+\item the ability to use a word processing program to create, edit, format, store, retrieve, and print documents;
+\item the ability to use their CSUF email accounts to receive, create, edit, print, save, and send an e-mail message with and without an attached file; and
+\item the ability to use an Internet browser such as Chrome, Safari, Firefox, or Internet Explorer to search and access websites on the World Wide Web.
+\end{enumerate}
+\item Have ongoing reliable access to a computer with Internet connectivity for regular course assignments
+\item Utilize updated version of Microsoft ${ }^{\circledR}$ Office (for P.C. or Mac) including Word, PowerPoint, and Excel to learn content and communicate with colleagues and faculty; can regularly print assignments
+\item Maintain and access three times weekly their CSUF student email account
+\item Use Internet search and retrieval skills to complete assignments
+\item Apply his/her educational technology skills to complete expected competencies
+\item Utilize other software applications as course requirements dictate
+\item Utilize Canvas to access course materials and complete assignments
+\end{enumerate}
+
+\subsection*{Software for Students}
+Students can get FREE and low-cost software. Software downloads and request forms can be found on the \href{https://www.fullerton.edu/it/students/software/}{CSUF Student Software website}. Class-specific software will be provided.
+
+\section*{CBE Assessment Statement}
+The programs offered in the College of Business and Economics (CBE) at Cal State Fullerton are designed to provide every student with the knowledge and skills essential for a successful career in business. Since assessment plays a vital role in the college's drive to offer the best, several assessment tools are implemented to constantly evaluate our program as well as our students' progress. Students, faculty, and staff should expect to participate in CBE assessment activities. In doing so, the college can measure its strengths and weaknesses and continue cultivating a climate of excellence in its students and programs.
+
+Assurance of Learning (AoL) is an integral part of both our AACSB and WASC accreditation. Please visit the \href{https://business.fullerton.edu/assessment}{Assessment and Instructional Support website} for more information on our college-based assurance of learning efforts, please visit the Assessment and Instructional Support website.
+
+\section*{Important Student Information}
+It is the student's responsibility to read and understand the required and important information at this website: \href{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}{https://fdc.fullerton.edu/teaching/student-info-syllabi.html}. Included is information about students' rights to accommodations for special needs, academic integrity and dishonesty, emergency preparedness, student learning goals and outcomes, general education, library support, and the final exam schedule.
+
+\section*{\centering \underline{University Resources}} \vspace{1em}
+\section*{University Learning Center}
+The goal of the University Learning Center is to provide all CSUF students with academic support in an inviting and contemporary environment. The staff of the University Learning Center will assist students with their academic assignments, general study skills, and computer user needs. The ULC staff works with all students from diverse backgrounds in most undergraduate general education courses, including those in science and math, humanities and social sciences, as well as other subjects. They offer one-to-one peer tutoring, online writing review and many more services. More information can be found on the \href{https://www.fullerton.edu/ulc/}{University Learning Center website}.
+
+\section*{Writing Center}
+The Writing Center offers 30-minute, one-on-one peer tutoring sessions and workshops aimed at providing assistance for all written assignments and student writing concerns. Writing Center services are available to students from all disciplines. Registration and appointment schedules are available at the Writing Center Appointment Scheduling System. Walk-in appointments are also available on a first-come, first-served basis to students who have registered online. More information can be found on the \href{https://fullerton.mywconline.com}{Writing Center webpage}. The Writing Center is located on the first floor of the \href{https://www.library.fullerton.edu}{Pollak Library} their phone number is (657) 278-3650.
+
+%%%%%% THE END 
+\end{document} 

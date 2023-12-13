@@ -1,0 +1,22 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 13 \\ \normalsize{Confidence Intervals}}
+\rhead{Class Handout for Lecture 13}
+
+\vspace{-1.5em}
+How to construct a confidence interval? 
+
+ \underline{Known population variance:} $1-\alpha$ confidence interval for the population mean $\mu$:
+$$ \bar{x} \pm  z_{\alpha/2} \cdot \frac{\sigma}{\sqrt{n}} $$
+where $z_{\alpha/2}$ is the $z$-value that leaves area $\alpha/2$ in the upper tail of the standard normal distribution.
+
+\underline{Unknown population variance:} $1-\alpha$ confidence interval for the population mean $\mu$:
+$$ \bar{x} \pm  t_{n-1,\alpha/2}  \frac{S}{\sqrt{n}} $$
+where $t_{n-1,\alpha/2}$ is the $t$-value that leaves area $\alpha/2$ in the upper tail of the t-distribution. $n-1$ is the degrees of freedom. 
+
+\textit{Note}: Since the $t$ distribution looks just like the standard normal for large $n$, for $n\geq 100$ you can continue using the standard normal table. \\
+
+
+\textit{Exercise:} A car manufacturer wants to estimate the mean CO2 emissions of a new model of car. A sample of 196 cars is randomly selected and their CO2 emissions are measured. The sample mean and standard deviation are 120 g/km and 20 g/km, respectively. Construct a 95\% confidence interval for the true mean CO2 emissions of this car model. (Note: $Pr(Z>1.96)=0.025$.)
+\end{document}

@@ -1,0 +1,173 @@
+\documentclass{./../div_teaching_slides}
+
+\begin{document}
+\title{ECON 340 \\ Economic Research Methods}
+\author{Div Bhagia}
+\date{Lecture 19 \\ Categorical Variables \& Interaction Terms}
+
+%%%%%%%%%%%% 
+\begin{frame}[noframenumbering, plain]
+\maketitle
+\end{frame}
+
+
+%%%%%%%%%%%%
+\begin{frame}{Fitting a Line}
+Linear relationship (with some error):
+$$ Y = \beta_0 + \beta_1 X + u  $$
+
+Taking the conditional expectation:
+$$ E(Y | X) =  \beta_0 + \beta_1 X + E(u | X)  $$
+
+With $E(u | X)=0$, 
+$$ E(Y | X) =  \beta_0 + \beta_1 X   $$
+
+OLS fits a linear line between average $Y$ at each $X$ and $X$. 
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Hypothetical Data: $E(wages|educ)$ and $educ$}
+\centering
+\includegraphics{./../../output/lrm_mean_fit.pdf}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Dummy Variables}
+What if the independent variable is a binary variable that takes two values 1 and 0?  
+$$ Y = \beta_0 + \beta_1 D + u  $$ \\~\\
+Taking conditional expectation (assuming exogeneity):
+\begin{align*}
+	E[Y | D=1] &= \beta_0 + \beta_1 \cdot 1  = \beta_0 + \red{\beta_1} \\
+	E[Y | D=0] &= \beta_0 + \beta_1 \cdot 0 = \beta_0 
+\end{align*}
+So, $$\red{\beta_1} = E[Y | D=1]-E[Y | D=0] $$  
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{ACS Data: Gender Wage Gap}
+\centering  \small \vspace{1.25em}
+\input{./../../output/gender_wage_gap.tex} \\ \vspace{1.5em}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Dummy Variables: Interpretation}
+As before, to interpret $\beta_1$ as the causal impact of gender on wages, we need: $$E(u|female)=0$$ \\~\\
+Meaning that omitted factors that impact wages are uncorrelated with gender, which implies:
+$$\beta_1 = E[wages | female=1]-E[wages | female=0] $$ \\~\\
+
+However, even if exogeneity doesn't hold, $\hat{\beta}_1$ still captures the difference in average wages of men and women in our sample.  
+\end{frame}
+
+
+%%%%%%%%%%%%
+\begin{frame}{Dummy Variables in Multiple Regression}
+$$ Wages = \beta_0 + \beta_1 Age + \beta_2 Female +  u  $$ \\~\\
+Taking conditional expectation (assuming exogeneity):
+\begin{align*}
+	E[Wages | Age, Female=1] &= (\beta_0+\red{\beta_2}) + \beta_1 Age
+ \\
+	E[Wages | Age, Female=0] &= \beta_0 + \beta_1 Age
+	\end{align*} \\~\\
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{ACS Data: Wages and Age}
+\centering  \small 
+\includegraphics{./../../output/fit_gender_age.pdf} \\ \vspace{1.5em}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Interaction Terms}
+We can also include interaction terms in our model as follows:
+$$ Wages = \beta_0 + \beta_1 Age + \beta_2 Female + \beta_3 Female \times Age +  u  $$ \\~\\
+Taking conditional expectation (assuming exogeneity):
+\begin{align*}
+	E[Wages | Age, Female=1] &= (\beta_0+\red{\beta_2}) + (\beta_1+\red{\beta_3}) Age
+ \\
+	E[Wages | Age, Female=0] &= \beta_0 + \beta_1 Age
+	\end{align*} \\~\\
+Now the impact of $X$ on $Y$ varies with $D$.
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{ACS Data: Wages and Age}
+\centering
+\includegraphics{./../../output/fit_gender_age_inter.pdf}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Interaction of Two Dummy Variables}
+\vspace{-1em}
+$$ wages = \beta_0 + \beta_1 Female + \beta_2 Hispanic + \beta_3 Female \times Hispanic +  u  $$ \\~\\
+Average wages for Non-Hispanic Males:
+$$ E(wages|Hispanic=0, Female=0) = \beta_0  $$ 
+Average wages for Non-Hispanic Females:
+$$ E(wages|Hispanic=0, Female=1) = \beta_0 + \red{\beta_1}  $$
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Interaction of Two Dummy Variables}
+\vspace{-1em}
+$$ wages = \beta_0 + \beta_1 Female + \beta_2 Hispanic + \beta_3 Female \times Hispanic +  u  $$ \\~\\
+Average wages for Hispanic Males:
+$$ E(wages|Hispanic=1, Female=0) = \beta_0 + \beta_2  $$ 
+Average wages for Hispanic Females:
+$$ E(wages|Hispanic=1, Female=1) = \beta_0 + \red{\beta_1} + \beta_2 + \red{\beta_3}  $$
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{ACS Data: Gender and Ethnicity}
+\vspace{-0.1em}
+\centering  \small  
+\input{./../../output/gender_race_wage.tex} \\ \vspace{1.5em}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Variable with Multiple Categories}
+	Five education categories:
+	 $$ \{\text{Less than HS, HS Grad, Some College, College Degree, >College} \} $$ \\~\\
+	 Add four dummy variables to the regression (why not five?):
+	 $$ wages = \beta_0 + \beta_1 HS + \beta_2 SomeCol + \beta_3 Col + \beta_4 MoreThanCol +  u  $$ \\~\\
+	 Reference category: Less than HS \\~\\
+	 Coefficients capture the difference between average wages for that category and average wages for \textit{less than HS}. 
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Variable with Multiple Categories}
+\centering \vspace{1em}
+\input{./../../output/wages_by_educ.tex}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Variable with Multiple Categories}
+\centering \vspace{-0.5em} \footnotesize
+\input{./../../output/lrm_educ_cat.tex}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Binary Dependent Variable}
+What if we have a binary variable on the left-hand side?
+
+$$ emp = \beta_0 + \beta_1 educ  + u  $$
+
+$$ E[emp|educ] = \beta_0 + \beta_1 educ    $$
+
+Note that, 
+$$ E[emp|educ] = P(emp=1|educ) = \beta_0 + \beta_1 educ $$ 
+
+So, $\beta_1$ can be interpreted as the change in the probability of being employed. This is called the Linear Probability Model.
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{What's next?}
+\begin{witemize}
+  \item Next week, on Tuesday (11/07), we will continue with the linear regression model
+  \item \textbf{No class on Thursday} (11/09) as I am traveling for a conference. Use this time to review the linear regression model and work on Problem Set 4.
+  \item Problem Set 4 is due on the following Tuesday (11/14)
+  \item The week after next, we will learn to conduct regression analysis in R before going into the fall break. 
+\end{witemize}
+\end{frame}
+
+
+
+\end{document}

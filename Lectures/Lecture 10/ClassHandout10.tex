@@ -1,0 +1,55 @@
+\documentclass{./../handout}
+
+\fancyhf{}
+\fancyheadoffset{1cm}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{0.1em}
+     \Large \sc Handout for Lecture 10 \\ \vspace{0.1em}
+     \large Normal Distribution and Z-Score \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+
+If $X \sim N(\mu, \sigma^2)$, then the standardized random variable,
+$$ Z = \frac{X-\mu}{\sigma} \sim N(0,1) $$
+
+Given $X \sim N(\mu, \sigma^2)$, to find $Pr(x_0<X<x_1)$: \vspace{-1em}
+\begin{itemize}
+  \item Find $z_0 = (x_0-\mu)/\sigma$ and $z_1 = (x_1-\mu)/\sigma$
+  \item Use standard normal table to find $Pr(z_0<Z<z_1)$ \\~\\
+\end{itemize}
+
+\textit{Exercises}: Refer to the standard normal table to answer the following.
+\begin{enumerate}
+  \item Given $X \sim N(3, 16)$, find $Pr(2<X<5)$. \vspace{4cm}
+  \item Given $X \sim N(15, 100)$, find $Pr(X>-3)$. 
+\end{enumerate}
+
+\newpage
+Given $X \sim N(\mu, \sigma^2)$ and $Pr(X<x)=p$, to find $x$ : \vspace{-1em}
+\begin{itemize}
+  \item Use standard normal table to find $z$ where $Pr(Z<z)=p$ 
+  \item Find $x = \mu + z \cdot \sigma $  \vspace{-1em}
+\end{itemize}
+Follows analogously for when we are given $Pr(X>x)=p$. \\~\\ \vspace{-0.25cm}
+
+\textit{Exercises}: Refer to the standard normal table to answer the following.
+\begin{enumerate}
+  \item Given $Pr(Z>z) = 0.95 $. Find $z$. \vspace{3cm}
+  \item Given  $X \sim N(3, 16)$ and $Pr(X<x) = 0.95 $. Find $x$. \vspace{4cm}
+  \item Given $Pr(|Z|>z) = 0.10 $. Find $z$. \\ \vspace{-0.25cm}
+ 
+  \textit{Note:} Since the normal distribution is symmetric $Pr(Z>z)=Pr(Z<-z)$, so we have that: $Pr(|Z|>z) = 2 Pr(Z>z) = 2 Pr(Z<-z) $. \\ 
+ \vspace{3cm}
+\end{enumerate}
+\end{document}

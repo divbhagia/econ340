@@ -1,0 +1,25 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 17 \\ \normalsize{Inference in Regression Models}}
+\rhead{Class Handout for Lecture 17}
+\vspace{-1em}
+
+We are interested in the following relationship:
+$$ Crime Rate = \beta_0 + \beta_1 Unemployment Rate + u  $$
+We run a regression of \textit{Crime Rate} on \textit{Unemployment Rate} across US counties. The output from this regression is presented below. \footnote{Crime rate is defined as the ratio of crimes in a specific area to the population of that area, expressed as incidents per 1,000 people per year. The unemployment rate represents the number of unemployed people as a percentage of the labor force. The average crime rate in the data is 0.0057, while the average unemployment rate is 0.05.}
+
+\centering
+\input{./../../output/crime_unemp_reg.tex} 
+\begin{enumerate}
+	\item Interpret the slope and intercept coefficient.
+	\item Interpret the $R^2$.
+	\item According to this model, what is the predicted Crime Rate for a county with an unemployment rate of 0.06 (6\%)? 
+	\item What is the t-statistic associated with the hypothesis test that examines whether the coefficient on the unemployment rate is zero ($H_0: \beta_1 = 0$)?
+	\item What is the smallest level of significance at which you would reject the hypothesis in question 4? 
+	\item Construct a 95\% confidence interval for $\beta_1$. (Note: $Pr(|Z|>1.96)=0.95$.) What is the interpretation of this interval?
+	\item Can we attach a causal interpretation to the estimates here? Why or why not?
+\end{enumerate}
+
+
+\end{document}

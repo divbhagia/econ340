@@ -1,0 +1,152 @@
+---
+title: |
+  | ECON 340  
+  | Economics Research Methods
+author: "Div Bhagia"
+date: |
+  | Lecture 7: Data Analysis in R
+documentclass: slidesLight
+output:
+  beamer_presentation
+header-includes:
+  - \renewcommand{\tightlist}{\setlength{\itemsep}{10pt}\setlength{\parskip}{0pt}}
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE, fig.align="center")
+library(kableExtra)
+```
+
+### So far
+```{r}
+# Load Packages
+library(tidyverse)
+
+# Set directory (optional)
+#setwd("~/Dropbox (CSU Fullerton)/Econ340_R")
+
+# Import data
+data <- read.csv("caschool.csv")
+```
+You can clear your environment before starting by using the broom on the top-right. Or add `rm(list=ls())` command on top of your R-script.
+
+### Tabulating Variables
+
+-   Variable `gr_span` reports the grade span of a school district (K-6 or K-8)
+
+    ```{r}
+    table(data$gr_span)
+    ```
+
+-   So 61 school districts go up to grade 6 while 359 go up to grade 8
+
+### Dplyr Syntax
+
+-   `dplyr` is a `TidyVerse` package that provides several useful functions for data manipulation
+-   However, `dplyr` uses slightly different syntax from base R.
+-   One key operator utilized by this package is the pipe operator `%>%`
+-   You can use shortcut Cmd + Shift + M (Mac) and Ctrl + Shift + M (Windows) for `%>%`
+-   You can think of this operator as standing for "then" in the code
+
+### Dplyr Syntax
+
+For example, to tabulate data:
+
+```{r}
+data %>% count(gr_span)
+```
+
+### Some Useful `dplyr` Functions
+
+-   `mutate()` adds new variables that are functions of existing variables
+-   `select()` picks variables based on their names
+-   `filter()` picks cases based on their values
+-   `summarise()` reduces multiple values down to a single summary
+-   `arrange()` changes the ordering of rows
+-   `group_by()` performs subsequent calculations within-group (and ungroup() when done)
+
+### Select Variables
+
+```{r}
+data %>% select(computer, enrl_tot)
+```
+
+### Finding Correlation
+
+```{r}
+# Base R
+cor(data$computer, data$enrl_tot)
+```
+```{r}
+# Tidy way
+data %>% select(computer, enrl_tot) %>% cor() 
+```
+
+### Filter Observations
+
+```{r}
+data %>% select(gr_span, computer) %>% 
+  filter(gr_span=="KK-06")  
+```
+
+### _And_ and _Or_ in R
+
+To select schools in Orange county with enrollment over 5000
+```{r}
+data1 <- data %>% 
+  filter(county=="Orange" & enrl_tot>=5000)
+```
+To select schools that are either in Orange country or in LA county
+```{r}
+data2 <- data %>% 
+  filter(county=="Orange" | county=="Los Angeles")
+```
+### Summarize Variables
+
+```{r}
+# Calculating mean
+data %>% summarise(mean(computer))
+
+# Standard deviation and median
+data %>% summarise(sd = sd(computer), 
+                   med = median(comp_stu))
+```
+
+### Creating New Variables
+
+```{r}
+data <- data %>% 
+  mutate(log_enrl = log(enrl_tot))
+```
+- The code takes `data` and adds a new column `log_enrl`, which is the log of `enrl_tot` 
+- It then updates the original data with this new column.
+
+
+### Creating New Variables
+
+```{r}
+data <- data %>% 
+  mutate(hcomp = ifelse(comp_stu>=median(comp_stu),1,0))
+```
+
+-   Syntax: `ifelse(test_expression, x, y)`
+-   The returned vector has element from `x` if the corresponding value of `test_expression` is `TRUE` and `y` if it is `FALSE`
+-   So here `hcomp` takes value 1 whenever computers per student are above the median, and 0 otherwise. What should be the output from `mean(data$hcomp)`?
+
+### Combining `group_by()` and `summarise()`
+```{r}
+data %>% 
+  group_by(hcomp) %>% 
+  summarise(mean(comp_stu))
+```
+
+### Excercise for you
+Find the county with the highest average number of computers per student (`comp_stu`) (Hint: Use `group_by(county)` and `summarise()`)
+
+### What's next?
+
+- Next class we will continue with R
+- Problem set 2 is available on Canvas and is due next Tuesday (09/19)
+- Get in touch with your research group partner(s) and start thinking about your project
+- Research Paper First Submission is due in two weeks (09/26)

@@ -1,0 +1,54 @@
+\documentclass{./../handout}
+
+\fancyhf{}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{1em}
+     \Large \sc Confidence Intervals and Hypothesis Testing \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+\underline{Confidence Intervals} 
+
+\textit{Known population variance:} \\
+$1-\alpha$ confidence interval for the population mean $\mu$:
+$$ \bar{X} \pm  \underbrace{z_{\alpha/2}  \frac{\sigma}{\sqrt{n}}}_{\text{Margin of Error}} $$
+where $z_{\alpha/2}$ is the $z$-value that leaves area $\alpha/2$ in the upper tail of the standard normal distribution. 
+
+\textit{Unknown population variance:} \\
+$1-\alpha$ confidence interval for the population mean $\mu$:
+$$ \bar{X} \pm  t_{n-1,\alpha/2}  \frac{S}{\sqrt{n}} $$
+where $t_{n-1,\alpha/2}$ is the $t$-value that leaves area $\alpha/2$ in the upper tail of the t-distribution. $n-1$ is the degrees of freedom. Since $t$ distribution looks just like the standard normal for large $n$, for $n \geq 100$ continue using the standard normal table. \\~\\
+
+\textit{Exercise.} A car manufacturer wants to estimate the mean CO2 emissions of a new model of car. A sample of 196 cars is randomly selected and their CO2 emissions are measured. The sample mean and standard deviation are 120 g/km and 20 g/km, respectively. Construct a 95\% confidence interval for the true mean CO2 emissions of this car model.
+
+
+
+\newpage
+\underline{Hypothesis Testing} 
+
+Test null hypothesis $ H_0: \mu = \mu_0 $ against alternative hypothesis $H_1: \mu \neq \mu_0$. Construct test statistic $Z$ if true population variance is known, else use $T$-statistic.  
+ $$ z_0 = \frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}} \quad \text{and} \quad t_0 = \frac{\bar{x}-\mu_0}{S/\sqrt{n}}  $$
+Under the null $\bar{X} \sim N(\mu_0, \sigma^2/n)$, then $Z \sim N(0,1)$ and $T \sim t_{n-1}$. 
+In case of known population variance, reject the null if $|z_0|>z_{\alpha/2}$. In the case of unknown population variance, reject the null if $|t_0|>t_{n-1,\alpha/2}$. When $n \geq 100$ you can reject the null if $|t_0|>z_{\alpha/2}$. \\
+
+
+\underline{p-value:} 
+
+Known variance: $ p = 2Pr(Z>|z_0|)$ \\
+Unknown variance, $n<100$: $p=2Pr(T>|t_0|)$ \\
+Unknown variance, $n \geq 100$:  $p=2Pr(Z>|t_0|)$ \\
+
+\textit{Exercise.} The car manufacturer had initially claimed that the average CO2 emissions of this model would be 115 g/km. Test the manufacturer's claim at a 5\% level of significance. What is the $p$-value associated with your test statistic?
+
+
+\end{document}

@@ -1,0 +1,173 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Simple Linear Regression Model}
+
+We are interested in the relationship between two variables, $X$ and $Y$. Here, $Y$ is the \textit{dependent variable}, while $X$ is the \textit{independent or explanatory variable}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ordinary Least Squares (OLS)
+\section{Ordinary Least Squares (OLS)}
+We observe $Y_i$ and $X_i$ for all individuals in our sample. We want to fit a line to represent our data as follows: 
+$$ \hat{Y_i} = \hat{\beta}_0 + \hat{\beta}_1 X_i $$
+where $\hat{Y_i}$ is the predicted value of the dependent variable. $\hat{\beta}_0$ is the intercept for this line, while $\hat{\beta}_1$ is its slope. $\hat{\beta}_0$ and $\hat{\beta}_1$ are also called regression coefficients. The OLS estimator chooses the regression coefficients to minimize the discrepancy between $\hat{Y}_i$ and $Y_i$. Define residuals as
+$$ \hat{u}_i = Y_i-\hat{Y}_i $$  
+Then the OLS estimates $\hat{\beta}_0$ and $\hat{\beta}_1$ are obtained by minimizing the sum of squared residuals: 
+\begin{align*}
+(\hat{\beta}_0,\hat{\beta}_1)= & \arg \min_{b_0, b_1} \sum_{i=1}^n \hat{u}_i^2 = \arg \min_{b_0, b_1} \sum_{i=1}^n(Y_i - {b_0} - {b_1} X_i)^2
+\end{align*}
+Some calculus (included at the end of this handout) will reveal 
+ $$ \hat{\beta}_0 = \bar{Y}-\hat{\beta}_1 \bar{X} $$
+
+ $$ \hat{\beta}_1 = \frac{ \sum_{i=1}^n(Y_i - \bar{Y})(X_i-\bar{X})}{ \sum_{i=1}^n(X_i - \bar{X})^2 } = \frac{S_{XY}}{S^2_X}$$
+
+Note that from the expression of $\hat{\beta}_0$, the best fit line passes through the point of means. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Goodness of Fit: The $R^2$
+\section{Goodness of Fit: The $R^2$} 
+Once we have estimated a regression line, we might be interested in how well this line fits the data. The $R$-squared measures how well the OLS regression line fits the data. 
+$R$-squared is the percent of sample variation in $Y$ that is explained by $X$.
+Note that,
+$$ Y_i = \hat{Y}_i +  \hat{u}_i $$
+In this notation, $R^2$ is the ratio of sample variation of $\hat{Y}_i$ to sample variation of $Y_i$. Before we write down the formula for $R^2$, let's introduce a few more terms.  
+ \begin{itemize}
+\item[]   \textit{Total Sum of Squares:} $$ \quad TSS = \sum_{i=1}^n (Y_i-\bar{Y})^2 $$
+\item[]  \textit{Explained Sum of Squares:} $$ \quad ESS = \sum_{i=1}^n (\hat{Y}_i-\bar{Y})^2 $$
+\item[]   \textit{Residual Sum of Squares:} $$ \quad RSS = \sum_{i=1}^n (Y_i-\hat{Y}_i)^2 =\sum_{i=1}^n \hat{u}_i^2$$
+\end{itemize}
+I am not going to prove it, but $TSS = ESS + RSS$. $RSS$ is also sometimes called the \textit{Sum of squared residuals} (SSR).  \\\\
+A measure of goodness of fit: 
+$$ R^2 = \frac{ESS}{TSS} = 1-\frac{RSS}{TSS} $$ 
+
+ $R^2$ lies between 0 and 1
+\begin{itemize}
+  \item If $X$ explains no variation in $Y$, $\hat{\beta}_1=0$ and $ \hat{Y_i} = \hat{\beta}_0 = \bar{Y}$. In which case, $ESS=0$ and hence $R^2=0$.
+  \item On the other hand, if $X$ explains all the variation in $Y$, $\hat{Y}_i=Y_i$ and $RSS=0$. In which case, $R^2=1$.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Linear Regression Model: Assumptions for Causal Inference
+\section{Linear Regression Model: Assumptions for Causal Inference}
+
+Until now we have talked about choosing a line that fits the sample data without any reference to the underlying population. We will now formally set up the linear regression model and discuss the assumptions under which OLS estimates can be used to answer causal questions.
+\begin{itemize}
+  \item \textit{Assumption 1 (Linear in Parameters)}: The population regression model is linear in its parameters and correctly specified as:
+  $$ Y = \beta_0 + \beta_1 X + u $$
+  Here, $u$ is the mean zero error term $E(u)=0$.
+ Note that the model can be non-linear in variables. For example, $ Y = \beta_0 + \beta_1 X^2 + u  $ or $ \ln Y = \beta_0 + \beta_1 \ln X + u  $ are fine.
+\item \textit{Assumption 2 (Random Sample):} The observed data $(Y_i, X_i)$ for $i=1,2,...,n$ represent a random sample of size $n$ from the above population model.
+\item \textit{Assumption 3 (No large outliers)}: Fourth moments (or Kurtosis) of $X$ and $Y$ are finite.
+%\item Assumption 3 (Variation in $X$) All observations of $X_i$ are not the same value. Note if for all $i=1,2,...,n$, $X_i=k$, then $\bar{X}=k$ and the denominator of the OLS slope estimator will be 0. 
+\item \textit{Assumption 4 (Zero Conditional Mean/Exogeneity):} The expected value of the error term is 0 conditional on any value of the explanatory variable.
+$$ E(u|X)=0 $$ 
+\end{itemize}
+
+Assumptions 1-4 imply that OLS estimators are unbiased, that is
+$$ E(\hat{\beta}_0) = \beta_0, \quad  E(\hat{\beta}_1) = \beta_1 $$
+
+Note that Assumption 4 is the key assumption that is needed for causal analysis and the one most often not satisfied in practice. By Assumption 4, 
+ $$ E(Y|X) = \beta_0 + \beta_1 X $$
+Say $X=x$ and it increases by 1 unit. Note that,  
+  $$ E(Y|X=x) = \beta_0 + \beta_1 x $$
+  $$ E(Y|X=x+1) = \beta_0 + \beta_1 (x+1) $$
+  Then $\beta_1$ represents the causal effect of one unit change in $X$ on $Y$
+$$\beta_1 = E(Y|X=x+1)-E(Y|X=x) $$
+
+Note that the error term $u$ captures unobserved factors that may affect the outcome $Y$. The exogeneity assumption posits that, on average, these unobserved factors do not vary with the values of $X$. In other words, omitted factors are uncorrelated with $X$. 
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sampling Distribution of OLS Estimators
+ \section{Sampling Distribution of OLS Estimators}
+ Since OLS estimators are computed from a random sample, just like the sample mean, they are random variables. In small samples, the sampling distribution for OLS estimators is a bit complicated, but in large samples, they are approximately normal because of the Central Limit Theorem (CLT).\footnote{In small samples, if we are willing to assume that errors are conditionally normally distributed, we can conclude that OLS estimators are normally distributed.} \\
+ 
+ Under assumptions 1-4, in large samples, 
+ $$ \hat{\beta}_0 \sim N(\beta_0, \sigma^2_{\hat{\beta}_0}), \quad \quad  \hat{\beta}_1 \sim N(\beta_1, \sigma^2_{\hat{\beta}_1}) $$
+ 
+ where $$ \sigma^2_{\hat{\beta}_1} = \frac{1}{n} \frac{Var[(X_i-\mu_X)u_i]}{Var(X_i)} $$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Hypothesis Testing and Confidence Intervals
+ \section{Hypothesis Testing and Confidence Intervals}
+
+As before, we don't have $\sigma^2_{\hat{\beta}_1}$ but we can estimate its sample counterpart $S_{\hat{\beta}_1}$. Then we can compute the $t$-statistic: 
+$$ t = \frac{\hat{\beta}_1-\beta_1}{S_{\hat{\beta}_1}}  $$
+Since $ \hat{\beta}_1$ is approximately normally distributed in large samples, the t-statistic is approximately distributed as a standard normal random variable.
+
+%%% Review from here
+One common hypothesis test we are interested in involves testing whether the effect is 0. This is so common that most statistical packages automatically report the $t$ and $p$ values associated with this hypothesis test. 
+$$ H_0: \beta_1 = 0 \quad \quad H_1: \beta_1 \neq 0 $$
+In this case the test statistic is 
+$$ t = \frac{\hat{\beta}_1}{S_{\hat{\beta}_1}} $$
+As before, denote $z_{\alpha/2}$ as the value of $z$ that leaves area $\alpha/2$ in the upper tail of the normal distribution. If $|t|>z_{\alpha/2}$, we can reject the null at $\alpha$\% level of significance and say that $\beta$ is statistically significant at $\alpha$\% level of significance. Alternatively, if our $p$-value associated with this test is smaller than $\alpha$, we can say that $\beta$ is statistically significant at $\alpha$\% level of significance. \\
+
+Similarly, we can construct a $1-\alpha$\% confidence interval (CI) around the $\beta$. A $1-\alpha$ CI in this case is given by:
+$$ \hat{\beta}_1 \pm z_{\alpha/2} \cdot S_{\hat{\beta}_1} $$
+where $z_{\alpha/2}$ leaves area $\alpha/2$ in the upper tail of the normal distribution. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Homoscedasticity
+%\section{Homoscedasticity and Heteroscadasticity}
+%BLUE 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Derivation of OLS Coefficients
+\section*{Appendix: Derivation of OLS Coefficients\footnote{You do not need to know the derivation for the purpose of the exam. However, you do need to know how $\hat{\beta}_0$ and $\hat{\beta}_1$ are chosen.}}
+Note that, $$ \sum_{i=1}^n e^2_i = \sum_{i=1}^n(Y_i - \hat{Y}_i)^2 =   \sum_{i=1}^n(Y_i - \hat{\beta}_0 - \hat{\beta}_1 X_i)^2 $$ 
+
+First-order conditions for $\hat{\beta}_0$ and $\hat{\beta}_1$: 
+\begin{equation} -2\sum_{i=1}^n (Y_i - \hat{\beta}_0 - \hat{\beta}_1 X_i) = 0 \end{equation}
+\begin{equation}  -2\sum_{i=1}^n (Y_i - \hat{\beta}_0 - \hat{\beta}_1 X_i)X_i = 0 \end{equation}
+Dividing both sides of equation (1) by $-2n$, we  get 
+ $$ \bar{Y} = \hat{\beta}_0 + \hat{\beta}_1 \bar{X} $$
+ This implies that the best fit line will pass through the point of means. We can rewrite the above equation to get 
+ $$ \hat{\beta}_0 = \bar{Y}-\hat{\beta}_1 \bar{X} $$
+ Now if we both sides of equation (2) by $-2$ and plug in $ \hat{\beta}_0 = \bar{Y}-\hat{\beta}_1 \bar{X} $, we get
+ \begin{align*}
+ & \sum_{i=1}^n (Y_i - \bar{Y}+\hat{\beta}_1 \bar{X} - \hat{\beta}_1 X_i)X_i = 0 \\
+ & \Rightarrow   \sum_{i=1}^n [(Y_i - \bar{Y})-\hat{\beta}_1(X_i-\bar{X})]X_i = 0 \\
+&  \Rightarrow  \sum_{i=1}^n (Y_i - \bar{Y})X_i = \hat{\beta}_1   \sum_{i=1}^n (X_i-\bar{X})X_i \\
+& \Rightarrow \hat{\beta}_1 = \frac{ \sum_{i=1}^n(Y_i - \bar{Y})X_i}{ \sum_{i=1}^n(X_i - \bar{X})X_i } = \frac{ \sum_{i=1}^n(Y_i - \bar{Y})(X_i-\bar{X})}{ \sum_{i=1}^n(X_i - \bar{X})^2 } = \frac{S_{XY}}{S^2_X}
+ \end{align*}
+
+%
+%\\ We start by assuming a linear relationship (with an error) between these variables in the population: 
+%$$ Y = \beta_0 + \beta_1 X + \varepsilon $$
+%where $\varepsilon$ is the \textbf{error term} which accounts for unobserved factors affecting $Y$. If we assume conditional 
+%
+%\\
+%\newpage
+%
+% \vspace{1em}
+% 
+%  \underline{\textbf{Why OLS?}} \\
+%If you end up taking Econometrics, you will see that under additional assumptions, one can show that OLS estimators are unbiased and have the least variance amongst all other linear unbiased estimators. \\
+%Unbiasedness implies that $$ E(\hat{\beta}_1)= \beta $$
+%The variance of $\hat{\beta}_1$ is given by 
+%$$ \sigma^2_{\hat{\beta}_1} =  Var(\hat{\beta}_1) = \frac{\sigma^2}{\sum_{i=1}^n (X_i-\bar{X})^2} $$
+%where $\sigma^2 = Var(\varepsilon)$.
+%\vspace{1em}
+%
+%\underline{\textbf{Interpretation}} \\
+%One of the assumptions for the above desirable properties of OLS estimators to hold is \textbf{exogeneity}. This and most other assumptions are about the \textbf{true} model and in particular about the true error $\varepsilon$. Mathematically, exogeneity assumption can be written as follows: 
+%$$ E(\varepsilon|X) = 0 $$
+%What this assumption implies is that anything that's omitted from the model and hence ends up being in the error term and matters for $Y$ is independent of $X$. If we can argue that this assumption holds, we can give a \textit{causal} interpretation to our OLS estimator $\hat{\beta}_1$. \\
+%
+% 
+% \newpage 
+% \textbf{\underline{Example: Returns to Education in the US}} \\
+%Data from December 2013 Current Population Survey (CPS). We are interested in the relationship between wages and years of education. Let's start by summarizing our data. \\
+%\includegraphics[scale=0.45]{ONE}
+%In our data set, on an  average,  individuals  have  completed  15.6  years  of  education, but educational attainment varies widely (between 0 and 20 years). Similarly, wages differ widely and ranges from a minimum of \$1.88 per hour to a maximum of \$100 per hour. The average wage is \$18.45 per hour.  \\
+%Now let's estimate the following model: 
+%$$ Wages = \alpha + \beta \text{Years of Education} + \varepsilon $$
+%\includegraphics[scale=0.45]{TWO}
+%\vspace{1em}
+%
+%\textbf{How to interpret OLS coefficients?}
+%\begin{itemize}
+%\item $ \hat{\beta}_0 = -1.54 $ implies that a person with 0 years of education is predicted to have hourly earnings of -1.54 dollars. (This is not necessarily very meaningful - the low number of observations with years below 6 can explain this prediction). 
+%\item $\hat{\beta}_1 = 1.28$ implies that a 1 year increase in education is associated with a \$1.28 increase in the average hourly earnings. 
+%\end{itemize}
+%\vspace{1em}
+%
+%\newpage
+%\textbf{What if $\beta=0$?}
+%That would mean that having higher years of education does not change our prediction of the person's wage. \\
+%We want to test the hypothesis that $\beta$ is equal to 0. In this case our t-statistic would just be $\hat{\beta}_1/{S_{\hat{\beta}_1}}$. From the output table $S_{\hat{\beta}_1}=0.08$, which implies a $t=1.28/0.08=16$. This $t$ value is also reported in column 4 of row 1. Since $t>2.58$, we can reject the null at 1\% level of significance and conclude that $\beta$ is statistically significant. We could have come to this conclusion by looking at the $p$-value as well. 
+
+\end{document}

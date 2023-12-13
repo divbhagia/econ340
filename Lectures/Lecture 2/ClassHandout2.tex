@@ -1,0 +1,82 @@
+\documentclass{./../handout}
+
+\fancyhf{}
+\fancyheadoffset{1cm}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{0.1em}
+     \Large \sc Handout for Lecture 2 \\ \vspace{0.1em}
+     \large Empirical Distribution and Measures of Central Tendency \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+
+\begin{enumerate}
+\item You rolled a six-sided die 100 times and noted down how many times each of the six outcomes were realized. Fill in the rest of the table below: \\~\\
+\setstretch{1.5}
+\begin{tabular}{c|c|c|c}
+Outcome & Count ($n_k$) & Relative frequency ($f_k$) & Cumulative frequency ($F_k$) \\
+\hline
+1 &  18 & & \\
+\hline
+2 & 18 & & \\
+\hline
+3 & 12 & & \\
+\hline
+4 & 16 & & \\
+\hline
+5 & 21 & & \\
+\hline
+6 & 15 & & \\
+\hline
+\textbf{Total} & \textbf{100} & \textbf{1} & \\
+\hline
+\end{tabular}
+\vspace{0.5em}
+
+Note that $$ f_k = \frac{n_k}{n} = \frac{\text{observations in category $k$}}{\text{total observations}} $$
+
+\begin{enumerate}
+	\item How many times did you get a die face with a value of at most 3? \\ 
+	\item Are the proportions close to what you would have predicted? \\~\\
+\end{enumerate}
+
+\item Find the mean and median for: $ 3, 4, 1, 6, 8 $
+\vspace{5em}
+\item Amongst the mean and the median, which one is more affected by outliers? \\~\\
+\item We asked a sample of 10 individuals whether they like icecream or not. We then create a variable $X$ that takes value 1 if the individual likes icecream, and 0 otherwise.  Here is the data we collected:
+$$ 1, 1, 0, 0, 0, 1, 0, 1, 1, 1 $$
+
+\begin{enumerate}
+\item How many individuals like icecream in our sample? \\~\\
+\item What proportion of individuals like icecream in our sample? \\~\\
+\item Use the frequency distribution table and the following formula to calculate the mean of $X$. 
+$$ \bar{X} = \frac{\sum_{k=1}^K n_k X_k}{n} = \sum_{k=1}^K f_k X_k $$
+\end{enumerate}
+
+\newpage
+\item We have the following data on shoe sizes ($X_i$) for four individuals. 
+$$ X = \{8, 6, 6, 8 \}$$
+\begin{enumerate}
+\item Calculate the mean:
+$$ \mu = \frac {\sum_{i=1}^N X_i}{N} = \hspace{8cm} $$ \\
+\item Calculate the weighted mean with weights $ w=  \{1, 1, 1, 1 \}$.
+$$ \mu_{Weighted} = \frac {\sum_{i=1}^N w_i X_i}{\sum_{i=1}^N w_i } = \hspace{8cm} $$ \\
+\item Calculate the weighted mean with weights $ w=  \{1, 2, 2, 1 \}$.
+$$ \mu_{Weighted} = \frac {\sum_{i=1}^N w_i X_i}{\sum_{i=1}^N w_i } = \hspace{8cm} $$ \\
+\item Calculate the weighted mean with weights $ w=  \{0.5, 0, 0, 0.5 \}$.
+$$ \mu_{Weighted} = \frac {\sum_{i=1}^N w_i X_i}{\sum_{i=1}^N w_i } = \hspace{8cm} $$ 
+\end{enumerate}
+\vspace{4em}
+\end{enumerate}
+
+\end{document}

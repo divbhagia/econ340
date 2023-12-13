@@ -1,0 +1,55 @@
+\documentclass{./../handout}
+
+
+\fancyhf{}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{1em}
+     \Large \sc Summation Notation \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+
+The capital sigma ($\Sigma$) stands for summing everything on the right. 
+$$ \sum_{i=1}^N X_i = X_1 + X_2 + ... + X_N $$
+
+\underline{Things you CAN do to summations:}
+\begin{enumerate}
+\item Pull constants out of them, or into them.
+$$ \sum_{i=1}^N b X_i = b \sum_{i=1}^N X_i  $$
+\item Split apart (or combine) sums (addition) or differences (subtraction)
+$$ \sum_{i=1}^N (b X_i + c Y_i) = b \sum_{i=1}^N X_i  + c \sum_{i=1}^N Y_i $$
+\item Multiply through constants by the number of terms in the summation
+$$ \sum_{i=1}^N (a+b X_i)= aN + b \sum_{i=1}^N X_i  $$
+\end{enumerate}
+
+\underline{Things you CANNOT do to summations:}
+\begin{enumerate}
+\item Split apart (or combine) products (multiplication) or quotients (division).
+$$ \sum_{i=1}^N X_i Y_i \neq  \sum_{i=1}^N X_i \times \sum_{i=1}^N Y_i   $$
+\item Move the exponent out of or into the summation.
+$$ \sum_{i=1}^N X_i^a \neq  \left(\sum_{i=1}^N X_i\right)^a $$
+\end{enumerate}
+
+\underline{Exercise}:
+$$ X = \{2,9,6,8,11,14\} \quad \quad Y = \{7,1,3,5,0\}$$ 
+\begin{enumerate}
+\item $\mathlarger{\sum}_{i=1}^4 X_i = X_1 + X_2 + X_3 + X_4 = 2 + 9 + 6 + 8 = 25 $ \\~\\
+\item $\mathlarger{\sum}_{i=1}^4 2 X_i = 2 \mathlarger{\sum}_{i=1}^4 X_i = 2 \times 25 = 50  $ \\~\\
+\item $\mathlarger{\sum}_{i=1}^4 (X_i+4) = \mathlarger{\sum}_{i=1}^4 X_i + 4 \cdot 4 = 25+16 = 41 $ \\~\\
+\item $\mathlarger{\sum}_{i=1}^3 (X_i+Y_i) = (X_1 + Y_1) + (X_2 + Y_2) + (X_3 + Y_3) = (2+7) + (9+1) + (6+3) = 28 $ \\~\\
+\item $\mathlarger{\sum}_{i=1}^2 X_i Y_i = X_1 Y_1 + X_2 Y_2 = 2 \cdot 7 + 9 \cdot 1 = 23  $ \\~\\
+\item $\mathlarger{\sum}_{i=1}^2 X_i \times \mathlarger{\sum}_{i=1}^2 Y_i = (X_1+X_2) \times (Y_1 +Y_2) = (2+9) \times (7+1) = 88 $ \\~\\
+\item $\mathlarger{\sum}_{i=1}^2 X_i^2 = X_1^2 + X_2^2 = 4 +81 = 85$ \\~\\
+\end{enumerate}
+
+\end{document}

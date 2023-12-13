@@ -1,0 +1,41 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Summation Notation}
+
+The capital sigma ($\Sigma$) stands for summing everything on the right. 
+$$ \sum_{i=1}^N X_i = X_1 + X_2 + ... + X_N $$
+When we have sets, the index $i$ denotes the $i$-th position in the set. 
+
+\textit{Example}: For $X = \{1, 3, 5, 1\}$, we have $\sum_{i=1}^3 X_i = X_1 + X_2 + X_3 = 1 + 3 + 5 = 9$
+
+\textit{Note}: Another way of using a summation sign is to write $\sum_{x \in A} x $, which refers to summing up all elements in $A$. Similarly, to sum up $x$ for all possible values $x$, we can simply write $\sum_x x$. \\
+
+
+\underline{Things you CAN do to summations:}
+\begin{enumerate}
+\item Pull constants out of them or into them.
+$$ \sum_{i=1}^N b X_i = b \sum_{i=1}^N X_i  $$ \\
+\textit{Example}: $ \sum_{i=1}^2 b X_i = b X_1 + b X_2 = b(X_1 + X_2) = b \sum_{i=1}^2 X_i $ \\
+\item Split apart (or combine) sums (addition) or differences (subtraction)
+$$ \sum_{i=1}^N (b X_i + c Y_i) = b \sum_{i=1}^N X_i  + c \sum_{i=1}^N Y_i $$ \\
+\textit{Example}: $\sum_{i=1}^2 (X_i - 2 Y_i) = (X_1-2 Y_1) + (X_2-2 Y_2) = X_1 + X_2 - 2(Y_1 + Y_2)$. So we can write $$\sum_{i=1}^2 (X_i - 2 Y_i) = \sum_{i=1}^2 X_i - 2 \sum_{i=1}^2 Y_i $$ \\
+\item Multiply through constants by the number of terms in the summation
+$$ \sum_{i=1}^N (a+b X_i)= aN + b \sum_{i=1}^N X_i  $$ \\
+\textit{Example}: $\sum_{i=1}^3 a = a + a + a = 3a $. \\
+\end{enumerate}
+
+\underline{Things you CAN NOT do to summations:}
+\begin{enumerate}
+\item Split apart (or combine) products (multiplication) or quotients (division).
+$$ \sum_{i=1}^N X_i Y_i \neq  \sum_{i=1}^N X_i \times \sum_{i=1}^N Y_i   $$
+\textit{Example}: Note that $\sum_{i=2}^N X_i Y_i = X_1 Y_1 + X_2 Y_2 $, while $(\sum_{i=1}^2 X_i) \cdot (\sum_{i=1}^2 Y_i) = (X_1+X_2)(Y_1 + Y_2) = X_1 Y_1 + X_2 Y_2 + X_1 Y_2 + X_2 Y_1 $. \\
+
+\item Move the exponent out of or into the summation.
+$$ \sum_{i=1}^N X_i^a \neq  \left(\sum_{i=1}^N X_i\right)^a $$
+\textit{Example}: Note that $\sum_{i=1}^2 X_i^2 =  X_1^2 + X_2 ^2$, while  $\left(\sum_{i=1}^2 X_i\right)^2 = (X_1 + X_2)^2 = X_1^2 + X_2 ^2 + 2X_1 X_2$. \\
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 18 \\ \normalsize{Omitted Variable Bias}}
+\rhead{Class Handout for Lecture 18}
+\vspace{-1em}
+
+Consider the following linear regression model:
+$$ Y = \beta_0 + \beta_1 X + u  $$
+Omitted variable bias occurs when \underline{both} of the following conditions are true: 
+\begin{itemize}
+  \item[(1)] The omitted variable is correlated with $X$
+  \item[(2)] The omitted variable is a determinant of $Y$
+\end{itemize}
+
+Consider the following model:
+$$ Test Score = \beta_0 + \beta_1 \cdot STR + u $$
+Here, \( Test Score \) represents the average test score on standardized tests for a school, and \( STR \) denotes the student-teacher ratio for that school.
+
+\textit{Which of these omitted factors do you think will introduce bias in our OLS estimate for \( \beta_1 \)? Explain your reasoning.}
+\begin{itemize}
+  \item[(a)] percentage of English learners
+  \item[(b)] time of day when tests were conducted
+  \item[(c)] parking lot space per pupil (number of teacher parking spots divided by the number of students)
+  \item[(d)] computers per student
+\end{itemize}
+
+
+\newpage
+Omitted variable bias implies that the exogeneity assumption is violated and hence $E(u|X)\neq 0$. In which case, we have that:
+$$ \hat{\beta}_1 = \beta_1 +  \frac{Cov(X,u)}{Var(X)} $$
+So the direction and strength of bias $\hat{\beta}_1- \beta_1$ depends on the correlation between $u$ and $X$. 
+
+In our example:
+$$ Test Score = \beta_0 + \beta_1 \cdot STR + u $$
+
+\textit{What should be the direction of bias due to the following omitted variables?}  
+\begin{itemize}
+  \item[(a)] percentage of English learners
+  \item[(b)] computers per student
+\end{itemize}
+
+\end{document}

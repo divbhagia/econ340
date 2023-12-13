@@ -1,0 +1,75 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 11 \\ Independence and Correlation}
+\rhead{Class Handout: Independence and Correlation}
+
+\vspace{-0.25em}
+Consider two random variables $X$ and $Y$. \vspace{-0.5em}
+\begin{itemize}
+	\item The \textit{joint probability} $f(x,y)=Pr(X=x, Y=y)$ represents the likelihood that $X$ equals $x$ and $Y$ equals $y$. 
+	\item The marginal probability of \( Y=y \), denoted \( f(y) \), is obtained by summing the joint probability \( f(x, y) = Pr(X = x, Y = y) \) over all possible values of \( x \).
+	\item The \textit{conditional probability} $f(y | x)= Pr(Y=y| X=x)$ represents the likelihood that $Y$ is equal to $y$, given that $X$ is equal to $x$.
+$$ f(y | x) = Pr(Y=y| X=x) = \frac{Pr(X=x, Y=y)}{Pr(X=x)} = \frac{f(x,y)}{f(x)}$$
+\item The \textit{conditional expectation} $E(Y|x)$ is the expected value of $Y$ given that $X=x$.
+$$ E(Y|X=x) = \sum_{y} y Pr(Y=y | X=x) = \sum_{y} y f(y | x) $$
+
+\end{itemize}
+
+\underline{Uncorrelated vs Independent} \vspace{-0.5em}
+\begin{itemize}
+\item Covariance and correlation:
+$$ \sigma_{XY} = Cov(X,Y) = E[(X-\mu_X)(Y-\mu_Y)] \quad \quad  $$ 
+$$ \rho_{XY} = corr(X,Y) = \frac{\sigma_{XY}}{\sigma_X \sigma_Y} \quad \text{ where } -1 \leq \rho \leq 1$$
+  \item Two random variables are \textit{uncorrelated} if $ corr(X,Y)=0$.
+  \item Two random variables are \textit{independent} if $ f(y|x) = f(y)$ for all $x$ and $y$ or equivalently $ E(Y|X) = E(Y)$.
+  \item If X and Y are independent, then they are also uncorrelated. (The converse is not necessarily true.)
+\end{itemize}
+
+\newpage
+\begin{enumerate}
+\item The following table gives the joint-probability distribution of rain $(X)$ \textit{and} commute time in minutes $(Y)$. \\~\\
+\renewcommand{\arraystretch}{1.75}
+\begin{tabularx}{0.95\textwidth}{cYYc}
+\toprule
+	& Rain $(X=1)$ & No Rain $(X=0)$ & Total \\
+	\midrule
+60-min commute ($Y=60$) & 0.3  & 0.2 \\ 
+30-min commute ($Y=30$) & 0.1 & 0.4 \\
+\midrule
+ Total & &  & \\
+ \bottomrule
+\end{tabularx} \\ 
+
+\begin{enumerate}
+  \item Fill the marginal probabilities in the column and row labeled \textit{Total}. For example, the first row in column \textit{Total} should contain the marginal probability of having a 60-minute commute ($Pr(Y=60)$). \\
+  \item Find the following conditional probabilities: \vspace{0.5em}
+  \begin{itemize}
+ \item Probability of having a 60-min commute conditional on \textit{raining} \vspace{0.25cm}
+ $$ Pr(Y=60| X=1)  = \hspace{8cm} $$ \vspace{0.25em}
+  \item Probability of having a 60-min commute conditional on \textit{not raining} \vspace{0.25cm}
+   $$ Pr(Y=60| X=0) = \hspace{8cm} $$ \vspace{0.25em}
+\end{itemize}
+\item Calculate $E(Y| X=1)$ and $E(Y| X=0)$. \vspace{5cm}
+\item How does rain impact the expected commute time in this example? \vspace{3cm}
+\end{enumerate}
+
+\item You flipped a coin six times and got tails each time. The likelihood of getting a head in your seventh flip is
+\begin{enumerate}
+\item[$\square$] 1/2
+\item[$\square$] More than 1/2
+\item[$\square$] Less than 1/2 \\~\\
+\end{enumerate}
+
+\item Note that for sums of two random variables $X$ and $Y$:
+$$ E(a X + b Y ) = a E(X) + b E(Y)$$
+$$ Var(a X + b Y ) = a^2 Var(X) + b^2 Var(Y) + 2abCov(X,Y)$$
+In the above expressions, $a$ and $b$ are constants. 
+
+You are contemplating investing in two stocks with the same average return and spread.  
+$$ \mu_X = \mu_Y \quad \quad \sigma^2_X = \sigma^2_Y $$
+Should you pick any one stock at random or invest equally in both? \\~\\
+\textit{Hint: Let $W=0.5 X + 0.5 Y$.} 
+\end{enumerate}
+
+\end{document}

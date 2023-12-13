@@ -1,0 +1,89 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 12 \\ \normalsize{Good Estimators, Sample Mean Distribution, and Confidence Intervals}}
+\rhead{Class Handout for Lecture 12}
+
+\fbox{\begin{minipage}{\textwidth}
+\underline{Good Estimators} 
+
+Denote $\hat{\theta}$ as an estimator for the population parameter $\theta$. Some desirable properties for an estimator \vspace{-1em}
+\begin{itemize}
+\normalsize
+\item \textit{Unbiasedness}: $ E(\hat{\theta}) = \theta $
+\item \textit{Efficiency}: lower variance is better
+\item \textit{Consistency}: as the sample size becomes infinitely large,  $\hat{\theta} \rightarrow \theta$ 
+\end{itemize}
+\end{minipage}} \\~\\
+
+\textit{Question 1:} If some sample estimator $\hat{\theta}$ is an unbiased estimator for the true population parameter $\theta$ i.e. $E(\hat{\theta}) = \theta$. This implies that: \vspace{-1em}
+\begin{itemize}
+\item[$\square$] $\hat{\theta}=\theta$ in all samples.
+\item[$\boxtimes$] If we take repeated samples, average of $\hat{\theta}$ is equal to $\theta$ \\
+\end{itemize}
+
+\textit{Question 2}: We are choosing between two estimators $\hat{\theta}_1$ and $\hat{\theta}_2$, both of which are unbiased i.e. $E(\hat{\theta}_1)=\mu$ and $E(\hat{\theta}_2)=\mu$. But the variance of $\hat{\theta}_1$ is lower than that of $\hat{\theta}_2$ i.e. $Var(\hat{\theta}_1)<Var(\hat{\theta}_2)$.  Which of the following is true? \vspace{-1em}
+\begin{itemize}
+\item[$\square$] We are indifferent between the two estimators.
+\item[$\boxtimes$] We prefer $\hat{\theta}_1$ over $\hat{\theta}_2$.
+\item[$\square$] We prefer $\hat{\theta}_2$ over $\hat{\theta}_1$.
+\item[$\square$] We need more information to reach any conclusion. \\~\\
+\end{itemize}
+
+\newpage
+\fbox{\begin{minipage}{\textwidth}
+\underline{Sample Mean Distribution} 
+
+Let $X_1,X_2,...,X_n$ denote independent random draws (random sample) from a population with mean $\mu$ and variance $\sigma^2$. Then the sample mean 
+$ \bar{X} = \frac{1}{n} \sum_{i=1}^n X_i $ is a random variable with:
+$$E(\bar{X}) = \mu \quad \quad  Var(\bar{X}) = \frac{\sigma^2}{n} $$ 
+In addition, the distribution of the sample mean is \textit{normal} if \textit{either} of the following is true: \vspace{-1em}
+\begin{itemize}
+  \item The underlying population is normal
+  \item The sample size is large, say $n\geq 100$ 
+\end{itemize}
+Given the variance of the sample mean as \(\sigma_{\bar{X}}^2 = \frac{\sigma^2}{n} \), its standard deviation, commonly referred to as the \textit{standard error}, is \( \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} \). 
+\end{minipage}} \\
+
+\textit{Question 3}: If the average of hourly wages in the population is \( \mu = \$30 \) and the variance of hourly wages is \( \sigma^2 = 16 \). Then what is the expected value, variance, standard error, and distribution of the sample mean estimator for a sample size of 400? 
+
+$$ E(\bar{X}) = 30, \quad \sigma^2_{\bar{X}} = \frac{16}{400} = 0.04, \quad \sigma_{\bar{X}} = \sqrt{0.04} =0.2 $$
+Since $n \geq 100$, by Central Limit Theorem $ \bar{X}$ is normally distributed. \\
+
+\textit{Question 4}: You are interested in the average starting salary of CSUF graduates and are considering taking a random sample of 120 students. I advise you to take as large of a sample as feasible. This is sound advice because taking an even larger sample would ensure that \vspace{-1em}
+\begin{itemize}
+\item[$\square$] The sample average $\bar{x}=\mu$
+\item[$\square$] The sample average $\bar{x}$ is drawn from a normal distribution
+\item[$\boxtimes$] The sample average $\bar{x}$ is drawn from a distribution with lower variance 
+\end{itemize}
+\textit{Note}: I am using $\bar{x}$ to denote a realization of $\bar{X}$. \\
+
+\newpage
+\textit{Question 5}: Can you explain intuitively why the variance of the sample mean increases with $\sigma^2$ and decreases with $n$? \\
+
+\textit{Why does the variance of the sample mean decrease with $n$?} 
+
+Suppose you aim to determine the average test score for all students at a university. When you use smaller samples, you could encounter significant sample-to-sample variability. For example, one sample might consist of students who performed exceptionally well, while another might include students who scored poorly. In contrast, a larger sample is more likely to accurately represent the overall student population, thereby reducing the variability between different samples. \\
+
+\textit{Why does the variance of the sample mean increase with $\sigma^2$?}
+
+If the range of scores is quite wide, one sample could consist of students who performed exceptionally well, leading to a high sample mean, while another might include students who scored poorly, resulting in a low sample mean. However, if there is little to no variation in the student test scores across the university, you are likely to obtain similar sample means across different samples.
+
+\newpage
+\fbox{\begin{minipage}{\textwidth}
+\underline{Confidence Intervals}\\
+
+Let $z_{\alpha/2}$ be the $z$-value that leaves area $\alpha/2$ in the upper tail of the normal distribution. \\
+Then $1-\alpha$ confidence interval is given by 
+$$ \bar{x} \pm  \underbrace{z_{\alpha/2}  \frac{\sigma}{\sqrt{n}}}_{\text{Margin of Error}} $$
+\end{minipage}} \\
+
+\textit{Question 6}: Continuing with Question 3, say you took a sample of 400 individuals and found the average hourly wages in your sample of $\bar{x} = 26$. Create a 95\% confidence interval for the true population mean. 
+
+Note that here $1-\alpha = 0.95$, so $\alpha/2=0.025$. From the Standard Normal Table, $z_{0.025}=1.96$. In which case, the 95\% confidence interval is given by:
+$$ 26 \pm 1.96 \times 0.2 = [25.6, 26.4] $$
+
+ 
+
+
+\end{document}

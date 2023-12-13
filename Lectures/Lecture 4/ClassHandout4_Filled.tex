@@ -1,0 +1,76 @@
+\documentclass{./../handout}
+
+\fancyhf{}
+\fancyheadoffset{1cm}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{0.1em}
+     \Large \sc Handout for Lecture 4 \\ \vspace{0.1em}
+     \large Covariance and Correlation \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+\begin{enumerate}
+\item Let $X$ be the average hours of sleep per day you got last week, and let $Y$ be the average hours you exercised per day last week. You want to look at the relationship between these two variables over the last three weeks. Given values of $X$ and $Y$ fill in the following table. \\
+
+\begin{tabularx}{\textwidth}{P{1cm}P{1cm}P{1.5cm}P{2.5cm}P{2.5cm}Y}
+\hline \addlinespace[0.5em]
+Week & $X_i$ & $Y_i$ & $(X_i-\mu_X)^2$ & $(Y_i-\mu_Y)^2$ & $(X_i-\mu_X)(Y_i-\mu_Y)$  \\ \addlinespace[0.5em] \hline \addlinespace[0.5em]
+1 & 6 & 0.5   & 4 & 0.01 & 0.2  \\ \hline \addlinespace[0.5em]
+2 & 9 & 0.3   & 1 & 0.09 &  -0.3\\ \hline \addlinespace[0.5em]
+3 & 9 & 1     & 1 & 0.16 &  0.4 \\ \hline \addlinespace[0.5em]
+Total & 24  & 1.8   & 6  & 0.26 & 0.3 \\ \hline \addlinespace[0.5em]
+\end{tabularx}
+
+Note that $\mu_X = 24/3 = 8$ and $\mu_Y = 1.8/3 = 0.6$. 
+\begin{enumerate}
+\item  Calculate the variance of $X$ and $Y$. \\
+$$ \sigma^2_{X} = \frac{1}{N}\sum_{i=1}^N (X_i-\mu_X)^2 = \frac{6}{3} = 2 \hspace{4cm} $$ \\
+$$ \sigma^2_{Y} = \frac{1}{N}\sum_{i=1}^N (Y_i-\mu_Y)^2 = \frac{0.26}{3} = 0.087 \hspace{3cm} $$ \\
+
+\item Calculate the covariance and correlation between $X$ and $Y$. \\
+
+\textit{Covariance}:
+$$ \sigma_{XY} = \frac{1}{N}\sum_{i=1}^N (X_i-\mu_X)(Y_i-\mu_Y) = \frac{0.3}{3} = 0.1  \hspace{2cm} $$ \\
+\textit{Correlation}:
+$$ \rho_{XY} = \frac{ \sigma_{XY}}{\sigma_X \sigma_Y}  = \frac{0.1}{\sqrt{2} \sqrt{0.087}}=0.24 \hspace{3cm} $$ \\
+\item In class, we learned that covariance is positive when two variables move together, meaning that they increase or decrease together. Can you explain how the formula you used in (c) ensures that this is the case? Explain it to your peer.
+\item[] \textit{While calculating the covariance, we add a positive number to the numerator in the formula whenever both variables are either above or below their respective averages. Conversely, we add a negative number to the numerator when one variable is above its average while the other is below. Therefore, a positive covariance indicates that, on average, the variables move together—either both being above or both being below their averages. While a negative covariance indicates that, on average, the variables move in opposite directions—one being above its average while the other is below.}
+\end{enumerate}
+
+Now say instead of recording the exercise in hours, you had recorded it in minutes. Then your data would look as below, where $Z$ is the average minutes of exercise per day. \\
+
+\begin{tabularx}{\textwidth}{P{1cm}P{1cm}P{1.5cm}P{2.5cm}P{2.5cm}Y}
+\hline \addlinespace[0.5em]
+Week & $X_i$ & $Z_i$ & $(X_i-\mu_X)^2$ & $(Z_i-\mu_Z)^2$ & $(X_i-\mu_X)(Z_i-\mu_Z)$  \\ \addlinespace[0.5em] \hline \addlinespace[0.5em]
+1 & 6 & 30   	& 4  & 36 & 12  \\ \hline \addlinespace[0.5em]
+2 & 9 & 18   	& 1  & 324 & -18 \\ \hline \addlinespace[0.5em]
+3 & 9 & 60   	& 1  & 576 &  24 \\ \hline \addlinespace[0.5em]
+Total & 26 & 108 & 6 & 936  & 18 \\ \hline \addlinespace[0.5em]
+\end{tabularx}
+\begin{enumerate}
+\item[(d)] Do you think the covariance between sleep and exercise is going to be larger, smaller or the same now that exercise is measured in minutes instead of hours? 
+\item[] \textit{The covariance between sleep and exercise will be larger when exercise is measured in minutes instead of hours. This is because covariance is sensitive to the scale of the variables.}
+\item[(e)] Fill in the table above and calculate the covariance and correlation between $X$ and $Z$. \\
+\item[] Note that $\mu_Z = 108/3 = 36$ and $\sigma^2_Z = 936/3 = 312.$
+$$ \text{Covariance: } \sigma_{XZ} = \frac{18}{3} = 6  \hspace{1cm} \text{Correlation: }\rho_{XZ} = \frac{6}{\sqrt{312} \sqrt{2}}= 0.24 $$
+\end{enumerate}
+\vspace{4cm}
+
+\item If a study finds a strong positive correlation between the numberof houses and house prices across US cities, can we conclude thatmore housing supply leads to higher house prices? Why or why not? Discuss.
+
+\item[] \textit{If we observe a strong positive correlation between the number of houses and house prices across US cities, it does not necessarily imply that an increase in housing supply causes higher house prices. In fact, it is possible that higher house prices lead to more housing supply, as builders try to maximize their profits by building in more profitable locations, resulting in a positive correlation between the stock of housing and prices. This is known as reverse causality.}
+
+\textit{It is also possible that external confounding factors are responsible for the observed positive correlation between housing stock and housing prices. For instance, if certain cities have more desirable amenities, more people may want to live there, leading to higher demand for housing. This, in turn, can result in higher prices and increased housing stock as builders construct more houses to meet the growing demand. }
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,81 @@
+\documentclass{./../handout}
+
+\fancyhf{}
+\fancyheadoffset{1cm}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+  \framebox{
+    \vbox{
+    \vspace{0.1em}
+     \Large \sc Handout for Lecture 9 \\ \vspace{0.1em}
+     \large Distribution, Expectation, Variance \\
+     \vspace{0.5em}
+      \small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+      }
+    }
+\end{center}	
+$X$ is a random variable. \vspace{-1em}
+\begin{itemize}
+  \item Expectation of $X$, $\mu_X = E(X) = \sum_{x} x f(x) $
+  \item Variance of $X$, $\sigma^2_X = Var(X) = E[(X-\mu_X)^2] = \sum_{x} (x-\mu_X)^2 f(x) $
+  \item Standard deviation of $X$, $\sigma_X = \sqrt{\sigma_X^2}$
+\end{itemize}
+If $X$ is a random variable and $Y=a+bX$, then $Y$ is also a random variable with \vspace{-1em}
+\begin{itemize}
+\item $ E(Y) = a + b E(X)$ 
+\item $Var(Y) = b^2 Var(X) $ \\~\\
+\end{itemize}
+
+You are at a fair and considering playing the following game --- flip a coin, if you get heads, you gain \$10, else you lose \$10. Denote $X$ as your winnings/loss from the game.
+  \begin{enumerate}
+
+\item Find the expected value, variance, and standard deviation of $X$. 
+\item[] \begin{tabularx}{0.8\textwidth}{P{2cm}P{1cm}YYY}
+\toprule
+$x$ & $f(x)$ & $x f(x)$ & $(x-\mu_X)^2$ & $f(x)(x-\mu_X)^2$ \\ \midrule
+$10$ & $0.5$ & $5$ & $10^2$ & $50$ \\
+$-10$ & $0.5$ & $-5$ & $(-10)^2$ & $50$ \\ \midrule
+ & & $0$ & & $100$ \\ \bottomrule
+\end{tabularx} \\
+
+\textit{Answer}:
+$$ \mu_X = 0, \quad \sigma^2_X = 100, \quad \sigma_X = 10$$
+
+\newpage
+\item You look up and realize that you have to pay \$5 in order to play the game. So your actual winnings/loss from the game will be $Y=X-5$. Find the expected value, variance, and standard deviation of $Y$. 
+\item[] \begin{tabularx}{0.8\textwidth}{P{2cm}P{1cm}YYY}
+\toprule
+$y$ & $f(y)$ & $y f(y)$ & $(y-\mu_Y)^2$ & $f(y)(y-\mu_Y)^2$ \\ \midrule
+$5$ & $0.5$ & $2.5$ & $(5-(-5))^2$ & $50$ \\
+$-15$ & $0.5$ & $-7.5$ & $(-15-(-5))^2$ & $50$ \\ \midrule
+ & & $-5$ & & $100$ \\ \bottomrule
+\end{tabularx} \\
+
+\textit{Answer}:
+$$ \mu_Y = -5, \quad \sigma^2_Y = 100, \quad \sigma_Y = 10$$   
+Note that, $E(Y) = E(X)-5$ and $Var(Y) = Var(X)$. \\
+
+
+\item You see another stall offering a lower stakes game --- flip a coin, if you get heads, you gain \$5, else you lose \$5. Your winnings/loss from this game will be $Z=0.5X$. Find the expected value, variance, and standard deviation of $Z$. 
+\item[] \begin{tabularx}{0.8\textwidth}{P{2cm}P{1cm}YYY}
+\toprule
+$z$ & $f(z)$ & $z f(z)$ & $(z-\mu_Z)^2$ & $f(z)(z-\mu_Z)^2$ \\ \midrule
+$5$ & $0.5$ & $2.5$ & $5^2$ & $12.5$ \\
+$-5$ & $0.5$ & $-2.5$ & $(-5)^2$ & $12.5$ \\ \midrule
+ & & $0$ & & $25$ \\ \bottomrule
+\end{tabularx} \\
+
+\textit{Answer}:
+$$ \mu_Z = 0, \quad \sigma^2_Z = 25, \quad \sigma_Z = 5$$
+Note that, $E(Z) = E(X)$, $Var(Z) = (0.5)^2 Var(X)$, and $\sigma_Z=0.5 \sigma_X$. \\
+
+  \end{enumerate}
+
+
+
+\end{document}

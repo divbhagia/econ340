@@ -1,0 +1,334 @@
+\documentclass{./../Lectures/div_teaching_slides}
+\tikzset{
+    -Latex,auto,node distance =1 cm and 1 cm,semithick,
+    state/.style ={ellipse, draw, minimum width = 0.7 cm},
+    point/.style = {circle, draw, inner sep=0.04cm,fill,node contents={}},
+    bidirected/.style={Latex-Latex,dashed},
+    el/.style = {inner sep=2pt, align=left, sloped}
+}
+
+\begin{document}
+\title{ECON 340 \\ Economics Research Methods}
+\author{Div Bhagia}
+\date{Research Project Guidelines}
+
+\begin{frame}[noframenumbering, plain]
+\maketitle
+\end{frame}
+
+
+
+%%%%%%%%%%%% Overview
+\begin{frame}{Overview}
+\begin{witemize}
+\item As a part of this class, you will write an empirical research paper \textit{using R} in groups of 2-3 students 
+\item You will pick a question and a dataset and use the tools from this class to answer your question 
+\item You can pick a dataset from the \blue{Econ340 Datasets} Dropbox folder compiled for this class or use an external dataset
+\item There are also some external data sources on Canvas on the \textit{Research Project Overview} page. 
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Milestones
+\begin{frame}{Milestones}
+\begin{witemize}
+\item Aug 31: Form groups of 2-3 students 
+\item Sep 26: First submission worth 5\% (pick dataset and question)
+\item Oct 17: Feedback on your research question
+\item Oct 31: Second submission worth 10\% (preliminary analysis)
+\item Dec 05: Final paper due worth 15\%
+\item Dec 14: Last day to fill out the (optional) peer survey
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Submission 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\themecolor{Submission 1}}
+\subsection{\vspace{1em}}
+
+%%%%%%%%%%%% Submission 1: Overview
+\begin{frame}{Submission 1: Overview}
+\begin{witemize}
+  \item \textbf{Goal}: pick your dataset and research question
+  \item You need to describe your research question and the data you will use
+  \item Highlight why your question is interesting and important
+  \item Mention the source of your data
+  \item Highlight the variables you will use
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Submission 1: Research Question
+\begin{frame}{Submission 1: Research Question}
+\begin{witemize}
+\item Your question should concern the impact of one variable on another 
+\item The variable whose impact you will be studying will be your \textit{primary independent variable}, while your outcome of interest will be your \textit{dependent variable}
+\item In addition, pick two more variables that you think might correlate with \underline{both} the dependent and the independent variables
+\item We will call these additional variables \textit{control variables}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Submission 1: Research Question
+\begin{frame}{Submission 1: Research Question}
+\begin{center}
+\begin{tikzpicture}
+\node (1) at (0,0) {Control Variables};
+\node (2) at (-4,2) {Independent Variable};
+\node (3) at (4,2) {Dependent Variable};
+\path (2) edge  (3);
+\path[bidirected] (1) edge[bend left=20] (2);
+\path[bidirected] (3) edge[bend left=20] (1);
+\end{tikzpicture}	
+\end{center} 
+\vspace{0.5em}
+Your research question should be \textit{well-defined} and \textit{feasible}. \\
+\begin{witemize}
+	\item Well-defined: Clearly specify your dependent and independent variables
+	\item Feasible: Your dataset should contain all the variables
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Submission 1: Dataset
+\begin{frame}{Submission 1: Dataset}
+\begin{witemize}
+  \item You can pick a dataset from the Econ340 Datasets Dropbox folder compiled for this class or use an external dataset
+  \item There is a list of all the datasets in the folder; each folder contains the codebook (description of variables)
+  \item If you want to use an external dataset,  please run it by me in advance of your submissions
+  \item Your dataset should meet the following criteria:\\
+  \begin{itemize}
+  \item Have at least 100 observations
+  \item Contain your primary independent variable, dependent variable, and two control variables
+  \end{itemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Submission 1: What to turn in?
+\begin{frame}{Submission 1: What to turn in?}
+You need to submit the following: \\
+\begin{itemize}
+\item Filled Template for Submission 1 in PDF format
+\item Dataset in CSV or Excel format if using an external dataset. \\~\\
+\end{itemize}
+If you plan to construct new variables in the data using some existing variables, specify that in the template. \\~\\
+Submissions need to be made on Canvas. Any member of the group can submit on your group's behalf. There is also an example of the filled template on Canvas. 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Submission 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\themecolor{Submission 2}}
+\subsection{\vspace{1em}}
+
+
+%%%%%%%%%%%% Submission 2: Overview
+\begin{frame}{Submission 2: Overview}
+\begin{witemize}
+  \item  \textbf{Goal}: obtain a general understanding of the patterns that are present in the data concerning your research question
+  \item Report the essential numerical characteristics of your variables and do some visual analysis
+  \item You will use R to perform this preliminary data analysis.
+  \item Prepare your submission in Microsoft Word and submit it in PDF format, along with R code and data (if changed significantly).
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Submission 2: Tasks
+\begin{frame}{Submission 2: Tasks}
+\begin{wenumerate}
+  \item Describe the data and your variables of interest. Mention if you constructed new variables or deleted observations.  
+  \item Present summary statistics for all your variables and comment.
+  \item Present a graph showing the relationship between your dependent and primary independent variable \\
+  \begin{itemize}
+  \item Scatter plot if both variables are continuous
+  \item Bar plot if one variable is binary
+\end{itemize}
+Summarize what you learn. 
+\item Confirm what you found in (3) by finding the correlation
+\end{wenumerate}
+\end{frame}
+
+%%%%%%%%%%%% Submission 2: Tasks
+\begin{frame}{Submission 2: Tasks}
+\begin{witemize}
+\item[5.] In one or more tables, report the correlation between your dependent variable and control variables. Comment.
+\item[6.]In one or more tables, report the correlation between your primary independent variable and control variables. Comment.
+\item[] You can combine 5 and 6 in a single table.
+\item[7.] Comment: In what direction will your results be biased if you do not control for your control variables?
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Final Submission
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\themecolor{Final Submission}}
+\subsection{\vspace{1em}}
+
+
+%%%%%%%%%%%%
+\begin{frame}{Final Paper: Overview}
+\begin{witemize}
+\item The final paper should reflect:\\
+  \begin{itemize}
+  \item your ability to perform and interpret statistical analyses
+  \item your writing ability (use Grammarly)
+\end{itemize}
+\item Carefully read all the instructions on Canvas
+\item Incorporate the feedback you have gotten so far
+\item Rubric provides a breakdown of the score for different components
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Final Paper: Submission}
+\begin{witemize}
+\item The paper should be in essay format divided into sections (around 6-8 pages)
+\item Comply with the formatting requirements
+\item Final submission on Canvas, should include \\
+\begin{itemize}
+  \normalsize
+  \item write-up in PDF format
+  \item data (if required)
+  \item R script that reproduces the analysis (should run without error)
+\end{itemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Research Paper: Sections}
+\begin{witemize}
+\item Structure and content: \\
+  \begin{itemize}
+  \normalsize
+  \item Introduction
+  \item Literature Review
+  \item Descriptive Analysis and Motivational Evidence
+  \item Empirical Strategy
+  \item Results and Analysis
+  \item Conclusion
+  \item References
+  \item Appendix (optional) \\~\\
+\end{itemize}
+\end{witemize}
+Instructions include the \textit{suggested} length for each section.
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{I. Introduction}
+\begin{witemize}
+  \item What is your research question?
+  \item Why is your research question interesting? Why is your topic important?
+  \item Preview your results 
+  \item A statement that explains why you think your results are correlational or causal. \\~\\
+\end{witemize}
+\textit{People who do not have time to go through the entire paper should get the general idea and conclusion of the paper through the introduction.}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{II. Literature Review}
+\begin{witemize}
+  \item What other work has been done on these issues? What has been found?
+  \item Look for papers on Google Scholar (ChatGPT makes up papers that don't exist!)
+  \item The literature review must preferably include at least two academic papers.
+  \item Cite sources in APA format \\
+\end{witemize}
+\textit{How do your findings relate to these other papers?}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{APA Citation Format}
+Say I want to cite the paper, ``The Rise of American Minimum Wages, 1912–1968'' by Price V. Fishback and Andrew J. Seltzer published in the Journal of Economic Perspectives in 2021. \\~\\
+The way to include this citation: \\
+\begin{witemize}
+  \item At the end of your paper on a new page start a References section and include \\
+ \begin{itemize}
+  \item [] Fishback, P.V., and Seltzer A.J. (2021). The Rise of American Minimum Wages, 1912–1968. \textit{Journal of Economic Perspectives}.
+\end{itemize}
+\item In text: ``Fishback and Seltzer (2021) find...''
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{III. Descriptive Analysis}
+Tasks 1-3 from Submission 2: \\ \vspace{0.25em}
+\begin{wenumerate}
+  \item Describe the data and your variables of interest. Mention if you constructed new variables or deleted observations.  
+  \item Present summary statistics for all your variables and comment.
+  \item Present a graph showing the relationship between your dependent and primary independent variable \\
+  \begin{itemize}
+  \item Scatter plot if both variables are continuous
+  \item Bar plot if one variable is binary
+\end{itemize}
+Summarize what you learn. 
+\end{wenumerate}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{IV. Empirical Strategy}
+\textit{Explain how you plan to answer your question(s)}. \\
+\begin{witemize}
+  \item Shortly recap your research question.
+  \item Write down the main regression model and explain why it makes sense. \\ \vspace{0.5em}
+\begin{witemize}
+\normalsize
+  \item Interpret each coefficient. Do you expect the main coefficient to capture a causal impact?
+  \item Why did you pick the controls that you picked? Talk about how excluding these controls may impact your main coefficient of interest.
+  \end{witemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Empirical Strategy: Example}
+\small
+The objective of this paper is to investigate whether class size has an impact on test performance. To address this question, we estimate the following regression model:
+$$ testscr = \beta_0 + \beta_1 str + \beta_2 high\_comp\_stu + \beta_3 meal\_pct + u $$
+
+Here, $\beta_0$ represents the intercept term. The main coefficient of interest is $\beta_1$, which corresponds to the student-teacher ratio variable. This coefficient captures the change in test scores associated with an additional student per teacher, holding other variables in the model constant. We expect $\beta_1$ to be negative if smaller class sizes are associated with higher test scores. 
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Empirical Strategy: Example (cont.)}
+\small \vspace{-0.25em}
+However, it is possible that $\beta_1$ could be capturing the impact of other factors that are correlated with class size and test scores, such as better infrastructure or funding in the school district. To control for these potential confounders, we include two additional variables in our regression model. These variables are $high\_comp\_stu$ and $meal\_pct$. \\ \vspace{0.5em}
+$high\_comp\_stu$ is an indicator variable that takes the value of 1 if the school has more computers per student than the median school and 0 otherwise. We expect that schools with more computers per student are associated with higher test scores, as computers can provide students with access to a wider range of educational resources and facilitate learning. Additionally, we expect schools with more computers also to have smaller class sizes. Therefore omitting this control variable could overestimate the effect of class size on test scores. \\ \vspace{0.5em}
+We also control for $meal\_pct$... Interpret $\beta_2$ and $\beta_3$...
+\end{frame}
+
+
+\begin{frame}[fragile]{V. Results and Analysis}
+\begin{witemize}
+\item In one or more tables, present the results of your regression analysis. Adding controls one by one.
+\item For this example, the code would be:
+\end{witemize}
+\begin{lstlisting}[language=R, literate={~}{{$\sim$}}1, basicstyle=\ttfamily\footnotesize]
+model1 <- lm(testscr ~ str, data)model2 <- lm(testscr ~ str + high_comp_stu, data)model3 <- lm(testscr ~ str + high_comp_stu + meal_pct,data)stargazer(model1, model2, model3, type="text", keep.stat = c('n', 'adj.rsq'))
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]{V. Results and Analysis}
+\begin{witemize}
+\item Interpret the sign, value, and significance of the main coefficient across all specifications.
+\item Comment on how and why the coefficient changes or does not change as you add each control.
+\item Comment on the coefficients on your control variables. 
+\item Interpret the adjusted $R^2$ of your models
+\item Discuss what you can conclude from your regression results. Correlation vs causation? Are there other omitted variables you are worried about?
+\end{witemize}
+\end{frame}
+
+\begin{frame}{}
+\centering \small
+\input{./../output/final_paper_reg.tex}
+\end{frame}
+
+
+%%%%%%%%%%%%
+\begin{frame}{VI. Conclusion}
+\begin{witemize}
+  \item Summarize your results. Given this summary, answer your research question.
+  \item Emphasize again why you think your results are causal or correlational.
+  \item Compare with the literature
+  \item Are there any policy implications of your findings? Are there suggestions for future research?
+\end{witemize}
+\end{frame}
+
+
+
+
+
+\end{document}

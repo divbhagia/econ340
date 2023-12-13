@@ -1,0 +1,109 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Dummy Variables and Interaction Terms}
+
+\vspace{-1cm}
+\section{Dummy Variable Regression}
+
+Categorical variables that take on values of 0 or 1 for each observation are referred to as binary or dummy variables. These variables can be used in regression models to investigate differences in outcomes between two groups. For instance, if we are interested in studying the gender pay gap, we can use a dummy variable \textit{female} in a regression with wages as the dependent variable. The \textit{female} dummy variable takes on the value 1 if the reported sex in the data is female and 0 if it is male.
+
+In this case our model is given by:
+$$ wages = \beta_0 + \beta_1 female + u  $$
+
+The exogeneity assumption in this case is:
+$$ E(u | female) =0 $$
+
+This means that, on average, the unobserved factors or error term are zero, regardless of whether the \textit{female} variable takes on a value of 0 or 1. Since the \textit{female} variable can only take on two values, this assumption reduces to:
+$$ E(u | female=1) =E(u | female=0) = 0 $$
+
+This implies that the unobserved factors that affect wages, on average, are similar for men and women. Under this assumption, we can interpret $\beta_1$ as the causal effect of being female on wages.
+
+To see this, we can take the conditional expectation:
+$$ E(wages | female=1) = \beta_0 + \beta_1 \cdot 1  = \beta_0 + \beta_1 $$
+$$ E(wages | female=0) = \beta_0 + \beta_1 \cdot 0 = \beta_0   $$
+
+Thus, $\beta_0$ captures the average wages for men, while $\beta_1$ captures the difference between the average wages for women and men.
+\begin{align*}
+\beta_0 & = E(wages | female=0) \\
+\beta_1 &= E(wages | female=1)-E(wages | female=0)
+\end{align*}
+
+When we use OLS on our sample data, it returns:
+\begin{align*}
+\hat{\beta_0} & = \bar{Y}_{female=0} \\
+\hat{\beta_1} & =  \bar{Y}_{female=1}-\bar{Y}_{female=0}
+\end{align*}
+
+Therefore, even if the exogeneity assumption is not met, we can still interpret $\hat{\beta_0}$ as the average wages of men in our sample, and $\hat{\beta_1}$ as the difference between the average wages of women and men in our sample.
+
+The table below presents the estimates for the above model from the ACS data. 
+ %\begin{table}[!h]
+ %\caption{Gender Wage Gap}
+\begin{center}
+	\input{./../../output/gender_wage_gap.tex}
+\end{center}
+% \end{table}
+Based on the results shown in the above table, the estimated coefficient $\hat{\beta_0}$ is 67,220.17, which represents the average wages for men in our sample. Meanwhile, the estimated coefficient $\hat{\beta_1}$ is $-$14,661.12, indicating that the average wages for women in our sample are lower by \$14,661.12 compared to men. Therefore, the average wages for women in our sample are $67,220.17 - 14,661.12$ = \$52,559.05. This result can also be verified by directly calculating the raw averages. However, the regression here has an advantage in that you can test the hypothesis of whether the difference between the two groups is statistically significant. 
+
+\section{Dummy Variables and Interactions}
+
+Consider a multiple regression model where the outcome variable $Y$ is a function of a continuous independent variable $X$ and a binary independent variable $D$ (a dummy variable). The model can be written as:
+
+$$ Y = \beta_0 + \beta_1 X + \beta_2 D + u $$
+
+Then under the exogeneity assumption, we can write: 
+\begin{align*}
+E(Y | X, D=1) &= (\beta_0+\beta_2) + \beta_1 X \\
+E(Y | X, D=0) &= \beta_0 + \beta_1 X
+\end{align*}
+
+The intercept term $\beta_0$ represents the expected value of $Y$ when $X=0$ and $D=0$. The coefficient $\beta_1$ represents the expected change in $Y$ associated with a one-unit increase in $X$, holding $D$ constant. The coefficient $\beta_2$ represents the difference in average $Y$ between the group represented by $D=1$ and the group represented by $D=0$, at any given value of $X$, i.e.
+$$ \beta_2 =E(Y | X, D=1)-E(Y | X, D=0)  $$
+
+Now let's consider an augmented model where the interaction between $D$ and $X$ is also added to the model. The model can be written as:
+$$ Y = \beta_0 + \beta_1 X + \beta_2 D +  \beta_3 DX + u $$
+To interpret the coefficients in this model, as before, lets take the conditional expectations of $Y$ for each group, holding $X$ constant:
+\begin{align*}
+E(Y | X, D=1) &= (\beta_0 + \beta_2) + (\beta_1+ \beta_3) X  \\
+E(Y | X, D=0) &= \beta_0 + \beta_1 X 
+\end{align*}
+
+Interpretation of coefficients: 
+\begin{itemize}
+  \item $\beta_0$ is the intercept term for the group $D=0$.
+  \item $\beta_1$ is the effect of $X$ on $Y$ for the group $D=0$. It represents the change in $Y$ associated with a one-unit increase in $X$ when $D=0$.
+  \item $\beta_2$ represents the difference in the intercept between the two groups. In other words, it quantifies the average difference in $Y$ between the two groups when $X=0$.
+  \item $\beta_3$ is the interaction effect between $X$ and $D$. It represents how the effect of $X$ on $Y$ differs between the two groups. Alternatively, we can understand $\beta_3$ as the measure of how the effect of $D$ varies with $X$.  In other words, it is the difference in the slopes of the regression lines for the two groups.
+\end{itemize}
+
+Interactions between two dummy variables can also be included in regression models. Let's look at an example with two dummy variables \textit{Hispanic} and \textit{Female}.  
+$$ wages = \beta_0 + \beta_1 Female + \beta_2 Hispanic + \beta_3 Female \times Hispanic +  u  $$ 
+
+To interpret the coefficients, we need to consider the conditional expectations of wages for each combination of the two dummy variables:
+\begin{align*}
+E(wages | Female=0, Hispanic=0) &= \beta_0 \\
+E(wages | Female=1, Hispanic=0) &= \beta_0 + \beta_1 \\
+E(wages | Female=0, Hispanic=1) &= \beta_0 + \beta_2 \\
+E(wages | Female=1, Hispanic=1) &= \beta_0 + \beta_1 + \beta_2 + \beta_3
+\end{align*}
+
+Interpretation of coefficients: 
+\begin{itemize}
+\item $\beta_0$ represents the average wages of non-Hispanic men.
+\item $\beta_1$ represents the difference in average wages between non-Hispanic females and males.
+\item $\beta_2$ represents the difference in average wages between Hispanic and non-Hispanic men.
+\item Finally, $\beta_3$ represents the interaction effect of being female and Hispanic. It represents the difference in the effect of being female on wages for Hispanics compared to non-Hispanics. Alternatively, we can interpret $\beta_3$ as the difference in the effect of being Hispanic on wages for females compared to males. \end{itemize}
+To understand the interpretation of $\beta_3$, note that:
+\begin{align*}
+\Delta_1 = E(wages | Female=1, Hispanic=0)-E(wages | Female=0, Hispanic=0) &= \beta_1 \\
+\Delta_2 = E(wages | Female=1, Hispanic=1)-E(wages | Female=0, Hispanic=1) &= \beta_1 + \beta_3 
+\end{align*}
+So can interpret $\beta_3 =\Delta_2 -\Delta_1 $. Alternatively,
+\begin{align*}
+\Delta_4 = E(wages | Female=0, Hispanic=1)-E(wages | Female=0, Hispanic=0) &= \beta_2 \\
+\Delta_3 = E(wages | Female=1, Hispanic=1)-E(wages | Female=1, Hispanic=0) &= \beta_2 + \beta_3 
+\end{align*}
+So can also interpret $\beta_3 =\Delta_4 -\Delta_3 $.
+
+\end{document}

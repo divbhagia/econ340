@@ -1,0 +1,54 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Hypothesis Testing: Example}
+
+\vspace{-1cm}
+\section*{Example: Blood Pressure in Massachusetts (Continued.)}
+
+We picked a random sample of 100 people from Massachusetts and took their blood pressure. The average diastolic blood pressure in our sample was 75. We think that the true average blood pressure in the population should have been 78. We would like to test this hypothesis formally. 
+
+\subsection*{Hypothesis Testing: Two-Tailed Test} 
+
+\underline{Step 1: State the null hypothesis and the alternative hypothesis.}
+$$ H_0: \mu = 78 \quad \quad H_1: \mu \neq 78 $$
+This will imply a two-tailed hypothesis test as values far above and far below 78 will cause us to reject the null hypothesis. 
+
+\underline{Step 2:  Find the distribution of the test statistic under the null.} 
+
+Here we have $n \geq 100$, so by CLT we know that $ \bar{X}$ is normally distributed. In addition, we are assuming we know that the population variance is $\sigma^2 = 552.25$. So we can calculate the variance of the sample mean $ \sigma^2_{\bar{X}} = \frac{\sigma^2}{n}= \frac{552.25}{100} = 5.52$ Under the null $ \bar{X} \sim N(78, 5.52) $. So test statistic constructed as follows
+$$ Z = \frac{\bar{X}-\mu_0}{\sigma_{\bar{X}}} $$ 
+is distributed normal with mean 0 and variance 1 i.e. $Z \sim N(0,1)$. 
+
+\underline{Step 3: Determine the rejection region.}   
+
+At 10\% level of significance, we find the 5\% of outcomes that are furthest above and 5\% of outcomes that are furthest below zero. 
+$$ z_{\alpha/2} = z_{0.05} = 1.64 $$
+We reject the null if our test statistic $z>1.64$ or if $z<-1.64$. 
+
+\underline{Step 4: Find the test statistic and decide whether to reject the null.} \\
+$$ z = \frac{75-78}{2.35} = -1.28 $$ 
+As $-1.64 < -1.28 < 1.64$, we do not reject the null. This automatically implies that we would not have rejected this null at 1\% or 5\% either. 
+
+\subsection*{P-Value} 
+
+What is the p-value associated with our test statistic? In other words, what is the probability that we would randomly select a sample mean that is 1.28 standard deviations or more away from the (hypothesized) population mean? 
+$$ p = 2P(Z>|z||H_0: \mu = 78) = 2P(Z>1.28) = 2 \times 0.10 = 0.20$$
+You should recognize that this is really $Pr(Z > 1.28) + Pr(Z < -1.28)$. Due to the symmetry properties of the Normal distribution, this is the same as $2P(Z > 1.28)$. 
+
+The p-value implies that our test statistic is (just barely) in the 20\% percent of most surprising outcomes given that our null hypothesis is true. It is not in the 10\% percent of outcomes that are most surprising if the null is true. Therefore, our null cannot be rejected at a 10\% significance level. Put another way, the probability of being at least 1.28 standard deviations away from the mean is approximately 20\% and thus higher than the 10\% significance level. 
+
+\newpage
+\subsection*{One-Tailed Test} 
+
+\textit{This topic was not included in our classroom instruction and is not necessary for the exam. The information is simply provided for your personal interest.}
+
+Now $$ H_0: \mu > 78 \quad \quad H_1: \mu \leq 78 $$
+The only thing that changes in this case from when we were doing a two-tailed test is the rejection region. Test statistic outcomes far above 0 would be surprising, but obtaining a sample mean many standard deviations above 78 would not cause us to reject this null hypothesis. This implies a one-tailed test.
+
+As we are using a 10\% significance level, we find the 10\% of outcomes that are furthest below zero. Our critical value here is $z_{\alpha} = z_{0.10} = -1.28$, which tells us the cutoff for leaving 10 percent probability on the negative side tail. We will reject our null hypothesis if $z<-1.28$. Here $z=-1.28$, so we fail to reject the null. 
+
+Note: In the one-tailed test we did here, any $\mu_0<75$ would automatically never be rejected. (Finding an average of 75 does not  make  me reject the idea that the average is greater than 70)
+
+
+\end{document}

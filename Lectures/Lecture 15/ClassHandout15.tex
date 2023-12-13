@@ -1,0 +1,50 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 15 \\ \normalsize{Ordinary Least Squares \& Goodness of Fit}}
+\rhead{Class Handout for Lecture 15}
+
+\underline{Simple Linear Regression Model:} $\quad Y = \beta_0 + \beta_1 X + u $
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+  \item $Y$: Dependent variable (outcome or response variable)  \item $X$: Independent variable (explanatory variable, regressor)
+  \item $\beta_0, \beta_1$: intercept and slope (population parameters)
+  \item $u$: mean zero error term, $E(u)=0$
+\end{itemize}
+
+\underline{Ordinary Least Squares (OLS)} 
+
+To obtain estimates for the intercept and slope of the line, we minimize the distance between the fitted line and the sample data. Let $X_i$ and $Y_i$ denote the $i$'th observation of $X$ and $Y$ in the sample data. \vspace{-0.5em}
+\begin{itemize}
+    \setlength{\itemsep}{0pt} 
+  \item $\hat{Y}_i$: predicted value of $Y_i$
+  \item $\hat{\beta}_0, \hat{\beta}_1$: OLS estimators for the intercept and slope
+  \item Residuals/error: $ \hat{u}_i = \hat{Y}_i -Y_i$ (Note that we can always write $ Y_i = \hat{Y}_i + \hat{u}_i $)
+\end{itemize}
+OLS estimators for the intercept $\hat{\beta}_0$ and slope $\hat{\beta}_1$ are obtained by minimizing the sum of squared residuals: $$ \sum_{i=1}^n \hat{u}_i^2  = \sum_{i=1}^n (Y_i - \hat{Y}_i)^2   $$
+
+\underline{A Measure of Goodness of Fit}
+$$ R^2 = \frac{ESS}{TSS} = 1-\frac{RSS}{TSS} $$ 
+where $$ TSS = \sum_{i=1}^n (Y_i-\bar{Y})^2, \quad \quad ESS = \sum_{i=1}^n (\hat{Y}_i-\bar{Y})^2, \quad  \quad RSS = \sum_{i=1}^n (Y_i-\hat{Y}_i)^2 =\sum_{i=1}^n \hat{u}_i^2$$
+
+\newpage
+\underline{Example: Predicting Final Exam Scores}
+
+You've collected data on monthly revenue ($Revenue_i$) and advertising spending ($AddSpend_i$) for several months for a small business. You fit the following line using OLS: 
+\[ \hat{Revenue}_i = 50 + 3 \cdot AddSpend_i, \quad \quad R^2 =0.65 \]
+\begin{enumerate}
+    \item What are the estimated intercept and slope in the given fitted line?
+    $$\hat{\beta}_0 =  \hspace{4cm} \hat{\beta}_1 = \hspace{3cm} $$
+    \item Interpret the intercept and slope coefficient.
+    \vspace{2.5cm}
+    \item What is the predicted revenue for a month where the advertising spending was \$50?
+    \vspace{1cm}     
+    \item  If in a particular month, the revenue was \$100 and advertising spending was $20$, what would be the residual \( \hat{u} \) for this observation? \vspace{1.5cm}
+    \item  How does the predicted revenue increase due to an increase of \$10 in advertising spending? \vspace{1.5cm}
+        
+    \item  What percentage of the variability in revenue is explained by advertising spending? \vspace{1cm}
+    \item (A bit challenging, try at home.) If I tell you, the variance of revenue over months is $125$. Can you tell me what is the variance of advertising spending? 
+    \end{enumerate}
+
+
+\end{document}

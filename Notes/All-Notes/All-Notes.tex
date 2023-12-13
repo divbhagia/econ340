@@ -1,0 +1,73 @@
+\documentclass{./../../Latex/notes}
+
+\numberwithin{section}{chapter} 
+\numberwithin{subsection}{section} 
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \interlinepenalty\@M
+    \Huge \bfseries \phantom{#1} \par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+\usepackage[colorlinks=true, linkcolor=blue]{hyperref}
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\title{Lecture Notes \\ Econ 340: Economic Research Methods}
+\author{Div Bhagia}
+\date{}
+
+\begin{titlepage}
+    \maketitle
+    \tableofcontents    
+\end{titlepage}
+
+\chapter{Summation Notation}
+\vspace{-6cm} 
+\input{./../Module1-Intro-and-Describing-Data/Summation-Notation.tex}
+
+\chapter{Describing Data}
+\vspace{-6cm}
+\input{./../Module1-Intro-and-Describing-Data/Describing-Data.tex}
+
+\chapter{Random Variables}
+\vspace{-6cm}
+\input{./../Module3-Random-Variables/Random-Variables.tex}
+
+\chapter{Sampling and Estimation}
+\vspace{-6cm}
+\input{./../Module4-Sampling-and-Estimation/Sampling-and-Estimation.tex}
+\newpage
+\input{./../Module4-Sampling-and-Estimation/CI-Example.tex}
+\newpage
+\input{./../Module4-Sampling-and-Estimation/HT-Example.tex}
+
+
+\chapter{Simple Linear Regression Model}
+\vspace{-6cm}
+\input{./../Module5-Linear-Regression/Simple-Linear-Regression.tex}
+
+\chapter{Omitted Variable Bias}
+\vspace{-6cm}
+\input{./../Module5-Linear-Regression/Omitted-Variable-Bias.tex}
+
+\chapter{Multiple Linear Regression Model}
+\vspace{-6cm}
+\input{./../Module5-Linear-Regression/Multiple-Linear-Regression.tex}
+
+\chapter{Functional Forms in Regression Models}
+\vspace{-6cm}
+\input{./../Module5-Linear-Regression/Functional-Forms.tex}
+
+\chapter{Dummy Variables and Interaction Terms in Regression Models}
+\vspace{-6cm}
+\input{./../Module5-Linear-Regression/Dummy-Variables-and-Interaction-Terms.tex}
+
+\end{document}
+
+
+

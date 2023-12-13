@@ -1,0 +1,38 @@
+\documentclass{./../../Latex/handout}
+\begin{document}
+\thispagestyle{plain}
+\myheader{Handout for Lecture 14 \\ \normalsize{Hypothesis Testing \& p-values}}
+\rhead{Class Handout for Lecture 14}
+
+\vspace{-0.5em}
+\underline{Hypothesis Testing} \vspace{-0.5em}
+\begin{enumerate}
+  \item Set up null hypothesis and  alternative hypothesis  
+ \begin{align*}
+  	\text{Null Hypothesis: } \quad & H_0: \mu = \mu_0 \\
+  	\text{Alternative Hypothesis: } \quad & H_1: \mu \neq \mu_0
+  \end{align*}
+
+  \item Construct test statistic $Z$ if true population variance is known, else use $T$-statistic.  
+ $$ z_0 = \frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}} \quad \text{and} \quad t_0 = \frac{\bar{x}-\mu_0}{S/\sqrt{n}}  $$
+ \item Under the null if $\bar{X} \sim N(\mu_0, \sigma^2/n)$, then $Z \sim N(0,1)$ and $T \sim t_{n-1}$. 
+In case of known population variance, reject the null if $|z_0|>z_{\alpha/2}$. In the case of unknown population variance, reject the null if $|t_0|>t_{n-1,\alpha/2}$.
+\end{enumerate}
+\vspace{-0.5em}
+\textit{Note}: When $n \geq 100$ you can reject the null if $|t_0|>z_{\alpha/2}$ as in large sample $t$ distribution looks like the standard normal. 
+
+\textit{Question 1:} A car manufacturer wants to estimate the mean CO2 emissions of a new model of car. A sample of 196 cars is randomly selected and their CO2 emissions are measured. The sample mean and standard deviation are 120 g/km and 20 g/km, respectively. The car manufacturer had initially claimed that the average CO2 emissions of this model would be 115 g/km. Test the manufacturer's claim at a 5\% level of significance.
+
+\newpage
+\underline{p-Value:} 
+
+p-Value is the probability of obtaining an outcome even more surprising under the null hypothesis than the one you got. \vspace{-0.5em}
+\begin{itemize}
+  \item Known variance: $ p = 2Pr(Z>|z_0|)$ 
+\item Unknown variance, $n<100$: $p=2Pr(T>|t_0|)$ 
+\item Unknown variance, $n \geq 100$:  $p=2Pr(T>|t_0|)=2Pr(Z>|t_0|)$ 
+\end{itemize}
+
+\textit{Question 2:} Find the $p$-value associated with your test statistic in the previous question.
+
+\end{document}
