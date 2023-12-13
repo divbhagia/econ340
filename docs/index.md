@@ -1,4 +1,7 @@
-### Introduction
+
+[a link](rp.md)
+
+# Introduction
 
 This course covers the basics of conducting quantitative economic research. The course aims to take you through the steps involved in answering a research question using observational data. You will learn and implement statistical and econometric concepts vital to empirical research. You will select a question, locate data to answer it and use the tools we learn in this class to answer this question.
 
