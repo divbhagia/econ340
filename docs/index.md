@@ -1,0 +1,10 @@
+### Introduction
+
+This course covers the basics of conducting quantitative economic research. The course aims to take you through the steps involved in answering a research question using observational data. You will learn and implement statistical and econometric concepts vital to empirical research. You will select a question, locate data to answer it and use the tools we learn in this class to answer this question.
+
+This course will involve hands-on work with data using *R*, a statistical software, both inside and outside the classroom. The tools learned in this class will be helpful regardless of whether your goal is to be a researcher, a consultant, run your own business, or work for a non-profit.
+
+See the [syllabus](/Syllabus/Econ%20340%20Syllabus.pdf) for more details.
+
+
+
