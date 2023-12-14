@@ -18,7 +18,7 @@ This course covers the basics of conducting quantitative economic research. The 
 
 This course will involve hands-on work with data using *R*, a statistical software, both inside and outside the classroom. The tools learned in this class will be helpful regardless of whether your goal is to be a researcher, a consultant, run your own business, or work for a non-profit.
 
-See the [syllabus](../../Syllabus/Econ%20340%20Syllabus.pdf) for more details.
+See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 
 ## Lecture Material
 
