@@ -1,4 +1,5 @@
 theme: jekyll-theme-slate
+title: "Econ 340: Economic Research Methods"
 plugins:
   - jekyll-relative-links
 relative_links:
