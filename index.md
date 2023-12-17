@@ -66,7 +66,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 15: Ordinary Least Squares (OLS); R-Squared ([slides](Lectures/Lecture%2015/Slides15.pdf), [class handout](Lectures/Lecture%2015/ClassHandout15.pdf)) 
 - Lecture 16: Prediction vs. Causal Inference ([slides](Lectures/Lecture%2016/Slides16.pdf))
 - Lecture 17: Inference (p-values, t-stats, confidence intervals) ([slides](Lectures/Lecture%2017/Slides17.pdf), [class handout](Lectures/Lecture%2017/ClassHandout17.pdf))
-- Lecture 18: Omitted Variable Bias; Multiple Regression ([slides](Lectures/Lecture%2018/Slides18.pdf), [class handout](Lectures/Lecture%2018/ClassHandout18.pdf), lecture notes [I](Notes/Module5-Linear-Regression/Omitted-Variable-Bias.pdf) \& [II](Notes/Module5-Linear-Regression/Multiple-Linear-Regression.pdf))
+- Lecture 18: Omitted Variable Bias; Multiple Regression ([slides](Lectures/Lecture%2018/Slides18.pdf), [class handout](Lectures/Lecture%2018/ClassHandout18.pdf), [lecture notes I](Notes/Module5-Linear-Regression/Omitted-Variable-Bias.pdf) & [II](Notes/Module5-Linear-Regression/Multiple-Linear-Regression.pdf))
 - Lecture 19: Categorical Variables; Interaction Terms ([slides](Lectures/Lecture%2019/Slides19.pdf), [class handout](Lectures/Lecture%2019/ClassHandout19.pdf), [lecture notes](Notes/Module5-Linear-Regression/Dummy-Variables-and-Interaction-Terms.pdf))
 - Lecture 20: Quadratic and Log Functional Forms ([slides](Lectures/Lecture%2020/Slides20.pdf), [class handout](Lectures/Lecture%2020/ClassHandout20.pdf), [lecture notes](Notes/Module5-Linear-Regression/Functional-Forms.pdf))
 - Lecture 21: Regression Analysis in R ([slides](Lectures/Lecture%2021-22/Slides21.pdf))
