@@ -124,6 +124,24 @@ Newspapers and other news outlets are usually good places to learn about current
 
 ### Problem Sets
 
+- [Problem Set 1](Problem%20Sets/PS1/PS1.pdf)
+- [Problem Set 2](Problem%20Sets/PS2/PS2_Raw/ps2.pdf) (Download [zippped folder](Problem%20Sets/PS2/PS2.zip) with datasets and R Code to complete.)
+- [Problem Set 3](Problem%20Sets/PS3/PS3.pdf)
+- [Problem Set 4](Problem%20Sets/PS4/PS4.pdf)
+
 ### Sample Exams
+
+- Midterm
+  - [Sample Exam](Exams/Midterm/midterm_sample.pdf)
+  - [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
+  - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)
+  - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
+- Final
+  - [Sample Exam](Exams/Final/final_sample.pdf)
+  - [Sample Exam Solutions](Exams/Final/final_sample_solution.pdf)
+  - [Study Guide](Exams/Final/final_study_guide.pdf)
+  - [Sample Questions for Module VI](Exams/Final/sample_questions_add_topics.pdf)
+
+```
 
 ```
