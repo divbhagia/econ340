@@ -4,7 +4,7 @@ layout: default
 
 # Test heading
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<link rel="stylesheet" href="/assets/css/custom.css">
 
 - [Test heading](#test-heading)
   - [Overview](#overview)
