@@ -16,7 +16,7 @@ layout: default
   - [Overview](#overview-1)
   - [Questions and Data](#questions-and-data)
 - [Problem Sets](#problem-sets)
-- [Sample Exams](#sample-exams)
+- [Exams Related Material](#exams-related-material)
 
 ### Overview
 
@@ -129,13 +129,13 @@ Newspapers and other news outlets are usually good places to learn about current
 - [Problem Set 3](Problem%20Sets/PS3/PS3.pdf)
 - [Problem Set 4](Problem%20Sets/PS4/PS4.pdf)
 
-### Sample Exams
+### Exams Related Material
 
 - Midterm
   - [Sample Exam](Exams/Midterm/midterm_sample.pdf)
   - [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
-  - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)
   - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
+  - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)
 - Final
   - [Sample Exam](Exams/Final/final_sample.pdf)
   - [Sample Exam Solutions](Exams/Final/final_sample_solution.pdf)
