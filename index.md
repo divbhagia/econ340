@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 - [Overview](#overview)
 - [Lecture Material](#lecture-material)
