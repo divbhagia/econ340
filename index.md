@@ -6,19 +6,19 @@ layout: default
 
 - [Overview](#overview)
 - [Lecture Material](#lecture-material)
-    - [Module I: Describing Data](#module-i-describing-data)
-    - [Module II: Coding in R](#module-ii-coding-in-r)
-    - [Module III: Random Variables](#module-iii-random-variables)
-    - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
-    - [Module V: Linear Regression](#module-v-linear-regression)
-    - [Module VI: Advanced Topics](#module-vi-advanced-topics)
+  - [Module I: Describing Data](#module-i-describing-data)
+  - [Module II: Coding in R](#module-ii-coding-in-r)
+  - [Module III: Random Variables](#module-iii-random-variables)
+  - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
+  - [Module V: Linear Regression](#module-v-linear-regression)
+  - [Module VI: Advanced Topics](#module-vi-advanced-topics)
 - [Research Paper](#research-paper)
   - [Overview](#overview-1)
-    - [Questions and Data](#questions-and-data)
+  - [Questions and Data](#questions-and-data)
 - [Problem Sets](#problem-sets)
 - [Sample Exams](#sample-exams)
 
-## Overview
+### Overview
 
 This course covers the basics of conducting quantitative economic research. The course aims to take you through the steps involved in answering a research question using observational data. You will learn and implement statistical and econometric concepts vital to empirical research. You will select a question, locate data to answer it and use the tools we learn in this class to answer this question.
 
@@ -26,7 +26,7 @@ This course will involve hands-on work with data using *R*, a statistical softwa
 
 See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 
-## Lecture Material
+### Lecture Material
 
 #### Module I: Describing Data 
 
@@ -77,9 +77,9 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 24: Differences-in-Differences ([slides](Lectures/Lecture%2024/Slides24.pdf))
 - Lecture 25: Big Data and Machine Learning ([slides](Lectures/Lecture%2025/Slides25.pdf))
 
-## Research Paper
+### Research Paper
 
-### Overview
+#### Overview
 As a part of this class, you will write an empirical research paper using R in groups of 2-3 students. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
 
 - Sep 26: First submission (5%) 
@@ -122,8 +122,8 @@ Newspapers and other news outlets are usually good places to learn about current
 
 
 
-## Problem Sets
+### Problem Sets
 
-## Sample Exams
+### Sample Exams
 
 ```
