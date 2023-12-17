@@ -2,21 +2,24 @@
 layout: default
 ---
 
+# Test heading
+
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-- [Overview](#overview)
-- [Lecture Material](#lecture-material)
-    - [Module I: Describing Data](#module-i-describing-data)
-    - [Module II: Coding in R](#module-ii-coding-in-r)
-    - [Module III: Random Variables](#module-iii-random-variables)
-    - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
-    - [Module V: Linear Regression](#module-v-linear-regression)
-    - [Module VI: Advanced Topics](#module-vi-advanced-topics)
-- [Research Paper](#research-paper)
-  - [Overview](#overview-1)
-    - [Questions and Data](#questions-and-data)
-- [Problem Sets](#problem-sets)
-- [Sample Exams](#sample-exams)
+- [Test heading](#test-heading)
+  - [Overview](#overview)
+  - [Lecture Material](#lecture-material)
+      - [Module I: Describing Data](#module-i-describing-data)
+      - [Module II: Coding in R](#module-ii-coding-in-r)
+      - [Module III: Random Variables](#module-iii-random-variables)
+      - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
+      - [Module V: Linear Regression](#module-v-linear-regression)
+      - [Module VI: Advanced Topics](#module-vi-advanced-topics)
+  - [Research Paper](#research-paper)
+    - [Overview](#overview-1)
+      - [Questions and Data](#questions-and-data)
+  - [Problem Sets](#problem-sets)
+  - [Sample Exams](#sample-exams)
 
 ## Overview
 
