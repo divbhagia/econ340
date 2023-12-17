@@ -1,4 +1,8 @@
+---
+layout: default
+---
 
+<link rel="stylesheet" href="/assets/css/custom.css">
 
 - [Overview](#overview)
 - [Lecture Material](#lecture-material)
