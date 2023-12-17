@@ -30,7 +30,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 
 #### Module I: Describing Data 
 
-[Lecture Notes](../../Lecture%20Notes/Module%20I/Module%20I%20Notes.pdf)
+[Lecture Notes](Notes/Module1-Intro-and-Describing-Data/Describing-Data.pdf)
 
 - Lecture 1: Introduction; Summation Notation ([slides](Lectures/Lecture%201/Slides1.pdf), [class handout](Lectures/Lecture%201/ClassHandout1.pdf))
 - Lecture 2: Distribution, Mean, Median, Percentiles ([slides](Lectures/Lecture%202/Slides2.pdf), [class handout](Lectures/Lecture%202/ClassHandout2.pdf))
@@ -39,29 +39,38 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 5: Research Questions and Data ([slides](Lectures/Lecture%205/Slides5.pdf))
 
 #### Module II: Coding in R
-- Lecture 6: Getting Started with R ([slides](Lectures/Lecture%206/Slides6.pdf))
-- Lecture 7: Data Analysis in R ([slides](Lectures/Lecture%207/Slides7.pdf))
-- Lecture 8: Data Analysis in R ([slides](Lectures/Lecture%208/Slides8.pdf))
+- Lecture 6: Getting Started with R ([slides](Lectures/Lecture%206-8/Slides6.pdf))
+- Lecture 7: Data Analysis in R ([slides](Lectures/Lecture%206-8/Slides7.pdf))
+- Lecture 8: Data Analysis in R ([slides](Lectures/Lecture%206-8/Slides8.pdf))
 
 #### Module III: Random Variables
+
+[Lecture Notes](Notes/Module3-Random-Variables/Random-Variables.pdf)
+
 - Lecture 9: Distribution, Expectation, Variance ([slides](Lectures/Lecture%209/Slides9.pdf), [class handout](Lectures/Lecture%209/ClassHandout9.pdf))
 - Lecture 10: Normal Distribution, Z-Score ([slides](Lectures/Lecture%2010/Slides10.pdf), [class handout](Lectures/Lecture%2010/ClassHandout10.pdf))
 - Lecture 11: Independence and Correlation ([slides](Lectures/Lecture%2011/Slides11.pdf), [class handout](Lectures/Lecture%2011/ClassHandout11.pdf))
 
 #### Module IV: Sampling and Estimation
-- Lecture 12: Good Estimators, Sample Mean Distribution, Confidence Intervals ([slides](Lectures/Lecture%2012/Slides12.pdf), [class handout](Lectures/Lecture%2012/ClassHandout12.pdf))
+
+[Lecture Notes](Notes/Module4-Sampling-and-Estimation/Sampling-and-Estimation.pdf)
+
+- Lecture 12: Good Estimators, Sample Mean Distribution ([slides](Lectures/Lecture%2012/Slides12.pdf), [class handout](Lectures/Lecture%2012/ClassHandout12.pdf))
 - Lecture 13: Confidence Intervals ([slides](Lectures/Lecture%2013/Slides13.pdf), [class handout](Lectures/Lecture%2013/ClassHandout13.pdf))
 - Lecture 14: Hypothesis Testing and P-Values ([slides](Lectures/Lecture%2014/Slides14.pdf), [class handout](Lectures/Lecture%2014/ClassHandout14.pdf))
 
 #### Module V: Linear Regression
+
+[Notes for Lectures 15-17](Notes/Module5-Linear-Regression/Simple-Linear-Regression.pdf)
+
 - Lecture 15: Ordinary Least Squares (OLS); R-Squared ([slides](Lectures/Lecture%2015/Slides15.pdf), [class handout](Lectures/Lecture%2015/ClassHandout15.pdf)) 
-- Lecture 16: Prediction vs. Causal Inference ([slides](Lectures/Lecture%2016/Slides16.pdf), [class handout](Lectures/Lecture%2016/ClassHandout16.pdf))
+- Lecture 16: Prediction vs. Causal Inference ([slides](Lectures/Lecture%2016/Slides16.pdf))
 - Lecture 17: Inference (p-values, t-stats, confidence intervals) ([slides](Lectures/Lecture%2017/Slides17.pdf), [class handout](Lectures/Lecture%2017/ClassHandout17.pdf))
-- Lecture 18: Omitted Variable Bias; Multiple Regression Model; Adjusted R-Squared ([slides](Lectures/Lecture%2018/Slides18.pdf), [class handout](Lectures/Lecture%2018/ClassHandout18.pdf))
-- Lecture 19: Categorical Variables; Interaction Terms ([slides](Lectures/Lecture%2019/Slides19.pdf), [class handout](Lectures/Lecture%2019/ClassHandout19.pdf))
-- Lecture 20: Quadratic and Log Functional Forms ([slides](Lectures/Lecture%2020/Slides20.pdf), [class handout](Lectures/Lecture%2020/ClassHandout20.pdf))
-- Lecture 21: Regression Analysis in R ([slides](Lectures/Lecture%2021/Slides21.pdf))
-- Lecture 22: Regression Analysis in R ([slides](Lectures/Lecture%2022/Slides22.pdf))
+- Lecture 18: Omitted Variable Bias; Multiple Regression ([slides](Lectures/Lecture%2018/Slides18.pdf), [class handout](Lectures/Lecture%2018/ClassHandout18.pdf), lecture notes [I](Notes/Module5-Linear-Regression/Omitted-Variable-Bias.pdf) \& [II](Notes/Module5-Linear-Regression/Multiple-Linear-Regression.pdf))
+- Lecture 19: Categorical Variables; Interaction Terms ([slides](Lectures/Lecture%2019/Slides19.pdf), [class handout](Lectures/Lecture%2019/ClassHandout19.pdf), [lecture notes](Notes/Module5-Linear-Regression/Dummy-Variables-and-Interaction-Terms.pdf))
+- Lecture 20: Quadratic and Log Functional Forms ([slides](Lectures/Lecture%2020/Slides20.pdf), [class handout](Lectures/Lecture%2020/ClassHandout20.pdf), [lecture notes](Notes/Module5-Linear-Regression/Functional-Forms.pdf))
+- Lecture 21: Regression Analysis in R ([slides](Lectures/Lecture%2021-22/Slides21.pdf))
+- Lecture 22: Regression Analysis in R ([slides](Lectures/Lecture%2021-22/Slides22.pdf))
 
 #### Module VI: Advanced Topics
 - Lecture 23: Experiments and Quasi-Experimental Methods ([slides](Lectures/Lecture%2023/Slides23.pdf))
