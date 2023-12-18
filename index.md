@@ -6,7 +6,7 @@ layout: default
 
 - [Overview](#overview)
 - [Lecture Material](#lecture-material)
-  - [Module I: Describing Data](#module-i-describing-data)
+    - [Module I: Describing Data](#module-i-describing-data)
   - [Module II: Coding in R](#module-ii-coding-in-r)
   - [Module III: Random Variables](#module-iii-random-variables)
   - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
@@ -26,7 +26,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 
 ### Lecture Material
 
-#### Module I: Describing Data 
+##### Module I: Describing Data 
 
 [Lecture Notes](Notes/Module1-Intro-and-Describing-Data/Describing-Data.pdf)
 
@@ -77,7 +77,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 
 ### Research Paper
 
-*Overview*
+**Overview**
 
 As a part of this class, you will write an empirical research paper using R in groups of 2-3 students. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
 
@@ -87,18 +87,18 @@ As a part of this class, you will write an empirical research paper using R in g
 
 The goal of the first submission is to make you pick your data and question. For the second submission, you will be performing preliminary data analysis. The final paper will be 7 to 10 pages and will thoroughly discuss all the analyses you performed. The paper should demonstrate your writing ability and ability to perform and interpret statistical analyses correctly. 
 
-Follow the following links for detailed instructions for each submission: 
+The following links provide detailed instructions for each submission: 
 
-- First Submission ([instructions](Research%20Project/Submission%201/Submission%201%20Instructions.pdf), [template](Research%20Project/Submission%201/Submission%201%20Template.pdf), [example](Research%20Project/Submission%201/Submission%201%20Example.pdf)) 
-- Second Submission ([instructions](Research%20Project/Submission%202/Submission%202%20Instructions.pdf), [example](Research%20Project/Submission%202/Submission%202%20Example.pdf)) 
-- Final Submission ([instructions](Research%20Project/Final%20Submission%20Instructions.pdf))
+- First submission ([instructions](Research%20Project/Submission%201/Submission%201%20Instructions.pdf), [template](Research%20Project/Submission%201/Submission%201%20Template.pdf), [example](Research%20Project/Submission%201/Submission%201%20Example.pdf)) 
+- Second submission ([instructions](Research%20Project/Submission%202/Submission%202%20Instructions.pdf), [example](Research%20Project/Submission%202/Submission%202%20Example.pdf)) 
+- Final submission ([instructions](Research%20Project/Final%20Submission%20Instructions.pdf))
   
 
-*Questions and Data*
+**Questions and Data**
 
 You can pick any question and data as long as it meets the requirements specified in Submission 1. I have also compiled a set of datasets for you to use for your research projects. You can find these in the Dropbox folder: [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0). Let me know if you have any issues accessing the folder. [Here is a list of the datasets in the Dropbox folder](Research%20Project/Datasets%20Summary.pdf). You can pick a dataset from the Dropbox folder or use an external one. Below are some external sources of data. 
 
-External data sources:
+**External Data Sources**
 
 - The US [Bureau of Labor Statistics (BLS)](https://www.bls.gov/data/) maintains lots of series.  A notable one is the [Local Unemployment Area Statistics (LUAS)](https://www.bls.gov/lau/tables.htm) which provides the unemployment rate for US metropolitan areas.
 - The US [Bureau of Economic Analysis](https://www.bea.gov/data/by-place-us) also maintains lots of series. (You can look for data by Topic or by Place)
@@ -106,8 +106,8 @@ External data sources:
 - [IPUMS](https://www.ipums.org/) is your one-stop shop for downloading US (and international) microdata, such as from the Current Population Survey (CPS), American Community Survey (ACS), American Time-Use Survey (ATUS), etc.
 - Two leading US longitudinal datasets are the [Panel Study of Income Dynamics (PSID)](https://psidonline.isr.umich.edu/) and [National Longitudinal Surveys (NLSY).](https://www.bls.gov/nls/nlsy97.htm)
 - [County Business Patterns (CBP)](https://www.census.gov/programs-surveys/cbp.html) data contains the number of establishments and employment for different industries in each US county.
-- [FRED](https://fred.stlouisfed.org/) at the Federal Reserve Bank of St. Louis maintains numerous data series (mostly time series)
-- [Opportunity Insights Data Library](https://opportunityinsights.org/data/) has some data sets at the county or commuting zone level with variables related to economic mobility. 
+- [FRED](https://fred.stlouisfed.org/) at the Federal Reserve Bank of St. Louis maintains numerous data series on macroeconomic variables (mostly time series).
+- [Opportunity Insights Data Library](https://opportunityinsights.org/data/) has some datasets at the county or commuting zone level with variables related to economic mobility. 
 - More county-level data is available from [USDA ERS](https://www.ers.usda.gov/data-products/county-level-data-sets/). 
 - Check out [FiveThirtyEight](https://data.fivethirtyeight.com/) for sports and election data.
 - If you are looking for more data, check out [AEA’s Compiled Data Sources](https://www.aeaweb.org/resources/data) (Check [this](https://www.aeaweb.org/resources/data/us-other-data/us-other-data-more) link too).
