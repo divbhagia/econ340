@@ -7,11 +7,11 @@ layout: default
 - [Overview](#overview)
 - [Lecture Material](#lecture-material)
     - [Module I: Describing Data](#module-i-describing-data)
-  - [Module II: Coding in R](#module-ii-coding-in-r)
-  - [Module III: Random Variables](#module-iii-random-variables)
-  - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
-  - [Module V: Linear Regression](#module-v-linear-regression)
-  - [Module VI: Advanced Topics](#module-vi-advanced-topics)
+    - [Module II: Coding in R](#module-ii-coding-in-r)
+    - [Module III: Random Variables](#module-iii-random-variables)
+    - [Module IV: Sampling and Estimation](#module-iv-sampling-and-estimation)
+    - [Module V: Linear Regression](#module-v-linear-regression)
+    - [Module VI: Advanced Topics](#module-vi-advanced-topics)
 - [Research Paper](#research-paper)
 - [Problem Sets](#problem-sets)
 - [Exams Related Material](#exams-related-material)
@@ -36,12 +36,12 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 4: Covariance and Correlation ([slides](Lectures/Lecture%204/Slides4.pdf), [class handout](Lectures/Lecture%204/ClassHandout4.pdf))
 - Lecture 5: Research Questions and Data ([slides](Lectures/Lecture%205/Slides5.pdf))
 
-#### Module II: Coding in R
+##### Module II: Coding in R
 - Lecture 6: Getting Started with R ([slides](Lectures/Lecture%206-8/Slides6.pdf))
 - Lecture 7: Data Analysis in R ([slides](Lectures/Lecture%206-8/Slides7.pdf))
 - Lecture 8: Data Analysis in R ([slides](Lectures/Lecture%206-8/Slides8.pdf))
 
-#### Module III: Random Variables
+##### Module III: Random Variables
 
 [Lecture Notes](Notes/Module3-Random-Variables/Random-Variables.pdf)
 
@@ -49,7 +49,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 10: Normal Distribution, Z-Score ([slides](Lectures/Lecture%2010/Slides10.pdf), [class handout](Lectures/Lecture%2010/ClassHandout10.pdf))
 - Lecture 11: Independence and Correlation ([slides](Lectures/Lecture%2011/Slides11.pdf), [class handout](Lectures/Lecture%2011/ClassHandout11.pdf))
 
-#### Module IV: Sampling and Estimation
+##### Module IV: Sampling and Estimation
 
 [Lecture Notes](Notes/Module4-Sampling-and-Estimation/Sampling-and-Estimation.pdf)
 
@@ -57,7 +57,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 13: Confidence Intervals ([slides](Lectures/Lecture%2013/Slides13.pdf), [class handout](Lectures/Lecture%2013/ClassHandout13.pdf))
 - Lecture 14: Hypothesis Testing and P-Values ([slides](Lectures/Lecture%2014/Slides14.pdf), [class handout](Lectures/Lecture%2014/ClassHandout14.pdf))
 
-#### Module V: Linear Regression
+##### Module V: Linear Regression
 
 [Notes for Lectures 15-17](Notes/Module5-Linear-Regression/Simple-Linear-Regression.pdf)
 
@@ -70,7 +70,7 @@ See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
 - Lecture 21: Regression Analysis in R ([slides](Lectures/Lecture%2021-22/Slides21.pdf))
 - Lecture 22: Regression Analysis in R ([slides](Lectures/Lecture%2021-22/Slides22.pdf))
 
-#### Module VI: Advanced Topics
+##### Module VI: Advanced Topics
 - Lecture 23: Experiments and Quasi-Experimental Methods ([slides](Lectures/Lecture%2023/Slides23.pdf))
 - Lecture 24: Differences-in-Differences ([slides](Lectures/Lecture%2024/Slides24.pdf))
 - Lecture 25: Big Data and Machine Learning ([slides](Lectures/Lecture%2025/Slides25.pdf))
@@ -143,6 +143,5 @@ Newspapers and other news outlets are also good sources to learn about current i
   - [Study Guide](Exams/Final/final_study_guide.pdf)
   - [Sample Questions for Module VI](Exams/Final/sample_questions_add_topics.pdf)
 
-```
-
-```
+[//]: # (Back to Top Button)
+<a href="#top" class="back-to-top">Back to Top</a>
