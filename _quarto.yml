@@ -1,12 +1,14 @@
 project:
   type: website
+  output-dir: docs
+
+output: index.html
   
 execute:
   freeze: auto
 
 website:
   title: "quarto-course-website"
-  favicon: images/warwick-university.png
   navbar:
     right:
       - text: "Join"
