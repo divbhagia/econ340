@@ -1,8 +1,6 @@
 ---
-layout: default
+title: "Econ 340: Economic Research Methods"
 ---
-
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
 - [Overview](#overview)
 - [Lecture Material](#lecture-material)
