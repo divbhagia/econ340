@@ -1,33 +1,28 @@
 project:
   type: website
   output-dir: docs
-
-output: index.html
   
 execute:
   freeze: auto
 
 website:
-  title: "quarto-course-website"
+  title: "Econ 340: Economic Research Methods"
   navbar:
     right:
-      - text: "Join"
-        file: join.qmd
-      - text: "Prerequisites"
-        file: prerequisites.qmd
-      - text: "Schedule"
-        file: schedule.qmd
-      - text: "Content"
-        file: content.qmd
- 
+      - text: "Overview"
+        file: index.qmd
+      - text: "Lecture Materials"
+        file: lecture-materials.qmd
+      - text: "Research Project"
+        file: research-project.qmd
+      - text: "Problem Sets & Exams"
+        file: problem-sets-exams.qmd
       - icon: github
-        href: https://github.com/Warwick-Stats-Resources/quarto-course-website
+        href: https://divbhagia.github.io/Econ340/
   page-footer: "All material is shared under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/){target='_blank'} license."
   
 format:
   html:
     theme: custom.scss
-    highlight-style: warwick.theme
-    css: styles.css
     toc: true
     link-external-newwindow: true

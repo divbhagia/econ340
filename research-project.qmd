@@ -1,0 +1,48 @@
+---
+title: "Research Project"
+---
+
+### Overview
+
+As a part of this class, you will write an empirical research paper using R in groups of 2-3 students. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
+
+- Sep 26: First submission (5%) 
+- Oct 31: Second submission (10%)
+- Dec 05: Final submission (15%)
+
+The goal of the first submission is to make you pick your data and question. For the second submission, you will be performing preliminary data analysis. The final paper will be 7 to 10 pages and will thoroughly discuss all the analyses you performed. The paper should demonstrate your writing ability and ability to perform and interpret statistical analyses correctly. 
+
+The following links provide detailed instructions for each submission: 
+
+- First submission ([instructions](Research-Project/Submission%201/Submission%201%20Instructions.pdf), [template](Research-Project/Submission%201/Submission%201%20Template.pdf), [example](Research-Project/Submission%201/Submission%201%20Example.pdf)) 
+- Second submission ([instructions](Research-Project/Submission%202/Submission%202%20Instructions.pdf), [example](Research-Project/Submission%202/Submission%202%20Example.pdf)) 
+- Final submission ([instructions](Research-Project/Final%20Submission%20Instructions.pdf))
+  
+
+### Questions and Data
+
+You can pick any question and data as long as it meets the requirements specified in Submission 1. I have also compiled a set of datasets for you to use for your research projects. You can find these in the Dropbox folder: [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0). Let me know if you have any issues accessing the folder. [Here is a list of the datasets in the Dropbox folder](Research-Project/Datasets%20Summary.pdf). You can pick a dataset from the Dropbox folder or use an external one. Below are some external sources of data. 
+
+### External Data Sources
+
+- The US [Bureau of Labor Statistics (BLS)](https://www.bls.gov/data/) maintains lots of series.  A notable one is the [Local Unemployment Area Statistics (LUAS)](https://www.bls.gov/lau/tables.htm) which provides the unemployment rate for US metropolitan areas.
+- The US [Bureau of Economic Analysis](https://www.bea.gov/data/by-place-us) also maintains lots of series. (You can look for data by Topic or by Place)
+- [World Bank](https://databank.worldbank.org/home.aspx) provides large datasets across countries, including the World Development Indicators (WDI) database and the Global Financial Development Database (GFDD). 
+- [IPUMS](https://www.ipums.org/) is your one-stop shop for downloading US (and international) microdata, such as from the Current Population Survey (CPS), American Community Survey (ACS), American Time-Use Survey (ATUS), etc.
+- Two leading US longitudinal datasets are the [Panel Study of Income Dynamics (PSID)](https://psidonline.isr.umich.edu/) and [National Longitudinal Surveys (NLSY).](https://www.bls.gov/nls/nlsy97.htm)
+- [County Business Patterns (CBP)](https://www.census.gov/programs-surveys/cbp.html) data contains the number of establishments and employment for different industries in each US county.
+- [FRED](https://fred.stlouisfed.org/) at the Federal Reserve Bank of St. Louis maintains numerous data series on macroeconomic variables (mostly time series).
+- [Opportunity Insights Data Library](https://opportunityinsights.org/data/) has some datasets at the county or commuting zone level with variables related to economic mobility. 
+- More county-level data is available from [USDA ERS](https://www.ers.usda.gov/data-products/county-level-data-sets/). 
+- Check out [FiveThirtyEight](https://data.fivethirtyeight.com/) for sports and election data.
+- If you are looking for more data, check out [AEA’s Compiled Data Sources](https://www.aeaweb.org/resources/data) (Check [this](https://www.aeaweb.org/resources/data/us-other-data/us-other-data-more) link too).
+
+Finally, if you need some inspiration to come up with a research question, here are some links to get you thinking:
+
+- [Freakonomics Radio](https://freakonomics.com/series/freakonomics-radio/)
+- [AEA Research Digest](https://www.aeaweb.org/research)
+- [NBER Research News](https://www.nber.org/nber-news/nber-research-news?page=1&perPage=50)
+- [VoxEU](https://cepr.org/voxeu)
+- [IMF Blog](https://blogs.imf.org/)
+
+Newspapers and other news outlets are also good sources to learn about current issues.

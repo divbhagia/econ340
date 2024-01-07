@@ -10,7 +10,7 @@ $font-family-sans-serif: Lato, Helvetica, sans-serif !default;
 $font-family-monospace: "Fira Mono", monospace;
 $headings-font-family: Lato, Helvetica, sans-serif !default;
 
-//  Warwick colors 
+//  Colors
 $aubergine: #552D62;
 $aubergine2: #886C91; //paler
 $ruby: #9A1310;
@@ -46,7 +46,7 @@ h1, h2 {
   font-weight: 700;
 }
 
-// iframes for slides embedded in talks pages
+// iframes for slides 
 iframe.slide-deck {
   border: 3px solid $gray;
   width: 100%;

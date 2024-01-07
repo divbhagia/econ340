@@ -1,0 +1,14 @@
+{
+  "hash": "6542b1ee88619a92d24c41744a84a054",
+  "result": {
+    "markdown": "---\ntitle: \"Problem Set 2 Solution\"\noutput: \n  pdf_document:\n    latex_engine: xelatex\nheader-includes:\n  - \"\\\\usepackage[default]{lato}\"\n---\n\n::: {.cell}\n\n```{.r .cell-code}\n# Housekeeping \nlibrary(tidyverse) \nlibrary(readxl) \n\n# 1. Import data\necon_data <- read_excel(\"econData.xlsx\")\nnbd_data <- read.csv(\"nbd_data.csv\")\n\n# 2. Average medHHinc and parks\necon_data %>% summarise(mean = mean(medHHinc))\nmean(nbd_data$parks)\n\n# 3. Merge data\nmerged_data <- merge(econ_data, nbd_data, by=\"state\")\n\n# 4. Remove missing values\nmerged_data %>% filter(is.na(poverty)==TRUE) # Alaska and Hawaii have missing values\nmerged_data <- merged_data %>% filter(is.na(poverty)==FALSE)\n\n# 5. State with the highest poverty rate is Tennessee\nmerged_data %>% filter(poverty==max(poverty))\n\n# 6. Saving data in R format\nsave(merged_data, file=\"merged_data.rda\")\n\n# 7. Create log_hhinc\nmerged_data <- merged_data %>% \n  mutate(log_hhinc = log(medHHinc))\n\n# 8. Scatter plot\nggplot(merged_data, aes(x = log_hhinc, y=fine_partc_mttr)) +\n  geom_point(color=\"orange\") +\n  theme_classic()\n\n# 9. Create a new variable called high_income \nmerged_data <- merged_data %>% \n  mutate(high_income = ifelse(medHHinc>45, 1, 0)) \nmerged_data %>% count(high_income) # 22 high income states\n\n# 10. Average particulate matter by high_income\nmerged_data %>% \n  group_by(high_income) %>% \n  summarise(mean = mean(fine_partc_mttr))\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
