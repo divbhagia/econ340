@@ -1,5 +1,5 @@
 Data/
-Compiled Material/
+Compiled/
 Code/
 Exams/Final/Final.*
 References/
@@ -7,6 +7,6 @@ R/
 **/.DS_Store
 **/.RData
 **/.Rhistory
-Problem Sets/*/*Solution*
-Problem Sets/*/*solution*
+ProblemSets/*/*Solution*
+ProblemSets/*/*solution*
 index_files/

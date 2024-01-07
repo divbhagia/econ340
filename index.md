@@ -89,14 +89,14 @@ The goal of the first submission is to make you pick your data and question. For
 
 The following links provide detailed instructions for each submission: 
 
-- First submission ([instructions](Research%20Project/Submission%201/Submission%201%20Instructions.pdf), [template](Research%20Project/Submission%201/Submission%201%20Template.pdf), [example](Research%20Project/Submission%201/Submission%201%20Example.pdf)) 
-- Second submission ([instructions](Research%20Project/Submission%202/Submission%202%20Instructions.pdf), [example](Research%20Project/Submission%202/Submission%202%20Example.pdf)) 
-- Final submission ([instructions](Research%20Project/Final%20Submission%20Instructions.pdf))
+- First submission ([instructions](Research-Project/Submission%201/Submission%201%20Instructions.pdf), [template](Research-Project/Submission%201/Submission%201%20Template.pdf), [example](Research-Project/Submission%201/Submission%201%20Example.pdf)) 
+- Second submission ([instructions](Research-Project/Submission%202/Submission%202%20Instructions.pdf), [example](Research-Project/Submission%202/Submission%202%20Example.pdf)) 
+- Final submission ([instructions](Research-Project/Final%20Submission%20Instructions.pdf))
   
 
 **Questions and Data**
 
-You can pick any question and data as long as it meets the requirements specified in Submission 1. I have also compiled a set of datasets for you to use for your research projects. You can find these in the Dropbox folder: [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0). Let me know if you have any issues accessing the folder. [Here is a list of the datasets in the Dropbox folder](Research%20Project/Datasets%20Summary.pdf). You can pick a dataset from the Dropbox folder or use an external one. Below are some external sources of data. 
+You can pick any question and data as long as it meets the requirements specified in Submission 1. I have also compiled a set of datasets for you to use for your research projects. You can find these in the Dropbox folder: [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0). Let me know if you have any issues accessing the folder. [Here is a list of the datasets in the Dropbox folder](Research-Project/Datasets%20Summary.pdf). You can pick a dataset from the Dropbox folder or use an external one. Below are some external sources of data. 
 
 **External Data Sources**
 
@@ -125,10 +125,10 @@ Newspapers and other news outlets are also good sources to learn about current i
 
 ### Problem Sets
 
-- [Problem Set 1](Problem%20Sets/PS1/PS1.pdf)
-- [Problem Set 2](Problem%20Sets/PS2/PS2_Raw/ps2.pdf) (Download [zippped folder](Problem%20Sets/PS2/PS2.zip) with datasets and R Code to complete.)
-- [Problem Set 3](Problem%20Sets/PS3/PS3.pdf)
-- [Problem Set 4](Problem%20Sets/PS4/PS4.pdf)
+- [Problem Set 1](Problem-Sets/PS1/PS1.pdf)
+- [Problem Set 2](Problem-Sets/PS2/PS2_Raw/ps2.pdf) (Download [zippped folder](Problem-Sets/PS2/PS2.zip) with datasets and R Code to complete.)
+- [Problem Set 3](Problem-Sets/PS3/PS3.pdf)
+- [Problem Set 4](Problem-Sets/PS4/PS4.pdf)
 
 ### Exams Related Material
 
