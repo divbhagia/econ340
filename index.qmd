@@ -1,11 +1,43 @@
 ---
-title: "Course Overview"
+title: "Economic Research Methods"
+sidebar: false
+toc: false
+page-layout: full
 ---
 
-This course covers the basics of conducting quantitative economic research. The course aims to take you through the steps involved in answering a research question using observational data. You will learn and implement statistical and econometric concepts vital to empirical research. You will select a question, locate data to answer it and use the tools we learn in this class to answer this question.
+::: {.grid .course-details}
 
-This course will involve hands-on work with data using *R*, a statistical software, both inside and outside the classroom. The tools learned in this class will be helpful regardless of whether your goal is to be a researcher, a consultant, run your own business, or work for a non-profit.
+::: {.g-col-14 .g-col-sm-7 .g-col-md-11}
+<p style="font-size:1.5em; font-weight:500">
+Master statistical and econometric tools along with coding in R, to analyze data and answer economic questions.
+</p>
 
-See the [syllabus](Syllabus/Econ%20340%20Syllabus.pdf) for more details.
+ECON 340 | Fall 2023 | College of Business and Economics | California State University
+:::
+
+::: {.g-col-4 .g-col-sm-2 .g-col-md-3}
+#### Instructor
+{{< fa user >}} &nbsp; [Dr. Div Bhagia](https://www.dbhagia.com) <br>
+{{< fa university >}} &nbsp; Office: SGMH 3361 <br>
+{{< fa envelope >}} &nbsp; [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) <br>
+:::
+
+::: {.g-col-4 .g-col-sm-2 .g-col-md-3}
+#### Course Details
+{{< fa location-dot >}} &nbsp; SGMH 2501 <br>
+{{< fa calendar >}} &nbsp; Tuesdays and Thursdays, 2:30-3:45 PM <br>
+{{< fa clock >}} &nbsp; Office hours: 
+<ul style="margin-top: 0; margin-left: -1.5em;">
+- Thursdays, 4-6.45 PM, or
+- By appointment (in-person or on [Zoom](https://fullerton.zoom.us/j/81895171931))
+</ul>
+:::
+
+::: {.g-col-6 .g-col-sm-3 .g-col-md-5}
+<img src="/assets/flaw.jpg" alt="Alt text" width="450"/>
+:::
+
+:::
+
 
 

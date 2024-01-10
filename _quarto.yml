@@ -6,23 +6,26 @@ execute:
   freeze: auto
 
 website:
-  title: "Econ 340: Economic Research Methods"
+  title: "Economic Research Methods"
   navbar:
     right:
-      - text: "Overview"
+      - text: "Home"
         file: index.qmd
-      - text: "Lecture Materials"
-        file: lecture-materials.qmd
-      - text: "Research Project"
+      - text: "Syllabus"
+        file: syllabus.qmd
+      - text: "Content"
+        file: content.qmd
+      - text: "Project"
         file: research-project.qmd
-      - text: "Problem Sets & Exams"
-        file: problem-sets-exams.qmd
-      - icon: github
-        href: https://divbhagia.github.io/Econ340/
-  page-footer: "All material is shared under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/){target='_blank'} license."
+      - text: "Assignments"
+        file: assignments.qmd
+  
+  page-footer:
+      2024 Div Bhagia | [CC BY-NC 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/) |Made with [Quarto](https://quarto.org/)
   
 format:
   html:
-    theme: custom.scss
+    theme: assets/custom.scss
     toc: true
     link-external-newwindow: true
+    css: assets/styles.css
