@@ -7,7 +7,7 @@ page-layout: full
 
 ::: {.grid .course-details}
 
-::: {.g-col-14 .g-col-sm-7 .g-col-md-11}
+::: {.g-col-12 .g-col-sm-12 .g-col-md-12 .g-col-lg-12}
 <p style="font-size:1.5em; font-weight:500">
 Master statistical and econometric tools along with coding in R, to analyze data and answer economic questions.
 </p>
@@ -15,14 +15,14 @@ Master statistical and econometric tools along with coding in R, to analyze data
 ECON 340 | Fall 2023 | College of Business and Economics | California State University
 :::
 
-::: {.g-col-4 .g-col-sm-2 .g-col-md-3}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
 #### Instructor
 {{< fa user >}} &nbsp; [Dr. Div Bhagia](https://www.dbhagia.com) <br>
 {{< fa university >}} &nbsp; Office: SGMH 3361 <br>
 {{< fa envelope >}} &nbsp; [dbhagia@fullerton.edu](mailto:dbhagia@fullerton.edu) <br>
 :::
 
-::: {.g-col-4 .g-col-sm-2 .g-col-md-3}
+::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 #### Course Details
 {{< fa location-dot >}} &nbsp; SGMH 2501 <br>
 {{< fa calendar >}} &nbsp; Tuesdays and Thursdays, 2:30-3:45 PM <br>
@@ -33,8 +33,8 @@ ECON 340 | Fall 2023 | College of Business and Economics | California State Univ
 </ul>
 :::
 
-::: {.g-col-6 .g-col-sm-3 .g-col-md-5}
-<img src="/assets/flaw.jpg" alt="Alt text" width="450"/>
+::: {.g-col-12 .g-col-md-12 .g-col-lg-5}
+<img src="/assets/flaw.jpg" alt="Flaw of averages" class = "responsive-image"/>
 :::
 
 :::

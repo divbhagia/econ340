@@ -14,7 +14,7 @@ $headings-font-family: Fira Sans Condensed, Helvetica, sans-serif !default;
 //  Colors
 $gray: #393A3B;
 $gray2: #747576; 
-$primary: #4a0f56 !default;
+$primary: #912040 !default;
 $secondary: #e8e1e1 !default;
 
 /*-- scss:rules --*/
@@ -69,10 +69,3 @@ iframe.slide-deck {
   height: 100vh;  
 }
 
-.ar4x3 {
-  aspect-ratio: 4 / 3;  
-}
-
-.ar3x2 {
-  aspect-ratio: 3 / 2;  
-}

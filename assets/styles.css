@@ -31,3 +31,25 @@ table {
   td:nth-child(1) { 
       width: 3em;
   }
+
+  /* Responsive image */
+  .responsive-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .responsive-image {
+        width: 60%;
+    }
+}
+
+@media (min-width: 992px) {
+    .responsive-image {
+        width: 100%;
+    }
+}
+
