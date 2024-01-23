@@ -12,7 +12,7 @@ page-layout: full
 Master statistical and econometric tools along with coding in R, to analyze data and answer economic questions.
 </p>
 
-ECON 340 | Fall 2023 | College of Business and Economics | California State University
+ECON 340 | Spring 2024 | College of Business and Economics | California State University
 :::
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
@@ -24,7 +24,7 @@ ECON 340 | Fall 2023 | College of Business and Economics | California State Univ
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-4}
 #### Course Details
-{{< fa location-dot >}} &nbsp; SGMH 2501 <br>
+{{< fa location-dot >}} &nbsp; SGMH 2113 <br>
 {{< fa calendar >}} &nbsp; Tuesdays and Thursdays, 2:30-3:45 PM <br>
 {{< fa clock >}} &nbsp; Office hours: 
 <ul style="margin-top: 0; margin-left: -1.5em;">

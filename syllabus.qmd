@@ -6,7 +6,7 @@ sidebar: false
 format: html
 ---
 
-The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking [here](Syllabus/Econ%20340%20Syllabus.pdf).
+The key components of the syllabus are outlined below. You can access the complete syllabus in PDF format by clicking [here](Syllabus/Econ340Syllabus.pdf).
 
 ::: {.panel-tabset}
 
@@ -40,8 +40,8 @@ A substantial portion of this class centers around the development of a research
 
 All course materials—including lecture slides, handouts, notes for each topic—are available on the course website. These materials should generally be sufficient, and there is no mandatory textbook for this class. However, if you have a keen interest in the subject and seek additional references, the following options are excellent choices:
 
-- Stock J, Watson M. Introduction to Econometrics (3rd edition). Addison Wesley Longman; 2011.
-- Huntington-Klein, Nick. 2021. The Effect: An Introduction to Research Design and Causality. Boca Raton, Florida: Chapman and Hall / CRC. [https://theeffectbook.net/](https://theeffectbook.net/)
+- Stock J, Watson M. Introduction to Econometrics (3rd edition)
+- Huntington-Klein, Nick. 2021. The Effect: An Introduction to Research Design and Causality [https://theeffectbook.net/](https://theeffectbook.net/)
 
 
 ## Grading
@@ -64,12 +64,12 @@ Your course grade will be determined according to the following breakdown:
     <td>20</td>
   </tr>
   <tr>
-    <td style="text-align: left;">Research Paper: Interim Submissions </td>
-    <td>15</td>
+    <td style="text-align: left;">Research Paper: Interim Submission </td>
+    <td>10</td>
   </tr>
   <tr>
     <td style="text-align: left;">Research Paper: Final Submission </td>
-    <td>15</td>
+    <td>20</td>
   </tr>
   <tr>
     <td style="text-align: left;">Midterm Exam</td>
