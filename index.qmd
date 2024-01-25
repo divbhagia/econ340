@@ -12,7 +12,7 @@ page-layout: full
 Master statistical and econometric tools along with coding in R, to analyze data and answer economic questions.
 </p>
 
-ECON 340 | Spring 2024 | College of Business and Economics | California State University
+ECON 340 | Fall 2024 | College of Business and Economics | California State University
 :::
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
