@@ -2,6 +2,7 @@ Data/
 Compiled/
 Code/
 Exams/Final/Final.*
+Exams/Midterm/Past.*
 References/
 R/
 **/.DS_Store
@@ -11,3 +12,6 @@ ProblemSets/*/*Solution*
 ProblemSets/*/*solution*
 index_files/
 /.quarto/
+**/archived/
+Syllabus/attendance*
+
