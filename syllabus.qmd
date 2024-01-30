@@ -38,10 +38,11 @@ A substantial portion of this class centers around the development of a research
 ## Material
 ### Course Material
 
-All course materials—including lecture slides, handouts, notes for each topic—are available on the course website. These materials should generally be sufficient, and there is no mandatory textbook for this class. However, if you have a keen interest in the subject and seek additional references, the following options are excellent choices:
+All course materials—including lecture slides, handouts, notes for each topic—are available on the course website. These materials should generally be sufficient, and there is no mandatory textbook for this class. However, if you have a keen interest in the subject and seek additional references, the following options are great choices:
 
 - Stock J, Watson M. Introduction to Econometrics (3rd edition)
 - Huntington-Klein, Nick. 2021. The Effect: An Introduction to Research Design and Causality [https://theeffectbook.net/](https://theeffectbook.net/)
+- Cunningham, Scott. Causal Inference: The Mixtape [https://mixtape.scunning.com](https://mixtape.scunning.com)
 
 
 ## Grading
