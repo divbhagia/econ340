@@ -4,7 +4,7 @@ title: "Research Project"
 
 ### Overview
 
-As a part of this class, you will write an empirical research paper using R in groups of 2-3 students. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
+As a part of this class, you will write an empirical research paper. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
 
 - Sep 26: First submission (5%) 
 - Oct 31: Second submission (10%)
