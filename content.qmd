@@ -1,5 +1,6 @@
 ---
 title: "Lecture Materials"
+sidebar: false
 ---
 
 ### Module I: Describing Data 

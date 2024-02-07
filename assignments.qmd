@@ -1,5 +1,6 @@
 ---
 title: ""
+sidebar: false
 ---
 
 ### Problem Sets
