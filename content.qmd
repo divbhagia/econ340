@@ -7,47 +7,53 @@ sidebar: false
 
 [Lecture Notes](Notes/Module1-Intro-and-Describing-Data/Describing-Data.pdf)
 
-- Lecture 1: Introduction; Summation Notation ([slides](Lectures/Lecture1/Slides1.pdf), [class handout](Lectures/Lecture1/ClassHandout1.pdf))
-- Lecture 2: Distribution, Mean, Median, Percentiles ([slides](Lectures/Lecture2/Slides2.pdf), [class handout](Lectures/Lecture2/ClassHandout2.pdf))
-- Lecture 3: Variance, Standard Deviation, Z-Score ([slides](Lectures/Lecture3/Slides3.pdf), [class handout](Lectures/Lecture3/ClassHandout3.pdf))
-- Lecture 4: Covariance and Correlation ([slides](Lectures/Lecture4/Slides4.pdf), [class handout](Lectures/Lecture4/ClassHandout4.pdf))
-- Lecture 5: Research Questions and Data ([slides](Lectures/Lecture5/Slides5.pdf))
+- Lecture 1: Introduction; Summation Notation [[slides](Lectures/Lecture1/Slides1.pdf), [handout](Lectures/Lecture1/ClassHandout1.pdf) [(filled)](Lectures/Lecture1/ClassHandout1_Filled.pdf)]
+- Lecture 2: Distribution, Mean, Median, Percentiles [[slides](Lectures/Lecture2/Slides2.pdf), [handout](Lectures/Lecture2/ClassHandout2.pdf) [(filled)](Lectures/Lecture2/ClassHandout2_Filled.pdf)]
+- Lecture 3: Variance, Standard Deviation, Z-Score [[slides](Lectures/Lecture3/Slides3.pdf), [handout](Lectures/Lecture3/ClassHandout3.pdf) [(filled)](Lectures/Lecture3/ClassHandout3_Filled.pdf)]
+- Lecture 4: Covariance and Correlation [[slides](Lectures/Lecture4/Slides4.pdf), [handout](Lectures/Lecture4/ClassHandout4.pdf) [(filled)](Lectures/Lecture4/ClassHandout4_Filled.pdf)]
+- Lecture 5: Research Questions and Data [[slides](Lectures/Lecture5/Slides5.pdf)]
+
+Additional Reading: [NYT Article 2016 Elections](Readings/NYT-Article-2016-Elections.pdf), [Stock & Watson Chapter 1](Readings/Stock-&-Watson-Chapter1.pdf)
 
 ### Module II: Coding in R
-- Lecture 6: Getting Started with R ([slides](Lectures/Lecture6-8/Slides6.pdf))
-- Lecture 7: Data Analysis in R ([slides](Lectures/Lecture6-8/Slides7.pdf))
-- Lecture 8: Data Analysis in R ([slides](Lectures/Lecture6-8/Slides8.pdf))
+Here are [instructions](Notes/How-to-install-R.pdf) on installing R and R Studio. 
+
+- Lecture 6: Getting Started with R [[slides](Lectures/Lecture6-8/Slides6.pdf)]
+- Lecture 7: Data Analysis in R [[slides](Lectures/Lecture6-8/Slides7.pdf)]
+- Lecture 8: Data Analysis in R [[slides](Lectures/Lecture6-8/Slides8.pdf)]
 
 ### Module III: Random Variables
 
 [Lecture Notes](Notes/Module3-Random-Variables/Random-Variables.pdf)
 
-- Lecture 9: Distribution, Expectation, Variance ([slides](Lectures/Lecture9/Slides9.pdf), [class handout](Lectures/Lecture9/ClassHandout9.pdf))
-- Lecture 10: Normal Distribution, Z-Score ([slides](Lectures/Lecture10/Slides10.pdf), [class handout](Lectures/Lecture10/ClassHandout10.pdf))
-- Lecture 11: Independence and Correlation ([slides](Lectures/Lecture11/Slides11.pdf), [class handout](Lectures/Lecture11/ClassHandout11.pdf))
+- Lecture 9: Distribution, Expectation, Variance [[slides](Lectures/Lecture9/Slides9.pdf), [handout](Lectures/Lecture9/ClassHandout9.pdf) [(filled)](Lectures/Lecture9/ClassHandout9_Filled.pdf)]
+- Lecture 10: Normal Distribution, Z-Score [[slides](Lectures/Lecture10/Slides10.pdf), [handout](Lectures/Lecture10/ClassHandout10.pdf) [(filled)](Lectures/Lecture10/ClassHandout10_Filled.pdf)]
+- Lecture 11: Independence and Correlation [[slides](Lectures/Lecture11/Slides11.pdf), [handout](Lectures/Lecture11/ClassHandout11.pdf) [(filled)](Lectures/Lecture11/ClassHandout11_Filled.pdf)]
 
 ### Module IV: Sampling and Estimation
 
 [Lecture Notes](Notes/Module4-Sampling-and-Estimation/Sampling-and-Estimation.pdf)
 
-- Lecture 12: Good Estimators, Sample Mean Distribution ([slides](Lectures/Lecture12/Slides12.pdf), [class handout](Lectures/Lecture12/ClassHandout12.pdf))
-- Lecture 13: Confidence Intervals ([slides](Lectures/Lecture13/Slides13.pdf), [class handout](Lectures/Lecture13/ClassHandout13.pdf))
-- Lecture 14: Hypothesis Testing and P-Values ([slides](Lectures/Lecture14/Slides14.pdf), [class handout](Lectures/Lecture14/ClassHandout14.pdf))
+- Lecture 12: Good Estimators, Sample Mean Distribution [[slides](Lectures/Lecture12/Slides12.pdf), [handout](Lectures/Lecture12/ClassHandout12.pdf) [(filled)](Lectures/Lecture12/ClassHandout12_Filled.pdf)]
+- Lecture 13: Confidence Intervals [[slides](Lectures/Lecture13/Slides13.pdf), [handout](Lectures/Lecture13/ClassHandout13.pdf) [(filled)](Lectures/Lecture13/ClassHandout13_Filled.pdf)]
+- Lecture 14: Hypothesis Testing and P-Values [[slides](Lectures/Lecture14/Slides14.pdf), [handout](Lectures/Lecture14/ClassHandout14.pdf) [(filled)](Lectures/Lecture14/ClassHandout14_Filled.pdf)]
 
 ### Module V: Linear Regression
 
-[Notes for Lectures 15-17](Notes/Module5-Linear-Regression/Simple-Linear-Regression.pdf)
+Notes: [Lectures 15-17](Notes/Module5-Linear-Regression/Simple-Linear-Regression.pdf), [Lecture 18 I](Notes/Module5-Linear-Regression/Omitted-Variable-Bias.pdf) & [II](Notes/Module5-Linear-Regression/Multiple-Linear-Regression.pdf), [Lecture 19](Notes/Module5-Linear-Regression/Dummy-Variables-and-Interaction-Terms.pdf),  [Lecture 20](Notes/Module5-Linear-Regression/Functional-Forms.pdf)
 
-- Lecture 15: Ordinary Least Squares (OLS); R-Squared ([slides](Lectures/Lecture15/Slides15.pdf), [class handout](Lectures/Lecture15/ClassHandout15.pdf)) 
-- Lecture 16: Prediction vs. Causal Inference ([slides](Lectures/Lecture16/Slides16.pdf))
-- Lecture 17: Inference (p-values, t-stats, confidence intervals) ([slides](Lectures/Lecture17/Slides17.pdf), [class handout](Lectures/Lecture17/ClassHandout17.pdf))
-- Lecture 18: Omitted Variable Bias; Multiple Regression ([slides](Lectures/Lecture18/Slides18.pdf), [class handout](Lectures/Lecture18/ClassHandout18.pdf), [lecture notes I](Notes/Module5-Linear-Regression/Omitted-Variable-Bias.pdf) & [II](Notes/Module5-Linear-Regression/Multiple-Linear-Regression.pdf))
-- Lecture 19: Categorical Variables; Interaction Terms ([slides](Lectures/Lecture19/Slides19.pdf), [class handout](Lectures/Lecture19/ClassHandout19.pdf), [lecture notes](Notes/Module5-Linear-Regression/Dummy-Variables-and-Interaction-Terms.pdf))
-- Lecture 20: Quadratic and Log Functional Forms ([slides](Lectures/Lecture20/Slides20.pdf), [class handout](Lectures/Lecture20/ClassHandout20.pdf), [lecture notes](Notes/Module5-Linear-Regression/Functional-Forms.pdf))
-- Lecture 21: Regression Analysis in R ([slides](Lectures/Lecture21-22/Slides21.pdf))
-- Lecture 22: Regression Analysis in R ([slides](Lectures/Lecture21-22/Slides22.pdf))
+- Lecture 15: Ordinary Least Squares (OLS); R-Squared [[slides](Lectures/Lecture15/Slides15.pdf), [handout](Lectures/Lecture15/ClassHandout15.pdf) [(filled)](Lectures/Lecture15/ClassHandout15_Filled.pdf)] 
+- Lecture 16: Prediction vs. Causal Inference [[slides](Lectures/Lecture16/Slides16.pdf)]
+- Lecture 17: Inference (p-values, t-stats, confidence intervals) [[slides](Lectures/Lecture17/Slides17.pdf), [handout](Lectures/Lecture17/ClassHandout17.pdf) [(filled)](Lectures/Lecture17/ClassHandout17_Filled.pdf)]
+- Lecture 18: Omitted Variable Bias; Multiple Regression [[slides](Lectures/Lecture18/Slides18.pdf), [handout](Lectures/Lecture18/ClassHandout18.pdf)]
+- Lecture 19: Categorical Variables; Interaction Terms [[slides](Lectures/Lecture19/Slides19.pdf), [handout](Lectures/Lecture19/ClassHandout19.pdf) [(filled)](Lectures/Lecture19/ClassHandout19_Filled.pdf)]
+- Lecture 20: Quadratic and Log Functional Forms [[slides](Lectures/Lecture20/Slides20.pdf), [handout](Lectures/Lecture20/ClassHandout20.pdf) [(filled)](Lectures/Lecture20/ClassHandout20_Filled.pdf)]
+- Lecture 21: Regression Analysis in R [[slides](Lectures/Lecture21-22/Slides21.pdf)]
+- Lecture 22: Regression Analysis in R [[slides](Lectures/Lecture21-22/Slides22.pdf)]
 
 ### Module VI: Advanced Topics
-- Lecture 23: Experiments and Quasi-Experimental Methods ([slides](Lectures/Lecture23/Slides23.pdf))
-- Lecture 24: Differences-in-Differences ([slides](Lectures/Lecture24/Slides24.pdf))
-- Lecture 25: Big Data and Machine Learning ([slides](Lectures/Lecture25/Slides25.pdf))
+- Lecture 23: Experiments and Quasi-Experimental Methods [[slides](Lectures/Lecture23/Slides23.pdf)]
+- Lecture 24: Differences-in-Differences [[slides](Lectures/Lecture24/Slides24.pdf)]
+- Lecture 25: Big Data and Machine Learning [[slides](Lectures/Lecture25/Slides25.pdf)]
+  
+Additional Reading: [2021 Nobel Prize in Economics](Readings/popular-economicsciencesprize2021.pdf)
