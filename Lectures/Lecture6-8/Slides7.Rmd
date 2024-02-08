@@ -23,9 +23,6 @@ library(kableExtra)
 # Load Packages
 library(tidyverse)
 
-# Set directory (optional)
-#setwd("~/Dropbox (CSU Fullerton)/Econ340_R")
-
 # Import data
 data <- read.csv("caschool.csv")
 ```
@@ -144,9 +141,9 @@ data %>%
 ### Excercise for you
 Find the county with the highest average number of computers per student (`comp_stu`) (Hint: Use `group_by(county)` and `summarise()`)
 
-### What's next?
+<!-- ### What's next?
 
 - Next class we will continue with R
 - Problem set 2 is available on Canvas and is due next Tuesday (09/19)
 - Get in touch with your research group partner(s) and start thinking about your project
-- Research Paper First Submission is due in two weeks (09/26)
+- Research Paper First Submission is due in two weeks (09/26) -->

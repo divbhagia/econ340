@@ -72,7 +72,7 @@
 \setbeamersize{text margin left=2em, text margin right=2em} 
 \addtolength{\headsep}{0.25cm}
 \setbeamertemplate{frametitle}{
-    \insertframetitle \\ \vspace{0.1em}
+    \insertframetitle \\ 
 }
 
 % Footer
