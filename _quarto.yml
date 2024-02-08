@@ -20,8 +20,8 @@ website:
         file: content.qmd
       - text: "Project"
         file: Research-Project/research-project.qmd
-      - text: "Assignments"
-        file: assignments.qmd
+      # - text: "Assignments"
+      #   file: assignments.qmd
   
   sidebar:
     - title: "Research Project"
