@@ -16,7 +16,7 @@ sidebar: false
 Additional Reading: [NYT Article 2016 Elections](Readings/NYT-Article-2016-Elections.pdf), [Stock & Watson Chapter 1](Readings/Stock-&-Watson-Chapter1.pdf)
 
 ### Module II: Coding in R
-Here are [instructions](Notes/How-to-install-R.pdf) on installing R and R Studio. 
+Here are the [instructions](Notes/How-to-install-R.pdf) for installing R and R Studio. You can find the datasets used in class in the Dropbox folder: [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0).
 
 - Lecture 6: Getting Started with R [[slides](Lectures/Lecture6-8/Slides6.pdf)]
 - Lecture 7: Data Analysis in R [[slides](Lectures/Lecture6-8/Slides7.pdf)]
