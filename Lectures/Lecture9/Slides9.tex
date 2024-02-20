@@ -182,36 +182,77 @@ Also referred to as probability distribution function (PDF) and cumulative distr
   \end{witemize}
 \end{frame}
 
-%%%%%%%%%%%%
-\begin{frame}{Roll of a Die}
-The expected value from the roll of a die
-$$ E(X) = \frac{1}{6} \cdot 1 +  \frac{1}{6} \cdot 2 +  \frac{1}{6} \cdot 3 +  \frac{1}{6} \cdot 4 +  \frac{1}{6} \cdot 5 +  \frac{1}{6} \cdot 6 =\frac{21}{6} = 3.5 $$
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Example}
+\vskip-0.5em
+An outdoor market vendor sells handmade crafts.
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Weather} & \textbf{Probability} & \textbf{ Sales (\$)} \\ \hline
+No rain                    & 60\%                 & 300                        \\ \hline
+Light rain                 & 30\%                 & 150                        \\ \hline
+Heavy rain                 & 10\%                 & 50                         \\ \hline
+\end{tabular} 
+\end{center} \vskip0.75em
+$$ E(Sales) = (0.6 \times 300) + (0.3 \times 150) + (0.1 \times 50) = \$230  $$\vskip0.75em
+\pause \textit{Daily sales will fluctuate due to randomness of the weather. However, if this day were to repeat itself multiple times, the vendor would, on average, expect to achieve daily sales of \$230.}
 \end{frame}
+
+
+%%%%%%%%%%%%%
+%\begin{frame}{Roll of a Die}
+%The expected value from the roll of a die
+%$$ E(X) = \frac{1}{6} \cdot 1 +  \frac{1}{6} \cdot 2 +  \frac{1}{6} \cdot 3 +  \frac{1}{6} \cdot 4 +  \frac{1}{6} \cdot 5 +  \frac{1}{6} \cdot 6 =\frac{21}{6} = 3.5 $$
+%\end{frame}
 
 %%%%%%%%%%%%
 \begin{frame}{Variance and Standard Deviation}
 The variance and standard deviation measure the dispersion or the ``spread''. \\
-$$ \sigma^2_X =   Var(X) = E[(X-\mu_X)^2] =  \sum_{x} (x-\mu_X)^2 f(x) $$ \\~\\
-Variance is the expected value of the square of the deviation of $X$ from its mean.
+$$ \sigma^2_X =   Var(X) = E[(X-\mu_X)^2] =  \sum_{x} (x-\mu_X)^2 f(x) $$ \\
+Variance is the expected value of the squared deviation of $X$ from its mean. \\~\\
+\textit{In our example, the variance will capture the potential variability or fluctuation in sales on any given day compared to the average (expected value).}
 \end{frame}
 
-%%%%%%%%%%%%
-\begin{frame}{Roll of a Die}
-Expected value 
-$$ E(X) = \frac{1}{6} \cdot 1 +  \frac{1}{6} \cdot 2 +  \frac{1}{6} \cdot 3 +  \frac{1}{6} \cdot 4 +  \frac{1}{6} \cdot 5 +  \frac{1}{6} \cdot 6 =\frac{21}{6} = 3.5 $$
-\vspace{1em}
-
-Variance
-$$ Var(X) = (-2.5)^2.\frac{1}{6} + (-1.5)^2.\frac{1}{6} + (-0.5)^2.\frac{1}{6} + (0.5)^2.\frac{1}{6}  $$
-$$ \quad \quad + (1.5)^2.\frac{1}{6}   + (2.5)^2.\frac{1}{6} = \frac{17.5}{6} $$ 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Example}
+\vskip-0.5em
+An outdoor market vendor sells handmade crafts. \\ \vskip1.25em
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Weather} & \textbf{Probability} & \textbf{ Sales (\$)} \\ \hline
+No rain                    & 60\%                 & 300                        \\ \hline
+Light rain                 & 30\%                 & 150                        \\ \hline
+Heavy rain                 & 10\%                 & 50                         \\ \hline
+\end{tabular} 
+\end{center} \vskip0.5em
+\begin{align*}
+E(Sales) &= \red{0.6} \cdot (300) + \red{0.3} \cdot (150) + \red{0.1} \cdot (50) = \$230 \\~\\
+Var(Sales) &= \red{0.6} \cdot (300 - 230)^2 + \red{0.3} \cdot (150 - 230)^2 + \red{0.1} \cdot (50 - 230)^2 \\
+&= 8100
+\end{align*}
 \end{frame}
+
+%%%%%%%%%%%%%
+%\begin{frame}{Roll of a Die}
+%Expected value 
+%$$ E(X) = \frac{1}{6} \cdot 1 +  \frac{1}{6} \cdot 2 +  \frac{1}{6} \cdot 3 +  \frac{1}{6} \cdot 4 +  \frac{1}{6} \cdot 5 +  \frac{1}{6} \cdot 6 =\frac{21}{6} = 3.5 $$
+%\vspace{1em}
+%
+%Variance
+%$$ Var(X) = (-2.5)^2.\frac{1}{6} + (-1.5)^2.\frac{1}{6} + (-0.5)^2.\frac{1}{6} + (0.5)^2.\frac{1}{6}  $$
+%$$ \quad \quad + (1.5)^2.\frac{1}{6}   + (2.5)^2.\frac{1}{6} = \frac{17.5}{6} $$ 
+%\end{frame}
 
 %%%%%%%%%%%%
 \begin{frame}{Variance and Standard Deviation}
 Alternative formula for the variance:  $$Var(X) = E[(X-\mu_X)^2] = E(X^2)-\mu_X^2$$ \\~\\
 Since variance is in units of the square of $X$, therefore we use \textit{standard deviation} which is the square-root of variance
 $$ \sigma_X = \sqrt{\sigma^2_X}  $$
-\end{frame}
+
+\textit{For our example, standard deviation of sales is $\sqrt{8100} = \$ 90 $. 
+}\end{frame}
 
 %%%%%%%%%%%%
 \begin{frame}{Transformations of Random Variables}
@@ -224,6 +265,49 @@ $$ \sigma_X = \sqrt{\sigma^2_X}  $$
   \end{witemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Shifting the Distribution}
+\vfill
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    no markers, 
+    %domain=-2:15, 
+    samples=100,
+    ymin=0,
+    axis lines*=left, 
+    xlabel=,
+    ylabel=$f(x)$,
+    height=7cm, 
+    width=16cm,
+    xtick=\empty, 
+    ytick=\empty,
+    clip=false,
+    axis on top,
+    grid = major,
+    hide y axis
+    ]
+% Distributions
+\addplot [black, very thick, domain=-3:11] {gauss(4,2)};
+\addplot [purple, very thick, domain=2:16] {gauss(9,2)};
+% Means
+\draw [color=black, very thick, dashed] (axis cs:4,0) -- (axis cs:4,0.2);
+\node[below] at (axis cs:4, 0) {$\mu_X$};
+\draw [color=purple, very thick, dashed] (axis cs:9,0) -- (axis cs:9,0.2);
+\node[below] at (axis cs:9, 0) {$\purple{\mu_X + a}$};
+% Random point
+\draw [color=black, very thick, dashed] (axis cs:1.5,0) -- (axis cs:1.5,0.09);
+\node[below] at (axis cs:1.5, 0) {$x$};
+\draw [color=purple, very thick, dashed] (axis cs:6.5,0) -- (axis cs:6.5,0.09);
+\node[below] at (axis cs:6.5, 0) {$\purple{x + a}$};
+% Distance from the mean
+\draw [color=black, thick, <->] (axis cs:1.5,0.05) -- (axis cs:4,0.05) node [midway, above] {$\sigma_X$};
+\draw [color=black, thick, <->] (axis cs:6.5,0.05) -- (axis cs:9,0.05) node [midway, above] {$\sigma_X$};
+\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
 %%%%%%%%%%%%
 \begin{frame}{Transformations of Random Variables}
  If you scale every outcome by some constant $b$, \\~\\
@@ -235,6 +319,49 @@ $$ \sigma_X = \sqrt{\sigma^2_X}  $$
   \end{witemize}
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Scaling the Distribution}
+\vfill
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+    no markers, 
+    %domain=-2:15, 
+    samples=100,
+    ymin=0,
+    axis lines*=left, 
+    xlabel=,
+    ylabel=$f(x)$,
+    height=7cm, 
+    width=16cm,
+    xtick=\empty, 
+    ytick=\empty,
+    clip=false,
+    axis on top,
+    grid = major,
+    hide y axis
+    ]
+% Distributions
+\addplot [black, very thick, domain=0:8] {gauss(4,1)};
+\addplot [purple, very thick, domain=2:12] {gauss(7,2)};
+% Means
+\draw [color=black, very thick, dashed] (axis cs:4,0) -- (axis cs:4,0.4);
+\node[below] at (axis cs:4, 0) {$\mu_X$};
+\draw [color=purple, very thick, dashed] (axis cs:8,0) -- (axis cs:8,0.175);
+\node[below] at (axis cs:8, 0) {$\purple{b\mu_X}$};
+% Random point
+\draw [color=black, very thick, dashed] (axis cs:3,0) -- (axis cs:3,0.23);
+\node[below] at (axis cs:3, 0) {$x$};
+\draw [color=purple, very thick, dashed] (axis cs:6,0) -- (axis cs:6,0.175);
+\node[below] at (axis cs:6, 0) {$\purple{bx}$};
+% Distance from the mean
+\draw [color=black, thick, <->] (axis cs:3,0.15) -- (axis cs:4,0.15) node [midway, above] {$\sigma_X$};
+\draw [color=black, thick, <->] (axis cs:6,0.1) -- (axis cs:8,0.1) node [midway, above] {$b\sigma_X$};
+\end{axis}
+\end{tikzpicture}
+\end{frame}
+
+
 %%%%%%%%%%%%
 \begin{frame}{Transformations of Random Variables}
 More generally, if $X$ is a random variable and $$Y=a+bX$$
@@ -244,23 +371,23 @@ In addition, a linear transformation of a random variable does not change the sh
 \end{frame}
 
 %%%%%%%%%%%%
-\begin{frame}{Example}
-Flip a coin to gain \$10 or loose \$10. 
-\begin{center}
-\renewcommand*{\arraystretch}{1.25}
-\begin{tabularx}{0.9\textwidth}{rcccc}
-$x$ & $f(x)$ & $xf(x)$ & $(x-E(X))^2$ & $f(x)(x-E(X))^2$\\
-\hline
-10 & 0.5 & 5 & (10)$^2$ & 50 \\
--10 & 0.5 & -5 & (-10)$^2$ & 50  \\
-\hline
-& & 0 & & 100 \\
-\hline
-\end{tabularx}
-\end{center}
-So we have that $E(X) = 0$ and $var(X)=100$. \\~\\
-Now say, $Y = X-5$ and $Z=0.5X$. What is the expectation and variance of $Y$ and $Z$?
-\end{frame}
+%\begin{frame}{Example}
+%Flip a coin to gain \$10 or loose \$10. 
+%\begin{center}
+%\renewcommand*{\arraystretch}{1.25}
+%\begin{tabularx}{0.9\textwidth}{rcccc}
+%$x$ & $f(x)$ & $xf(x)$ & $(x-E(X))^2$ & $f(x)(x-E(X))^2$\\
+%\hline
+%10 & 0.5 & 5 & (10)$^2$ & 50 \\
+%-10 & 0.5 & -5 & (-10)$^2$ & 50  \\
+%\hline
+%& & 0 & & 100 \\
+%\hline
+%\end{tabularx}
+%\end{center}
+%So we have that $E(X) = 0$ and $var(X)=100$. \\~\\
+%Now say, $Y = X-5$ and $Z=0.5X$. What is the expectation and variance of $Y$ and $Z$?
+%\end{frame}
 
 %%%%%%%%%%%%
 \begin{frame}{Standardized Random Variables}
@@ -268,6 +395,4 @@ A random variable can be transformed into a random variable with mean 0 and vari
 $$ Z = \frac{X-\mu_X}{\sigma_X} $$ \\~\\
 Here, $E(Z) = 0$ and $\sigma_Z = 1$.
 \end{frame}
-
-
 \end{document}
