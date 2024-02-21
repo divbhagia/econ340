@@ -19,7 +19,7 @@ Below, I detail the specific [tasks](#tasks) you need to complete and what you a
 
 For all tasks except the first one, ensure your responses are structured in paragraphs and categorized into sections. Consult the example submission for formatting guidance.
 
-1. **Cover Sheet**: Complete this [cover sheet](submission1-cover-sheet.docx) and attach it as the first page of your submission.
+1. **Cover Sheet**: Complete this [cover sheet](ubmission1-cover-sheet.docx) and attach it as the first page of your submission.
 2. **Introduction**: Clearly specify your research question and explain why it interesting or important.
 3. **Data and Variables Description**: Mention and verbally describe the dataset you are using, your dependent variable, primary independent variable, and control variables. Your variables should be either continuous or binary. If your variable is categorical and has more than two categories, transform it into a meaningful binary variable using 1 and 0 as values. Remember to mention how the variables are named in your dataset. Mention if you constructed new variables or deleted observations. Also, note the number of observations in your data.
 4. **Summary Statistics**: Present summary statistics for all your variables in a table. Comment on the averages of your variables and anything else you think is interesting or important. Be careful in properly describing the averages of your binary variables. 
