@@ -190,9 +190,9 @@ An outdoor market vendor sells handmade crafts.
 \begin{tabular}{|l|c|c|}
 \hline
 \textbf{Weather} & \textbf{Probability} & \textbf{ Sales (\$)} \\ \hline
-No rain                    & 60\%                 & 300                        \\ \hline
-Light rain                 & 30\%                 & 150                        \\ \hline
-Heavy rain                 & 10\%                 & 50                         \\ \hline
+No rain                    & 0.6                 & 300                        \\ \hline
+Light rain                 & 0.3                 & 150                        \\ \hline
+Heavy rain                 & 0.1                 & 50                         \\ \hline
 \end{tabular} 
 \end{center} \vskip0.75em
 $$ E(Sales) = (0.6 \times 300) + (0.3 \times 150) + (0.1 \times 50) = \$230  $$\vskip0.75em
@@ -222,9 +222,9 @@ An outdoor market vendor sells handmade crafts. \\ \vskip1.25em
 \begin{tabular}{|l|c|c|}
 \hline
 \textbf{Weather} & \textbf{Probability} & \textbf{ Sales (\$)} \\ \hline
-No rain                    & 60\%                 & 300                        \\ \hline
-Light rain                 & 30\%                 & 150                        \\ \hline
-Heavy rain                 & 10\%                 & 50                         \\ \hline
+No rain                    & 0.6                 & 300                        \\ \hline
+Light rain                 & 0.3                & 150                        \\ \hline
+Heavy rain                 & 0.1                & 50                         \\ \hline
 \end{tabular} 
 \end{center} \vskip0.5em
 \begin{align*}
@@ -388,6 +388,26 @@ In addition, a linear transformation of a random variable does not change the sh
 %So we have that $E(X) = 0$ and $var(X)=100$. \\~\\
 %Now say, $Y = X-5$ and $Z=0.5X$. What is the expectation and variance of $Y$ and $Z$?
 %\end{frame}
+
+\begin{frame}{Example}
+\vskip-0.75em
+The market vendor offered you a job, you get \$20 and 10\% commission ($Y$) on sales ($X$) per day.
+$$ Y = 20 + 0.1 X $$ \\ \vskip0.15em
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Weather} & \textbf{Probability} & \textbf{ X} & \textbf{Y} \\ \hline
+No rain                    & 0.6                 & 300   &  20 + 0.1(300) = 50                     \\ \hline
+Light rain                 & 0.3                 & 150   & 20 + 0.1(150) = 35                    \\ \hline
+Heavy rain                 & 0.1                 & 50    &  20 + 0.1(50) = 25                   \\ \hline
+\end{tabular} 
+\end{center} 
+\begin{align*}
+E(Y) &=  20 + 0.1 E(X) = 20 + 0.1(230) = 43 \\
+Var(Y) &= 0.1^2 \cdot Var(X) = 0.01 (8100) = 81 \\
+SD(Y) &= \sqrt{81} = 9 \ (= 0.1 SD(X))
+\end{align*}
+\end{frame}
 
 %%%%%%%%%%%%
 \begin{frame}{Standardized Random Variables}
