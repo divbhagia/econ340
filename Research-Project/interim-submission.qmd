@@ -8,7 +8,7 @@ This submission marks the beginning of your research project. Prior to moving fo
 
 For this submission, you need to (a) describe your research question and the data you will use, and (b) perform a basic analysis of your data in R. You will highlight why your question is interesting and important, mention your data sources, and identify the variables you will use. Then, report the key numerical characteristics of your variables and conduct some visual analysis. The aim is to gain an overall understanding of the patterns in your data. This submission will serve as a foundation for writing the "Introduction" and "Descriptive Analysis" sections of your final paper.
 
-Below, I detail the specific [tasks](#tasks) you need to complete and what you are required to [submit](#submission-checklist). At the bottom of the page, you'll also find a [rubric](#rubric) that will be used for grading. Finally, here is an [example submission](Research-Project/submission1-example.pdf) with it's corresponding [R code](submission1-example-code.R) to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.  
+Below, I detail the specific [tasks](#tasks) you need to complete and what you are required to [submit](#submission-checklist). At the bottom of the page, you'll also find a [rubric](#rubric) that will be used for grading. Finally, here is an [example submission](submission1-example.pdf) with it's corresponding [R code](submission1-example-code.R) to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.  
 
 **Before you get started:**
 
