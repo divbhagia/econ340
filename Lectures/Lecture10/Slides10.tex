@@ -114,9 +114,41 @@ A random variable can be transformed into a random variable with mean 0 and vari
 $$ Z = \frac{X-\mu_X}{\sigma_X} $$
 \end{frame}
 
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Transformations of Random Variables}
+\vskip-0.5em
+\begin{witemize}
+  \item Say, $X$ is a random variable with mean $\mu_X$, variance $\sigma^2_X$, and standard deviation $\sigma_X$
+  \item If we transform $X$ to create a new random variable $$ Y = a + bX $$
+\item Then $Y$ is a random variable that has a distribution with the same shape as $X$ and with \vskip0.15em
+\begin{mitemize}
+\normalsize
+  \item Mean: $\mu_Y = a + b \cdot \mu_X \quad  $
+  \item Variance: $\sigma^2_Y = b^2 \cdot \sigma^2_X$
+  \item SD:  $\sigma_Y = b \cdot \sigma_X  $
+\end{mitemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Z-Score}
+\begin{witemize}
+  \item We can rearrange the terms in the Z-score
+  $$ Z =  \frac{X-\mu_X}{\sigma_X} \quad \rightarrow \quad Z = \frac{-\mu_X}{\sigma_X} + \frac{1}{\sigma_X} \cdot X $$
+  \item So here $ Z = a + b \cdot X $ with 
+  $ a = \frac{-\mu_X}{\sigma_X}$ and $b= \frac{1}{\sigma_X} $
+  \item Since $Z$ is a transformed random variable:
+  $$ \mu_Z = a + b \cdot \mu_X = \frac{-\mu_X}{\sigma_X} + \frac{1}{\sigma_X} \cdot \mu_X = 0   $$
+    $$ \sigma^2_Z = b^2 \cdot \sigma_X^2 =  \left(\frac{1}{\sigma_X}\right)^2 \cdot \sigma_X^2  = 1   $$
+
+\end{witemize}
+
+\end{frame}
+
+
 %%%%%%%%%%%%
 \begin{frame}{How to find the area under the curve?}
-For example, say $X \sim N(3, 16)$. We want to calculate $Pr(X \geq 5)$
+For example, say $X \sim N(3, 16)$. We want to calculate $Pr(X \geq 5)$.\\~\\
  \begin{figure}[!h]
  \centering	
 \begin{tikzpicture}
@@ -132,6 +164,7 @@ For example, say $X \sim N(3, 16)$. We want to calculate $Pr(X \geq 5)$
   \addplot [fill=purple!20, draw=none, domain=5:3+3*4] {gauss(3, 4)} \closedcycle;
 %\draw[->, line width=1pt](axis cs: 185, 0.0125)--(axis cs: 205, 0.0125);
 %\node at (axis cs: 0, 0.2) { 95\%};
+\draw[dotted, line width=1pt](axis cs: 3, 0)--(axis cs: 3, 0.1);
 \end{axis}
 \end{tikzpicture}
  \end{figure}
@@ -140,7 +173,7 @@ For example, say $X \sim N(3, 16)$. We want to calculate $Pr(X \geq 5)$
 %%%%%%%%%%%%
 \begin{frame}{How to find the area under the curve?}
 Given $X \sim N(3, 16)$, 
-$$ Z = \frac{X-3}{4} \sim N(0,1) $$
+$$ Z = \frac{X-\mu_X}{\sigma_X}  = \frac{X-3}{4} \sim N(0,1) $$
 
 Note that, 
   $$ Pr(X \geq 5) = Pr\left(\frac{\red{X}-3}{4} \geq \frac{\red{5}-3}{4}\right) = Pr(Z \geq 0.5)  $$
@@ -149,6 +182,7 @@ Note that,
 
 %%%%%%%%%%%%
 \begin{frame}{How to find the area under the curve?}
+Find $Pr(Z \geq 0.5)$ from the standard normal table. \\~\\
  \begin{figure}[!h]
  \centering	
 \begin{tikzpicture}
@@ -163,6 +197,7 @@ Note that,
   \addplot [very thick,black] {gauss(0, 1)}; 
   \addplot [fill=purple!20, draw=none, domain=0.5:3] {gauss(0, 1)} \closedcycle;
 \node at (axis cs: 1.1, 0.1) {$0.3085$};
+\draw[dotted, line width=1pt](axis cs: 0, 0)--(axis cs: 0, 0.4);
 \end{axis}
 \end{tikzpicture}
  \end{figure}
@@ -180,9 +215,92 @@ Given $X \sim N(\mu, \sigma^2)$, general recipe to find $Pr(x_0<X<x_1)$: \\~\\
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Area under the curve}
+\begin{frame}{Finding points from area under the curve}
+\vskip-0.5em
+For example, say $X \sim N(3, 16)$ and we are given $ Pr(X>x) = 0.10$. How to find $x$? \vskip0.5em
+\begin{figure}[!h]
+ \centering	
+\begin{tikzpicture}
+\begin{axis}[
+  no markers, domain=3-3*4:3+3*4, samples=100,
+  axis lines*=left, xlabel=, ylabel=$f(X)$,
+  %every axis y label/.style={at=(current axis.above origin),anchor=south},
+  height=6cm, width=10cm,
+  xtick={3, 8.12}, %ytick=\empty,
+  xticklabels ={3, x?},
+  enlargelimits=false, clip=false, axis on top,
+  ]
+  \addplot [very thick,black] {gauss(3, 4)}; 
+  \addplot [fill=purple!20, draw=none, domain=8.12:15] {gauss(3, 4)} \closedcycle;
+\draw[dotted, line width=1pt](axis cs: 3, 0)--(axis cs: 3, 0.1);
+\node at (axis cs: 10, 0.01) {$0.1$};
+\end{axis}
+\end{tikzpicture}
+ \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Finding points from area under the curve}
+Start by finding $z$, such that $Pr(Z>z)=0.1$. \vskip0.5em
+\begin{figure}[!h]
+ \centering	
+\begin{tikzpicture}
+\begin{axis}[
+  no markers, domain=3-3*4:3+3*4, samples=100,
+  axis lines*=left, xlabel=, ylabel=$f(Z)$,
+  %every axis y label/.style={at=(current axis.above origin),anchor=south},
+  height=6cm, width=10cm,
+  xtick={3, 8.12}, %ytick=\empty,
+  xticklabels ={0, 1.28},
+  enlargelimits=false, clip=false, axis on top,
+  ]
+  \addplot [very thick,black] {gauss(3, 4)}; 
+  \addplot [fill=purple!20, draw=none, domain=8.12:15] {gauss(3, 4)} \closedcycle;
+\draw[dotted, line width=1pt](axis cs: 3, 0)--(axis cs: 3, 0.1);
+\node at (axis cs: 10, 0.01) {$0.1$};
+\end{axis}
+\end{tikzpicture}
+ \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Finding points from area under the curve}
+Now note that, 
+$$Z = \frac{X-\mu}{\sigma} \ \rightarrow \ X = \mu + Z.\sigma$$
+We found $Pr(Z>1.28)=0.1$, we can find the corresponding $x$ for 1.28 as follows:
+$$ 3+1.28 \times 4 = 8.12 $$
+So we have that $Pr(X > 8.12) = 0.1$.
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Finding points from area under the curve}
+Transforming $z$ back to $x = 3+1.28 \times 4 = 8.12$.  \vskip0.5em
+\begin{figure}[!h]
+ \centering	
+\begin{tikzpicture}
+\begin{axis}[
+  no markers, domain=3-3*4:3+3*4, samples=100,
+  axis lines*=left, xlabel=, ylabel=$f(X)$,
+  %every axis y label/.style={at=(current axis.above origin),anchor=south},
+  height=6cm, width=10cm,
+  xtick={3, 8.12}, %ytick=\empty,
+  xticklabels ={3, 8.12},
+  enlargelimits=false, clip=false, axis on top,
+  ]
+  \addplot [very thick,black] {gauss(3, 4)}; 
+  \addplot [fill=purple!20, draw=none, domain=8.12:15] {gauss(3, 4)} \closedcycle;
+\draw[dotted, line width=1pt](axis cs: 3, 0)--(axis cs: 3, 0.1);
+\node at (axis cs: 10, 0.01) {$0.1$};
+\end{axis}
+\end{tikzpicture}
+ \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Finding points from area under the curve}
 \begin{witemize}
-  \item Alternatively, sometimes we are given $ Pr(X<x)$ or $Pr(X>x)$ and we need to find $x$. 
+  \item Sometimes we are given $ Pr(X<x)$ or $Pr(X>x)$ and we need to find $x$. 
   \item \textit{Example}: Given $X \sim N(3, 16)$ and $ Pr(X>x) = 0.10$, find $x$. 
   \item Start by finding $z$, such that $Pr(Z>z)=0.1$. From the standard normal table, $z=1.28$.
   \item Now we just need to convert $z$ to $x$.
