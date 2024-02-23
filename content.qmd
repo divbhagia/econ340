@@ -27,7 +27,7 @@ Here are the [instructions](Notes/How-to-install-R.pdf) for installing R and R S
 [Lecture Notes](Notes/Module3-Random-Variables/Random-Variables.pdf)
 
 - Lecture 9: Distribution, Expectation, Variance [[slides](Lectures/Lecture9/Slides9.pdf), [handout](Lectures/Lecture9/ClassHandout9.pdf) [(filled)](Lectures/Lecture9/ClassHandout9_Filled.pdf)]
-- Lecture 10: Normal Distribution, Z-Score [[slides](Lectures/Lecture10/Slides10.pdf), [handout](Lectures/Lecture10/ClassHandout10.pdf) [(filled)](Lectures/Lecture10/ClassHandout10_Filled.pdf)]
+- Lecture 10: Normal Distribution, Z-Score [[slides](Lectures/Lecture10/Slides10.pdf), [handout](Lectures/Lecture10/ClassHandout10.pdf) [(filled)](Lectures/Lecture10/ClassHandout10_Filled.pdf), [z-table](Lectures/Lecture10/z_table.pdf)]
 - Lecture 11: Independence and Correlation [[slides](Lectures/Lecture11/Slides11.pdf), [handout](Lectures/Lecture11/ClassHandout11.pdf) [(filled)](Lectures/Lecture11/ClassHandout11_Filled.pdf)]
 
 ### Module IV: Sampling and Estimation
