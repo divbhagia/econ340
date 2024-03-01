@@ -34,7 +34,7 @@ Here are the [instructions](Notes/How-to-install-R.pdf) for installing R and R S
 
 [Lecture Notes](Notes/Module4-Sampling-and-Estimation/Sampling-and-Estimation.pdf)
 
-- Lecture 12: Good Estimators, Sample Mean Distribution [[slides](Lectures/Lecture12/Slides12.pdf), [handout](Lectures/Lecture12/ClassHandout12.pdf) [(filled)](Lectures/Lecture12/ClassHandout12_Filled.pdf)]
+- Lecture 12: Good Estimators, Sample Mean Distribution [[slides](Lectures/Lecture12/Slides12.pdf), [handout](Lectures/Lecture12/ClassHandout12.pdf) [(filled)](Lectures/Lecture12/ClassHandout12_Filled.pdf), [CLT Simulation](https://dbhagia.shinyapps.io/CLT-Demo/)]
 - Lecture 13: Confidence Intervals [[slides](Lectures/Lecture13/Slides13.pdf), [handout](Lectures/Lecture13/ClassHandout13.pdf) [(filled)](Lectures/Lecture13/ClassHandout13_Filled.pdf)]
 - Lecture 14: Hypothesis Testing and P-Values [[slides](Lectures/Lecture14/Slides14.pdf), [handout](Lectures/Lecture14/ClassHandout14.pdf) [(filled)](Lectures/Lecture14/ClassHandout14_Filled.pdf)]
 
