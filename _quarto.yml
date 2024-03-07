@@ -18,10 +18,10 @@ website:
         file: syllabus.qmd
       - text: "Content"
         file: content.qmd
-      - text: "Project"
-        file: Research-Project/research-project.qmd
       - text: "Assessment"
         file: assessment.qmd
+      - text: "Project"
+        file: Research-Project/research-project.qmd
   
   sidebar:
     - title: "Research Project"
