@@ -3,6 +3,9 @@ title: ""
 sidebar: false
 ---
 
+Your performance in this class will be evaluated based on active engagement, four problem sets, two exams, and your research project. Below, you will find the problem sets; please submit your solutions on Canvas. Solutions to the problem sets will be posted on Canvas following the due date. Additionally, study guides and sample exams for both the midterm and final exam are available below. 
+Details for the research project submissions can be found on the [Project](Research-Project/research-project.html) page.
+
 ### Problem Sets
 
 - [Problem Set 1](Problem-Sets/PS1/PS1.pdf)
@@ -13,9 +16,9 @@ sidebar: false
 ### Exams Related Material
 
 - Midterm
+  - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
   - [Sample Exam](Exams/Midterm/midterm_sample.pdf)
   - [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
-  - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
   - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)<br>
 <br>
 
