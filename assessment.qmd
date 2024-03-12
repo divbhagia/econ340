@@ -17,6 +17,7 @@ Details for the research project submissions can be found on the [Project](Resea
 
 - Midterm
   - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
+  - [Midterm Review Slides](Lectures/Midterm-Review/midterm_review.pdf)
   - [Sample Exam](Exams/Midterm/midterm_sample.pdf)
   - [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
   - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)<br>
