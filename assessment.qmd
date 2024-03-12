@@ -13,7 +13,7 @@ Details for the research project submissions can be found on the [Project](Resea
 - [Problem Set 3](Problem-Sets/PS3/PS3.pdf)
 - [Problem Set 4](Problem-Sets/PS4/PS4.pdf)
 
-### Exams Related Material
+### Exam Material
 
 - Midterm
   - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
