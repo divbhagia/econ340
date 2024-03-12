@@ -13,19 +13,20 @@ Details for the research project submissions can be found on the [Project](Resea
 - [Problem Set 3](Problem-Sets/PS3/PS3.pdf)
 - [Problem Set 4](Problem-Sets/PS4/PS4.pdf)
 
-### Exam Material
+### Midterm Material
 
-- Midterm
-  - [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
-  - [Midterm Review Slides](Lectures/Midterm-Review/midterm_review.pdf)
-  - Compiled material for Modules I, II, IV: [Notes](Notes/Part1-Compiled-Notes.pdf), [Handouts](Lectures/Part1-Compiled-Handouts.pdf), [Slides](Lectures/Part1-Compiled-Slides.pdf)
-  - [Sample Exam](Exams/Midterm/midterm_sample.pdf)
-  - [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
-  - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)<br>
+- [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
+- [Midterm Review Slides](Lectures/Midterm-Review/midterm_review.pdf)
+- [Sample Exam](Exams/Midterm/midterm_sample.pdf)
+- [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
+- [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)<br>
+
+Compiled material for Modules I, II, IV: [Notes](Notes/Part1-Compiled-Notes.pdf), [Handouts](Lectures/Part1-Compiled-Handouts.pdf), [Slides](Lectures/Part1-Compiled-Slides.pdf)
 <br>
 
-- Final
-  - [Sample Exam](Exams/Final/final_sample.pdf)
-  - [Sample Exam Solutions](Exams/Final/final_sample_solution.pdf)
-  - [Study Guide](Exams/Final/final_study_guide.pdf)
-  - [Sample Questions for Module VI](Exams/Final/sample_questions_add_topics.pdf)
+### Final Exam Material
+
+- [Sample Exam](Exams/Final/final_sample.pdf)
+- [Sample Exam Solutions](Exams/Final/final_sample_solution.pdf)
+- [Study Guide](Exams/Final/final_study_guide.pdf)
+- [Sample Questions for Module VI](Exams/Final/sample_questions_add_topics.pdf)
