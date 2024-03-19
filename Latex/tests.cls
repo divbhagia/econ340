@@ -91,7 +91,7 @@
 \setlength{\skip\footins}{1cm} 					% Footnote Space
 \setlength{\parskip}{3mm} 						% Paragraph Skip
 \setstretch{1.25} 								% Line Space
-\RequirePackage[margin=1.15in]{geometry} 		% Margins
+\RequirePackage[margin=1in]{geometry} 		% Margins
 
 % Custom Definitions
 \pgfmathdeclarefunction{gauss}{2}{%
