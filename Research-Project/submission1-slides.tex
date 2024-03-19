@@ -1,0 +1,117 @@
+\documentclass{./../Lectures/div_teaching_slides}
+\tikzset{
+    -Latex,auto,node distance =1 cm and 1 cm,semithick,
+    state/.style ={ellipse, draw, minimum width = 0.7 cm},
+    point/.style = {circle, draw, inner sep=0.04cm,fill,node contents={}},
+    bidirected/.style={Latex-Latex,dashed},
+    el/.style = {inner sep=2pt, align=left, sloped}
+}
+
+\begin{document}
+\title{ECON 340 \\ Economics Research Methods}
+\author{Div Bhagia}
+\date{Research Project Interim Submission Guidelines}
+
+\begin{frame}[noframenumbering, plain]
+\maketitle
+\end{frame}
+
+
+
+
+%%%%%%%%%%%% Submission 1: Overview
+% \begin{frame}{Interim Submission: Overview}
+% \begin{witemize}
+%     \item[(a)] describe your research question and the data you will use 
+%     \begin{itemize}
+%       \item highlight why your question is interesting and important
+%       \item mention your data sources
+%       \item identify the variables you will use
+%     \end{itemize}
+%     \item[(b)] perform a basic analysis of your data in R
+%   \end{itemize}
+%   \item You need to describe your research question and the data you will use
+%   \item Highlight why your question is interesting and important
+%   \item Mention the source of your data
+%   \item Highlight the variables you will use
+% \end{witemize}
+% \end{frame}
+
+%%%%%%%%%%%% Research Question
+\begin{frame}{Research Question}
+\begin{witemize}
+\item Your question should concern the impact of one variable on another 
+\item Select a primary independent variable, a dependent variable, and at least two control variables.
+\end{witemize}
+\begin{center}
+  \begin{tikzpicture}
+  \node (1) at (0,0) {Control Variables};
+  \node (2) at (-4,2) {Independent Variable};
+  \node (3) at (4,2) {Dependent Variable};
+  \path (2) edge  (3);
+  \path[bidirected] (1) edge[bend left=20] (2);
+  \path[bidirected] (3) edge[bend left=20] (1);
+  \end{tikzpicture}	
+  \end{center} 
+\end{frame}
+
+%%%%%%%%%%%% Data
+\begin{frame}{Data}
+\begin{witemize}
+  \item You can pick a dataset from the Econ340 Datasets Dropbox folder or use an external dataset
+  \item There is a list of all the datasets in the folder; each folder contains the codebook (description of variables)
+  \item  If you need help with formatting an external dataset, email me at least a week in advance
+  \item Your dataset should meet the following criteria:\\
+  \begin{itemize}
+  \item Have at least 100 observations
+  \item Contain all the variables you plan to use
+  \end{itemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Overview
+\begin{frame}{Interim Submission: Overview}
+  \textbf{Goals}:  \vskip0.5em
+  \begin{witemize}
+      \item[(a)] Describe your research question and data 
+      \item[(b)] Perform a basic analysis of your data in R   \\~\\
+  \end{witemize}
+  The submission will serve as a foundation for the “Introduction” and “Descriptive Analysis” sections of your final paper. \\~\\
+  Refer to the example submission and it’s corresponding R code to guide you.
+  \end{frame}
+
+%%%%%%%%%%%% Tasks
+\begin{frame}{Tasks}
+\begin{wenumerate}
+  \item Complete the cover sheet.
+  \item Specify and motivate your research question.
+  \item Describe your data and variables. All variables should be either continuous or binary.
+  \item Present summary statistics for all your variables and comment.
+\end{wenumerate}
+\end{frame}
+
+%%%%%%%%%%%% Tasks
+\begin{frame}{Tasks}
+\begin{witemize}
+\item[5.] Present a graph showing the relationship between your dependent and primary independent variable \\ \vskip0.5em
+\begin{itemize}
+\item Scatter plot if both variables are continuous
+\item Bar plot if one variable is binary \\ \vskip0.5em
+\end{itemize}
+Also, report the correlation between the two variables. Summarize what you learn. 
+\item[6.] Present the correlation between all your variables in one or more tables and discuss. Comment on the direction of bias from not accounting for control variables. 
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%% Submission
+\begin{frame}{Submission}
+\begin{witemize}
+  \item Prepare your submission in Microsoft Word and submit it in PDF format, along with R code and data (if changed significantly) on Canvas.
+  \item Export figures from R and include them in your document. 
+  \item For tables, you can copy from the output and format them as a table in Word (use a fixed-width font like Courier New) or take a screenshot.
+  \item All tables and figures should have a name and number. 
+  \item The write-up should be in essay format, no bullet points.
+\end{witemize}
+\end{frame}
+
+\end{document}
