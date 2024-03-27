@@ -172,7 +172,7 @@ Let's take the expectation of $Y$ conditional on $X$:
 $$ E(Y | X) = \beta_0 + \beta_1 X + E(u|X) $$ \\ \vspace{0.5em}
 If the exogeneity assumption holds, $E(u|X)=0$, then
 $$ E(Y | X) = \beta_0 + \beta_1 X  $$ \\ \vspace{0.5em}
-If $X$ increases by 1 unit, on average, $Y$ increases by $\beta_1$. $$  \beta_1 =  E(Y | X=x+1)  -  E(Y | X=x)$$
+So change in $Y$ in response to one unit change in $X$, $$  E(Y | X=x+1)  -  E(Y | X=x) =  \beta_1 $$
 \end{frame}
 
 
@@ -185,9 +185,7 @@ If $X$ increases by 1 unit, on average, $Y$ increases by $\beta_1$. $$  \beta_1 
 	 & E(Y|X=x+1) = \beta_0 + \beta_1 (x+1) + E(u|X=x+1) 
 \end{align} \\~\\
 Subtracting equation (1) from (2):
-$$ E(Y|X=x+1)-E(Y|X=x) = \beta_1 + [E(u|X=x+1)-E(u|X=x)] $$ \\~\\
-So, in this case:
-$$  \beta_1 =  \underbrace{[E(Y | X=x+1)-E(Y | X=x)]}_{\text{Impact of $X$ on $Y$}} - \underbrace{[E(u|X=x+1)-E(u|X=x)]}_{\text{Confounding effect of $u$}}$$
+$$ E(Y|X=x+1)-E(Y|X=x) = \beta_1 + \underbrace{[E(u|X=x+1)-E(u|X=x)]}_{\text{Confounding effect of $u$}} $$ \\~\\
 \end{frame}
 
 %%%%%%%%%%%% 
