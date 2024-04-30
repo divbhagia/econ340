@@ -56,4 +56,4 @@ Notes: [Lectures 15-17](Notes/Module5-Linear-Regression/Simple-Linear-Regression
 - Lecture 24: Differences-in-Differences [[slides](Lectures/Lecture24/Slides24.pdf)]
 - Lecture 25: Big Data and Machine Learning [[slides](Lectures/Lecture25/Slides25.pdf)]
   
-Additional Reading: [2021 Nobel Prize in Economics](Readings/popular-economicsciencesprize2021.pdf)
+Additional Readings: [2021 Nobel Prize in Economics](Readings/popular-economicsciencesprize2021.pdf), [Trade War](https://microeconomicinsights.org/the-return-to-protectionism/)
