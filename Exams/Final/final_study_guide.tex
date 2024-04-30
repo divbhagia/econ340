@@ -8,7 +8,7 @@
 \begin{itemize}
 \item This will be a closed-book exam.
 \item You will be allowed to use a calculator. No phones or computers are allowed. 
-\item It is really important that you review all the material uploaded on Canvas under the modules \textit{Linear Regression Model} and \textit{Additional Topics}.
+\item It is really important that you review all the material uploaded on the Course Website under the modules \textit{Linear Regression Model} and \textit{Additional Topics}.
 \item You do not need to know any proofs for the exam.
 
 \item While writing the exam, make sure to show your work to get full credit. This also helps you get partial credit in case you make a small error.
@@ -30,10 +30,15 @@ If I tell you the value of $X_j$ and $Y_j$ for observation $j$, you should be ab
 \begin{itemize}
   \item Linear
   \item Quadratic
-  \item Log-Log, Log-Level, Level-Log
+  \item Log-Log (elasticity), Log-Level, Level-Log
   \item Dummy variable 
   \item Interaction terms
 \end{itemize}
+For example, if I give you the following model:
+$$ \log Y = \beta_0 + \beta_1 X $$
+You should be able to take the derivative and show:
+$$ \frac{1}{Y} \cdot \frac{dY}{dX} = \beta_1 \rightarrow 100 \beta_1 = \frac{100 \times dY/Y}{dX}  $$
+So we can interpret $100 \beta_1 $ as the percentage change in $Y$ in response to a one unit change in $X$.
 \item Given the coefficient estimate and its standard error, be able to set up a hypothesis test to check statistical significance. Calculate and interpret $p$-values for regression coefficients. Construct confidence intervals. 
 \item Be able to identify the direction of omitted variable bias. 
 \item What are randomized control trials? What are some tools economists use to emulate experimental variation?
