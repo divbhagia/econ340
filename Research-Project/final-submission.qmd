@@ -42,23 +42,17 @@ Below, I elaborate on the expected [structure and content](#structure-and-conten
 #### V. Results and Analysis (about 1-2 pages)
 
 -   In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications. If you have multiple control variables, feel free to add more than one control as you transition to the next specification. You can build on the following code to create this table in R:
-
-    ``` r
-    model1 <- lm(depvar ~ indepvar, data)
-    model2 <- lm(depvar ~ indepvar + control1, data)
-    model3 <- lm(depvar ~ indepvar + control1 + control2, data)
-    stargazer (model1, model2, model3, type="text", keep.stat = c("n","adj.rsq"))
-    ```
-
--   Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls. 
-
--   Comment on the coefficients on your control variables.
-
--   Interpret the adjusted $R^2$ of your regression models.
-
--   Explain in detail what you can conclude from your regression results. How do they answer your research question? 
-
--   Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.
+``` r
+model1 <- lm(depvar ~ indepvar, data)
+model2 <- lm(depvar ~ indepvar + control1, data)
+model3 <- lm(depvar ~ indepvar + control1 + control2, data)
+stargazer (model1, model2, model3, type="text", keep.stat = c("n","adj.rsq"))
+```
+- Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls. 
+- Comment on the coefficients on your control variables.
+- Interpret the adjusted $R^2$ of your regression models.
+- Explain in detail what you can conclude from your regression results. How do they answer your research question? 
+- Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.
 
 #### VI. Conclusion (under 1 page)
 

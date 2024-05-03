@@ -259,16 +259,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="v.-results-and-analysis-about-1-2-pages" class="level4">
 <h4 class="anchored" data-anchor-id="v.-results-and-analysis-about-1-2-pages">V. Results and Analysis&nbsp;(about 1-2 pages)</h4>
 <ul>
-<li><p>In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications.&nbsp;If you have multiple control variables, feel free to add more than one control as you transition to the next specification. You can build on the following code to create this table in R:</p>
+<li>In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications.&nbsp;If you have multiple control variables, feel free to add more than one control as you transition to the next specification. You can build on the following code to create this table in R:</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(depvar <span class="sc">~</span> indepvar, data)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(depvar <span class="sc">~</span> indepvar <span class="sc">+</span> control1, data)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(depvar <span class="sc">~</span> indepvar <span class="sc">+</span> control1 <span class="sc">+</span> control2, data)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span> (model1, model2, model3, <span class="at">type=</span><span class="st">"text"</span>, <span class="at">keep.stat =</span> <span class="fu">c</span>(<span class="st">"n"</span>,<span class="st">"adj.rsq"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
-<li><p>Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls.&nbsp;</p></li>
-<li><p>Comment on the coefficients on your control variables.</p></li>
-<li><p>Interpret the adjusted&nbsp;<span class="math inline">\(R^2\)</span>&nbsp;of your regression models.</p></li>
-<li><p>Explain in detail what you can conclude from your regression results. How do they answer your research question?&nbsp;</p></li>
-<li><p>Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.</p></li>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span> (model1, model2, model3, <span class="at">type=</span><span class="st">"text"</span>, <span class="at">keep.stat =</span> <span class="fu">c</span>(<span class="st">"n"</span>,<span class="st">"adj.rsq"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls.&nbsp;</li>
+<li>Comment on the coefficients on your control variables.</li>
+<li>Interpret the adjusted&nbsp;<span class="math inline">\(R^2\)</span>&nbsp;of your regression models.</li>
+<li>Explain in detail what you can conclude from your regression results. How do they answer your research question?&nbsp;</li>
+<li>Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.</li>
 </ul>
 </section>
 <section id="vi.-conclusion-under-1-page" class="level4">
