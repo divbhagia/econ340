@@ -1,55 +1,69 @@
 ---
 title: "Research Project: Final Submission"
+html:
+    code-fold: True
 ---
 
-## Introduction 
+## Introduction
+
 Your final research paper should be structured as an essay that is divided into sections. Your paper should demonstrate your writing ability and ability to properly perform and interpret statistical analyses.
 
-At this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate. 
+At this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.
 
-Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading.
+Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading. Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below.
 
-## Structure and Content
+## Structure and Content {#structure-and-content}
 
 #### I. Introduction (under 1 page)
-- Clearly state the research question in a manner that is engaging and relevant to an average reader.
-- Tell us why your research question is interesting and important. 
-- Provide a brief and concise summary of your main results. People who do not have time to go through the entire paper should get the general idea and conclusion of the paper through the introduction section.
+
+-   Clearly state the research question in a manner that is engaging and relevant to an average reader.
+-   Tell us why your research question is interesting and important. 
+-   Provide a brief and concise summary of your main results. People who do not have time to go through the entire paper should get the general idea and conclusion of the paper through the introduction section.
 
 #### II. Literature Review (under 1 page)
 
-- Review the literature to identify existing studies on the topic that are related to your paper in some manner. For instance, you may cite a paper that uncovers similar findings in a different context, or papers that offer a counter view, or even reference papers that study a different but related question if insights from those papers and your paper, together, can help you make broader conclusions.
-- The literature review should ideally include more than two academic papers. You should look for papers on [Google Scholar](https://scholar.google.com).
-- Cite sources using the Chicago Manual of Style Author-Date system format and attach a reference list at the end of your write-up. Click [here](https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html#cg-journal) to learn more. 
+-   Review the literature to identify existing studies on the topic that are related to your paper in some manner. For instance, you may cite a paper that uncovers similar findings in a different context, or papers that offer a counter view, or even reference papers that study a different but related question if insights from those papers and your paper, together, can help you make broader conclusions.
+-   The literature review should ideally include more than two academic papers. You should look for papers on [Google Scholar](https://scholar.google.com).
+-   Cite sources using the Chicago Manual of Style Author-Date system format and attach a reference list at the end of your write-up. Click [here](https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html#cg-journal) to learn more. 
 
 #### III. Descriptive Analysis (about 1-2 pages, including relevant figures and tables)
 
-- Mention and verbally describe the dataset you are using, your dependent variable, primary independent variable, and control variables. Remember to mention how the variables are named in your dataset. Mention if you constructed new variables or deleted observations. Also, note the number of observations in your data.
-- Present summary statistics for all your variables in a table. Comment on the averages of your variables and anything else you think is interesting or important. Be careful in properly describing the averages of your binary variables.
-- Present a graph showing the relationship between your dependent and primary independent variable. You should present a scatter plot if both of your variables are continuous. If any of the two variables is binary, use a bar plot. Summarize what you learn.
+-   Mention and verbally describe the dataset you are using, your dependent variable, primary independent variable, and control variables. Remember to mention how the variables are named in your dataset. Mention if you constructed new variables or deleted observations. Also, note the number of observations in your data.
+-   Present summary statistics for all your variables in a table. Comment on the averages of your variables and anything else you think is interesting or important. Be careful in properly describing the averages of your binary variables.
+-   Present a graph showing the relationship between your dependent and primary independent variable. You should present a scatter plot if both of your variables are continuous. If any of the two variables is binary, use a bar plot. Summarize what you learn.
 
 #### IV. Empirical Strategy (about 1 page)
 
-- Outline the empirical strategy and introduce the estimating regression equation. Note that you maybe running multiple specifications, some with a reduced set of control variables. In this section, specify the equation for the model that includes the largest number of variables.
-- Your regression model should look something like:
-$$ dep\_var = \beta_0 + \beta_1*indep\_var + \beta_2*control1 + \beta_3*control2 + u $$
-    Here, $dep\_var, indep\_var$, etc. should be replaced with actual variable names from your dataset.
-- Highlight how the above regression model can help answer your question. Provide an intuitive interpretation of the coefficient of the main independent variable, specifically linking it to the research hypothesis.
-- Justify your choice of control variables by outlining plausible connections between the independent and control variables and their impact on the dependent variable. 
+-   Outline the empirical strategy and introduce the estimating regression equation. Note that you maybe running multiple specifications, some with a reduced set of control variables. In this section, specify the equation for the model that includes the largest number of variables.
+-   Your regression model should look something like: $$ depvar = \beta_0 + \beta_1*indepvar + \beta_2*control1 + \beta_3*control2 + u $$ Here, $depvar, indepvar$, etc. should be replaced with actual variable names from your dataset.
+-   Highlight how the above regression model can help answer your question. Provide an intuitive interpretation of the coefficient of the main independent variable, specifically linking it to the research hypothesis.
+-   Justify your choice of control variables by outlining plausible connections between the independent and control variables and their impact on the dependent variable.
 
 #### V. Results and Analysis (about 1-2 pages)
 
-- In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications. If you have multiple control variables, feel free to add more than one control as you transition to the next specification. 
-- Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls. 
-- Comment on the coefficients on your control variables.
-- Interpret the adjusted $R^2$ of your regression models.
-- Explain in detail what you can conclude from your regression results. How do they answer your research question? 
-- Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.
+-   In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications. If you have multiple control variables, feel free to add more than one control as you transition to the next specification. You can build on the following code to create this table in R:
+
+    ``` r
+    model1 <- lm(depvar ~ indepvar, data)
+    model2 <- lm(depvar ~ indepvar + control1, data)
+    model3 <- lm(depvar ~ indepvar + control1 + control2, data)
+    stargazer (model1, model2, model3, type="text", keep.stat = c("n","adj.rsq"))
+    ```
+
+-   Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls. 
+
+-   Comment on the coefficients on your control variables.
+
+-   Interpret the adjusted $R^2$ of your regression models.
+
+-   Explain in detail what you can conclude from your regression results. How do they answer your research question? 
+
+-   Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.
 
 #### VI. Conclusion (under 1 page)
 
-- Begin by summarizing the key findings of your study. Based on this summary, directly address and answer your research question. 
-- Expand on how your research findings connect to broader implications. This could involve exploring potential avenues for future research prompted by your study's results, discussing the implications your findings may have on policy-making, or situating your research within a wider context.  It would also be great to revisit the initial motivation behind your research question mentioned in the introduction, during this discussion.
+-   Begin by summarizing the key findings of your study. Based on this summary, directly address and answer your research question.
+-   Expand on how your research findings connect to broader implications. This could involve exploring potential avenues for future research prompted by your study's results, discussing the implications your findings may have on policy-making, or situating your research within a wider context. It would also be great to revisit the initial motivation behind your research question mentioned in the introduction, during this discussion.
 
 #### References
 
@@ -59,82 +73,15 @@ Write down a References List using using the [Chicago Manual of Style Author-Da
 
 If you think that some of the tables and graphs you produced in the Descriptive Analyses section are not very useful considering your research question, drop them (and the related comments) from that section, and include them (with the related comments) in the Appendix.
 
-## Format and Submission
+## Format and Submission {#format-and-submission}
 
-- Approximately 6 to 8 pages long (excluding the References Section and the Appendix Section). 
-- Use Times New Roman with font size 12 and interline space 1.15.
-- Tables and figures should be within the main body of the paper. All figures and tables must have a title and be numbered. (e.g., Table 1: Summary Statistics on Income). Tables and figures should appear shortly before or after you mention them in the text for the first time. You should refer to the figures and tables when commenting on your descriptive analyses and results. (e.g., As we can see from Table 1, the average income in my sample is…)
-- Your submission consists of your write-up in PDF format, which should be submitted on Canvas.
+-   Approximately 6 to 8 pages long (excluding the References Section and the Appendix Section). 
+-   Use Times New Roman with font size 12 and interline space 1.15.
+-   Tables and figures should be within the main body of the paper. All figures and tables must have a title and be numbered. (e.g., Table 1: Summary Statistics on Income). Tables and figures should appear shortly before or after you mention them in the text for the first time. You should refer to the figures and tables when commenting on your descriptive analyses and results. (e.g., As we can see from Table 1, the average income in my sample is…)
+-   Your submission consists of your write-up in PDF format, which should be submitted on Canvas.
 
-## Rubric
+## Rubric {#rubric}
 
-```{python}
-#| echo: false
+<iframe src="final-rubric.html" width="100%" height="800px" scrolling="no">
 
-import pandas as pd
-from IPython.display import display, HTML
-from RowSpan import row_span
-
-# Define custom class for table
-custom_css = """
-<style>
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700&display=swap);
-
-.my-table {
-    display: block;
-    overflow-y: auto;
-    height: 800px; 
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #b7b7b7;
-}
-table.my-table, table.my-table th, table.my-table td {
-    font-family: Lato;
-}
-
-.my-table td {
-    border: 1px solid #b7b7b7; 
-    padding: 8px; 
-    text-align: left; 
-}
-
-.my-table th {
-    border: 1px solid #b7b7b7; 
-    padding: 8px; 
-    text-align: center; 
-}
-
-.my-table thead th {
-    border: 1px solid #b7b7b7; 
-    position: sticky;
-    top: 0;
-    background-color: #ddd; 
-    z-index: 2;
-}
-
-# Columns
-.my-table td:nth-child(1), .my-table th:nth-child(1) { width: 10%; } 
-.my-table td:nth-child(2), .my-table th:nth-child(1) { width: 27%; } 
-.my-table td:nth-child(3), .my-table th:nth-child(1) { width: 20%; } 
-.my-table td:nth-child(4), .my-table th:nth-child(1) { width: 18%; } 
-.my-table td:nth-child(5), .my-table th:nth-child(1) { width: 18%; } 
-
-</style>
-"""
-# Load and save rubric as html
-df = pd.read_excel('final-rubric.xlsx', dtype=str)
-html_table = df.to_html(escape=False, index=False, na_rep='', classes='my-table')
-html_table = row_span(html_table, 'Introduction (15 points)', 3)
-html_table = row_span(html_table, 'Literature Review (10 points)', 2)
-html_table = row_span(html_table, 'Descriptive Analysis (15 points)', 3)
-html_table = row_span(html_table, 'Empirical Strategy (15 points)', 3)
-html_table = row_span(html_table, 'Results and Analysis (25 points)', 5)
-html_table = row_span(html_table, 'Conclusion (10 points)', 2)
-html_table = row_span(html_table, 'Format and Coherence (10 points)', 2)
-html_table = row_span(html_table, 'Writing and Grammar (10 points)', 3)
-full_html = custom_css + html_table
-with open('final-rubric.html', 'w', encoding='utf-8') as f:
-    f.write(full_html)
-```
-
-<iframe src="final-rubric.html" width="100%" height= "800px" scrolling=no></iframe>
+</iframe>

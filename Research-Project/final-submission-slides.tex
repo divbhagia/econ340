@@ -1,0 +1,187 @@
+\documentclass{./../Lectures/div_teaching_slides}
+\tikzset{
+    -Latex,auto,node distance =1 cm and 1 cm,semithick,
+    state/.style ={ellipse, draw, minimum width = 0.7 cm},
+    point/.style = {circle, draw, inner sep=0.04cm,fill,node contents={}},
+    bidirected/.style={Latex-Latex,dashed},
+    el/.style = {inner sep=2pt, align=left, sloped}
+}
+
+\begin{document}
+\title{ECON 340 \\ Economics Research Methods}
+\author{Div Bhagia}
+\date{Final Submission Guidelines}
+
+\begin{frame}[noframenumbering, plain]
+\maketitle
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Final Submission
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%
+\begin{frame}{Final Paper: Overview}
+\begin{witemize}
+\item The paper should reflect:\\
+  \begin{itemize}
+  \item your ability to perform and interpret statistical analyses
+  \item your writing ability (use Grammarly)
+\end{itemize}
+\item Carefully read all the instructions on course website
+\item Incorporate the feedback you have gotten so far
+\item Rubric provides a breakdown of the score for different components
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Final Paper: Submission}
+\begin{witemize}
+\item The paper should be in essay format divided into sections (around 6-8 pages)
+\item Comply with the formatting requirements
+\item Submit your write-up in PDF format on Canvas
+\end{witemize} 
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Research Paper: Sections}
+\begin{witemize}
+\item Structure and content: \\
+  \begin{itemize}
+  \normalsize
+  \item Introduction
+  \item Literature Review
+  \item Descriptive Analysis
+  \item Empirical Strategy
+  \item Results and Analysis
+  \item Conclusion
+  \item References
+  \item Appendix (optional) \\~\\
+\end{itemize}
+\end{witemize}
+Instructions include the \textit{suggested} length for each section.
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{I. Introduction}
+\begin{witemize}
+  \item What is your research question? Why is your research question interesting? Why is your topic important? \vskip0.2em
+\begin{witemize}
+  \item This was Task 1 for the interim submission
+\end{witemize}
+ \item Preview your results \\~\\
+\end{witemize}
+\textit{People who do not have time to go through the entire paper should get the general idea and conclusion of the paper through the introduction.}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{II. Literature Review}
+\begin{witemize}
+  \item What other work has been done on these issues? What has been found?
+  \item Look for papers on Google Scholar (ChatGPT makes up papers that don't exist!)
+  \item The literature review must include at least two academic papers.
+  \item Cite sources using the Chicago Manual of Style Author-Date system \\
+\end{witemize}
+%\textit{How do your findings relate to these other papers?}
+\end{frame}
+
+%%%%%%%%%%%%%
+%\begin{frame}{Chicago Citation Format}
+%Say I want to cite the paper, ``The Rise of American Minimum Wages, 1912–1968'' by Price V. Fishback and Andrew J. Seltzer published in the Journal of Economic Perspectives in 2021. \\~\\
+%The way to include this citation: \\
+%\begin{witemize}
+%  \item At the end of your paper on a new page start a References section and include \\
+% \begin{itemize}
+%  \item [] Fishback, P.V., and Seltzer A.J. (2021). The Rise of American Minimum Wages, 1912–1968. \textit{Journal of Economic Perspectives}.
+%\end{itemize}
+%\item In text: ``Fishback and Seltzer (2021) find...''
+%\end{witemize}
+%\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{III. Descriptive Analysis}
+Tasks 3-5 from Submission 2: \\ \vspace{0.25em}
+\begin{wenumerate}
+  \item Describe the data and your variables of interest. Mention if you constructed new variables or deleted observations.  
+  \item Present summary statistics for all your variables and comment.
+  \item Present a graph showing the relationship between your dependent and primary independent variable \\
+  \begin{itemize}
+  \item Scatter plot if both variables are continuous
+  \item Bar plot if one variable is binary
+\end{itemize}
+Summarize what you learn. 
+\end{wenumerate}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{IV. Empirical Strategy}
+\textit{Explain how you plan to answer your question(s)}. \\
+\begin{witemize}
+  \item Write down the main regression model and explain why it makes sense. \\ \vspace{0.5em}
+\begin{witemize}
+\normalsize
+  \item Interpret the main coefficient and and what you hope to learn from it. 
+  \item Why did you pick the controls that you picked? Talk about how excluding these controls may impact your main coefficient of interest.
+  \end{witemize}
+\end{witemize}
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Empirical Strategy: Example}
+\small
+The objective of this paper is to investigate whether class size has an impact on test performance. To address this question, we estimate the following regression model:
+$$ testscr = \beta_0 + \beta_1 str + \beta_2 high\_comp\_stu + \beta_3 meal\_pct + u $$
+
+The main coefficient of interest is $\beta_1$, which corresponds to the student-teacher ratio variable. This coefficient captures the change in test scores associated with an additional student per teacher, holding other variables in the model constant. We expect $\beta_1$ to be negative if smaller class sizes are associated with higher test scores. 
+\end{frame}
+
+%%%%%%%%%%%%
+\begin{frame}{Empirical Strategy: Example (cont.)}
+\small \vspace{-0.25em}
+However, it is possible that $\beta_1$ could be capturing the impact of other factors that are correlated with class size and test scores, such as better infrastructure or funding in the school district. To control for these potential confounders, we include two additional variables in our regression model. These variables are $high\_comp\_stu$ and $meal\_pct$. \\ \vspace{0.5em}
+$high\_comp\_stu$ is an indicator variable that takes the value of 1 if the school has more computers per student than the median school and 0 otherwise. We expect that schools with more computers per student are associated with higher test scores, as computers can provide students with access to a wider range of educational resources and facilitate learning. Additionally, we expect schools with more computers also to have smaller class sizes. Therefore omitting this control variable could overestimate the effect of class size on test scores. \\ \vspace{0.5em}
+We also control for $meal\_pct$... 
+\end{frame}
+
+
+\begin{frame}[fragile]{V. Results and Analysis}
+\begin{witemize}
+\item In one or more tables, present the results of your regression analysis. Adding controls one by one.
+\item For this example, the code would be:
+\end{witemize}
+\begin{lstlisting}[language=R, literate={~}{{$\sim$}}1, basicstyle=\ttfamily\footnotesize]
+model1 <- lm(testscr ~ str, data)model2 <- lm(testscr ~ str + high_comp_stu, data)model3 <- lm(testscr ~ str + high_comp_stu + meal_pct,data)stargazer(model1, model2, model3, type="text", keep.stat = c('n', 'adj.rsq'))
+\end{lstlisting}
+\end{frame}
+
+\begin{frame}{V. Results and Analysis}
+\begin{witemize}
+\item Interpret the sign, value, and significance of the main coefficient across all specifications.
+\item Comment on how and why the coefficient changes or does not change as you add each control.
+\item Comment on the coefficients on your control variables. 
+\item Interpret the adjusted $R^2$ of your models
+\item Discuss what you can conclude from your regression results. Correlation vs causation? Are there other omitted variables you are worried about?
+\end{witemize}
+\end{frame}
+
+\begin{frame}{}
+\centering \small
+\input{./../output/final_paper_reg.tex}
+\end{frame}
+
+
+%%%%%%%%%%%%
+\begin{frame}{VI. Conclusion}
+\begin{witemize}
+  \item Summarize your results. Given this summary, answer your research question.
+  \item Expand on how your research findings connect to broader implications. Future research? Policy? Wider context?
+\end{witemize}
+\end{frame}
+
+
+
+
+
+
+\end{document}

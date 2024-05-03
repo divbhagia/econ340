@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -185,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Your final research paper should be structured as an essay that is divided into sections.&nbsp;Your paper should demonstrate your writing ability and ability to properly perform and interpret statistical analyses.</p>
 <p>At this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.</p>
-<p>Below, I elaborate on the expected <a href="#structure-and-content">structure and content</a> of your paper, as well as instructions regarding <a href="#format-and-submission">formatting and submission</a>. At the bottom of the page, you’ll also find a <a href="#rubric">rubric</a> that will be used for grading.</p>
+<p>Below, I elaborate on the expected <a href="#structure-and-content">structure and content</a> of your paper, as well as instructions regarding <a href="#format-and-submission">formatting and submission</a>. At the bottom of the page, you’ll also find a <a href="#rubric">rubric</a> that will be used for grading. Finally, here are some <a href="final-submission-slides.pdf">slides</a> that briefly go over the instructions provided below.</p>
 </section>
 <section id="structure-and-content" class="level2">
 <h2 class="anchored" data-anchor-id="structure-and-content">Structure and Content</h2>
@@ -217,7 +251,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="iv.-empirical-strategy-about-1-page">IV. Empirical Strategy&nbsp;(about 1 page)</h4>
 <ul>
 <li>Outline the empirical strategy and introduce the estimating regression equation. Note that you maybe running multiple specifications, some with a reduced set of control variables. In this section, specify the equation for the model that includes the largest number of variables.</li>
-<li>Your regression model should look something like: <span class="math display">\[ dep\_var = \beta_0 + \beta_1*indep\_var + \beta_2*control1 + \beta_3*control2 + u \]</span> Here, <span class="math inline">\(dep\_var, indep\_var\)</span>, etc. should be replaced with actual variable names from your dataset.</li>
+<li>Your regression model should look something like: <span class="math display">\[ depvar = \beta_0 + \beta_1*indepvar + \beta_2*control1 + \beta_3*control2 + u \]</span> Here, <span class="math inline">\(depvar, indepvar\)</span>, etc. should be replaced with actual variable names from your dataset.</li>
 <li>Highlight how the above regression model can help answer your question. Provide an intuitive interpretation of the coefficient of the main independent variable, specifically linking it to the research hypothesis.</li>
 <li>Justify your choice of control variables by outlining plausible connections between the independent and control variables and their impact on the dependent variable.</li>
 </ul>
@@ -225,12 +259,16 @@ ul.task-list li input[type="checkbox"] {
 <section id="v.-results-and-analysis-about-1-2-pages" class="level4">
 <h4 class="anchored" data-anchor-id="v.-results-and-analysis-about-1-2-pages">V. Results and Analysis&nbsp;(about 1-2 pages)</h4>
 <ul>
-<li>In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications.&nbsp;If you have multiple control variables, feel free to add more than one control as you transition to the next specification.</li>
-<li>Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls.&nbsp;</li>
-<li>Comment on the coefficients on your control variables.</li>
-<li>Interpret the adjusted&nbsp;<span class="math inline">\(R^2\)</span>&nbsp;of your regression models.</li>
-<li>Explain in detail what you can conclude from your regression results. How do they answer your research question?&nbsp;</li>
-<li>Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.</li>
+<li><p>In one or more tables, present the results of your regression analysis. You should present the results without controls and then add controls, one by one, to see what happens to your main coefficient. With two controls, you will have three different specifications.&nbsp;If you have multiple control variables, feel free to add more than one control as you transition to the next specification. You can build on the following code to create this table in R:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>model1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(depvar <span class="sc">~</span> indepvar, data)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>model2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(depvar <span class="sc">~</span> indepvar <span class="sc">+</span> control1, data)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>model3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(depvar <span class="sc">~</span> indepvar <span class="sc">+</span> control1 <span class="sc">+</span> control2, data)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span> (model1, model2, model3, <span class="at">type=</span><span class="st">"text"</span>, <span class="at">keep.stat =</span> <span class="fu">c</span>(<span class="st">"n"</span>,<span class="st">"adj.rsq"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><p>Interpret the sign, the value, and the significance level of the coefficient on your primary independent variable across all specifications. Comment on how and why the coefficient changes or does not change as you add additional controls.&nbsp;</p></li>
+<li><p>Comment on the coefficients on your control variables.</p></li>
+<li><p>Interpret the adjusted&nbsp;<span class="math inline">\(R^2\)</span>&nbsp;of your regression models.</p></li>
+<li><p>Explain in detail what you can conclude from your regression results. How do they answer your research question?&nbsp;</p></li>
+<li><p>Comment on whether you believe that the results you find are correlational or causal. Discuss whether there are other variables that are not in the dataset (or not in your regression) that could affect both the dependent variable and your primary independent variable. If so, mention these unobserved/omitted variables and explain how they can lead you to over or underestimate the true impact of your primary independent variable.</p></li>
 </ul>
 </section>
 <section id="vi.-conclusion-under-1-page" class="level4">
