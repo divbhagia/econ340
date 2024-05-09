@@ -26,7 +26,8 @@ Compiled material for Modules I, II, IV: [Notes](Notes/Part1-Compiled-Notes.pdf)
 
 ### Final Exam Material
 
+- [Study Guide](Exams/Final/final_study_guide.pdf)
+- [Final Exam Review Slides](Lectures/Final-Review/final_review.pdf)
 - [Sample Exam](Exams/Final/final_sample.pdf)
 - [Sample Exam Solutions](Exams/Final/final_sample_solution.pdf)
-- [Study Guide](Exams/Final/final_study_guide.pdf)
 - [Sample Questions for Module VI](Exams/Final/sample_questions_add_topics.pdf)
