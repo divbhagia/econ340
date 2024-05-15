@@ -1,8 +1,9 @@
 Data/
 Compiled/
 Code/
-Exams/Final/Final.*
-Exams/Midterm/Past.*
+Exams/Final/final_*
+Exams/Final/final.*
+Exams/Midterm/Past/
 References/
 R/
 **/.DS_Store
