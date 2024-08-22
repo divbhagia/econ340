@@ -6,15 +6,17 @@ title: "Research Project Overview"
 
 As a part of this class, you will write an empirical research paper. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
 
-- **March 28**: Interim Submission 
-- **April 9**: Research Project Feedback Meeting
-- **May 7**: Final Submission
+- **Sep 5**: Finalize Team
+- **Oct 1**: Interim Submission I
+- **Oct 22**: Research Project Feedback Meeting
+- **Nov 5**: Interim Submission II
+- **Dec 10**: Final Submission
 
-The interim submission is worth 10% of your total grade, while the final counts for 20%. Additionally, I will meet with you mid-semester to give feedback on your project, which you should incorporate into your final paper. 
+The first interim submission is worth 5% of your total grade, while the second is worth 10%. The final submission is worth 15%. I will also meet with you mid-semester to give feedback on your project, which you should incorporate into your final paper.
 
-The objective of the *Interim Submission* is to make you select your data and research question and perform preliminary data analysis. The *Final Submission* will be 7 to 10 pages and will thoroughly discuss all the analyses you performed. The final paper should demonstrate your writing ability and ability to perform and interpret statistical analyses correctly. 
+The goal of Interim Submission I is for you to choose your data and research question. Interim Submission II then requires you to conduct preliminary data analysis. The Final Submission will be 7 to 10 pages and will thoroughly discuss all the analyses you performed. The final paper should demonstrate your writing ability and ability to perform and interpret statistical analyses correctly. 
 
-Below, I outline the type of question you should choose and the criteria your dataset must meet, and also include some external sources for finding data and inspiration for your project. After you've completed reading the content on this page, follow these links for detailed instructions for the [Interim Submission](interim-submission.qmd) and the [Final Submission](final-submission.qmd).
+Below, I outline the type of question you should choose and the criteria your dataset must meet, and also include some external sources for finding data and inspiration for your project. After you've completed reading the content on this page, follow these links for detailed instructions for the [Interim Submission I](interim-submission1.qmd), [Interim Submission II](interim-submission2.qmd), and [Final Submission](final-submission.qmd).
   
 
 ## Research Question and Data

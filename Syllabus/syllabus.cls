@@ -57,7 +57,7 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
-\usepackage{makecell}
+\RequirePackage{makecell}
 
 % Colors
 \definecolor{red}{RGB}{175 , 0 , 0}

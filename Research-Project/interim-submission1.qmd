@@ -1,0 +1,27 @@
+---
+title: "Research Project: Interim Submission I"
+---
+
+## Introduction
+
+This submission marks the beginning of your research project. For this submission, you need to describe your research question and the data you will use. You should highlight why your question is interesting and important, mention the source of your data, and highlight the variables you will use. 
+
+Before proceeding, please review the [Research Project Overview](research-project.qmd) page for detailed guidance on selecting your research question and data. Here is a brief summary of the key criteria to consider:
+
+- Choose a question that is "causal" in nature. In particular, your question should examine the effect of one variable (**the primary independent variable**) on another (**the dependent variable**).
+- In addition to your primary independent and dependent variables, you should identify **at least two control variables** that are plausibly correlated with both the primary independent and dependent variables. See the [section on variables](research-project.qmd#variables) on the [overview](research-project.qmd) page for more details. 
+- Use a dataset that includes **at least 100 observations** and all the variables you need for your analysis.
+
+## Submission Checklist
+
+For the submission, you need to fill and submit the [Template for Submission 1](submission1-template.docx) in PDF format. Here is an [example](submission1-example.pdf) to get you started. You must also upload your data in CSV or excel format if you are using an external dataset. 
+
+**What needs to be submitted?**
+
+- Filled Template for Submission 1 in PDF format
+- The dataset in CSV or excel format if using an external dataset.
+
+*Submissions need to be made on Canvas. Any member of the group can submit on your group's behalf.*
+
+<!-- ## Rubric
+<iframe src="submission1-rubric.html" width="100%" height= "650px" scrolling=no></iframe> -->

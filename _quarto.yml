@@ -30,8 +30,10 @@ website:
       contents:
         - text: "Overview"
           file: Research-Project/research-project.qmd
-        - text: "Interim Submission"
-          file: Research-Project/interim-submission.qmd
+        - text: "Interim Submission I"
+          file: Research-Project/interim-submission1.qmd
+        - text: "Interim Submission II"
+          file: Research-Project/interim-submission2.qmd
         - text: "Final Submission"
           file: Research-Project/final-submission.qmd
   

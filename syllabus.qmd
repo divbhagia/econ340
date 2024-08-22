@@ -31,9 +31,9 @@ Upon successful completion of this course, students will be able to discern valu
 ## Course Structure
 ### Course Structure
 
-All meetings for this are anticipated to take place in a physical classroom setting. During our class sessions, I use lecture slides to deliver the day's topics, and we frequently engage in collaborative problem-solving using handouts, practical work in R, or participate in class discussions. The course is designed to be interactive, and requires you to actively participate. Therefore, regular class attendance is especially important for you to suceed in this class.
+All meetings for this course are expected to take place in a physical classroom. During class, in addition to my delivering the day’s topics via lecture slides, you will often be expected to engage in collaborative problem-solving with handouts, work on R programming exercises, and participate in class discussions. The course is designed to be interactive, and requires you to actively participate. Therefore, regular class attendance is especially important for you to suceed in this class.
 
-A substantial portion of this class centers around the development of a research paper. You have the freedom to choose your dataset or you can utilize one of the datasets that I have compiled for this class in the [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0) Dropbox folder. You will start working on the research project early in the semester with assignments focused on coming up with a question, selecting data, and conducting descriptive analysis. I will provide guidance and support as you progress through the semester, and also schedule a mid-semester meeting to evaluate your progress.
+A significant portion of this class is focused on developing a research paper, which you can complete individually or with a classmate. You can either choose your own dataset or use one of the datasets that I have compiled for this class in the [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0) Dropbox folder. You’ll begin the research project early in the semester, with assignments focused on formulating a question, selecting data, and conducting descriptive analysis. I’ll provide guidance and support throughout the semester and will schedule a mid-semester meeting to review your progress.
 
 ## Material
 ### Course Material
@@ -65,12 +65,12 @@ Your course grade will be determined according to the following breakdown:
     <td>20</td>
   </tr>
   <tr>
-    <td style="text-align: left;">Research Paper: Interim Submission </td>
-    <td>10</td>
+    <td style="text-align: left;">Research Paper: Interim Submissions </td>
+    <td>15</td>
   </tr>
   <tr>
     <td style="text-align: left;">Research Paper: Final Submission </td>
-    <td>20</td>
+    <td>15</td>
   </tr>
   <tr>
     <td style="text-align: left;">Midterm Exam</td>

@@ -12,7 +12,7 @@ page-layout: full
 Master statistical and econometric tools along with coding in R, to analyze data and answer economic questions.
 </p>
 
-ECON 340 | Spring 2024 | College of Business and Economics | California State University
+ECON 340 | Fall 2024 | College of Business and Economics | California State University
 :::
 
 ::: {.g-col-12 .g-col-md-6 .g-col-lg-3}
@@ -28,7 +28,7 @@ ECON 340 | Spring 2024 | College of Business and Economics | California State Un
 {{< fa calendar >}} &nbsp; Tuesdays and Thursdays, 2:30-3:45 PM <br>
 {{< fa clock >}} &nbsp; Office hours: 
 <ul style="margin-top: 0; margin-left: -1.5em;">
-- Thursdays, 4-6.45 PM, or
+- Tuesdays, 4-6.45 PM, or
 - By appointment (in-person or on [Zoom](https://fullerton.zoom.us/j/81895171931))
 </ul>
 :::

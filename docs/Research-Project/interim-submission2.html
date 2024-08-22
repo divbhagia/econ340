@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Economic Research Methods - Research Project: Interim Submission</title>
+<title>Economic Research Methods - Research Project: Interim Submission II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Research-Project/interim-submission.html">Interim Submission</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Research-Project/interim-submission2.html">Interim Submission II</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -132,8 +132,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Research-Project/interim-submission.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Interim Submission</span></a>
+  <a href="../Research-Project/interim-submission1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Interim Submission I</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Research-Project/interim-submission2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Interim Submission II</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -155,7 +161,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
   <li><a href="#submission-checklist" id="toc-submission-checklist" class="nav-link" data-scroll-target="#submission-checklist">Submission Checklist</a></li>
-  <li><a href="#rubric" id="toc-rubric" class="nav-link" data-scroll-target="#rubric">Rubric</a></li>
   </ul>
 </nav>
     </div>
@@ -164,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Research Project: Interim Submission</h1>
+<h1 class="title">Research Project: Interim Submission II</h1>
 </div>
 
 
@@ -181,21 +186,13 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>This submission marks the beginning of your research project. Prior to moving forward, kindly review the <a href="../Research-Project/research-project.html">Research Project Overview</a> page, which provides guidance on the choice of question and data.</p>
-<p>For this submission, you need to (a) describe your research question and the data you will use, and (b) perform a basic analysis of your data in R. You will highlight why your question is interesting and important, mention your data sources, and identify the variables you will use. Then, report the key numerical characteristics of your variables and conduct some visual analysis. The aim is to gain an overall understanding of the patterns in your data. This submission will serve as a foundation for writing the “Introduction” and “Descriptive Analysis” sections of your final paper.</p>
-<p>Below, I detail the specific <a href="#tasks">tasks</a> you need to complete and what you are required to <a href="#submission-checklist">submit</a>. At the bottom of the page, you’ll also find a <a href="#rubric">rubric</a> that will be used for grading. Finally, here is an <a href="submission1-example.pdf">example submission</a> with it’s corresponding <a href="submission1-example-code.R">R code</a> to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.</p>
-<p><strong>Before you get started:</strong></p>
-<ul>
-<li>Confirm that your question has been defined to examine the effect of one variable (<strong>the primary independent variable</strong>) on another (<strong>the dependent variable</strong>). Additionally, you should have identified <strong>at least two control variables</strong> that may be correlated with both the primary independent and dependent variables. See the <a href="../Research-Project/research-project.html#variables">section on variables</a> on the <a href="../Research-Project/research-project.html">overview</a> page for more details.</li>
-<li>Ensure that the dataset you’ve selected contains all the above variables and has <strong>at least 100 observations</strong>.</li>
-</ul>
+<p>For this submission, you need to perform a general analysis of your data in R. You need to report the essential numerical characteristics of your variables and do some visual analysis. The aim is to gain an overall understanding of the patterns in your data. Note that the first submission provided the foundational elements for writing the “Introduction” of your Research Paper. This assignment gives you the building blocks for the “Descriptive Analysis” section of your final paper.</p>
+<p>Below, I detail the specific <a href="#tasks">tasks</a> you need to complete and what you are required to <a href="#submission-checklist">submit</a>. At the bottom of the page, you’ll also find a <a href="#rubric">rubric</a> that will be used for grading. Finally, here is an <a href="submission2-example.pdf">example submission</a> with it’s corresponding <a href="submission2-example-code.R">R code</a> to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.</p>
 </section>
 <section id="tasks" class="level2">
 <h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
 <p>For all tasks except the first one, ensure your responses are structured in paragraphs and categorized into sections. Consult the example submission for formatting guidance.</p>
 <ol type="1">
-<li><strong>Cover Sheet</strong>: Complete this <a href="submission1-cover-sheet.docx">cover sheet</a> and attach it as the first page of your submission.</li>
-<li><strong>Introduction</strong>: Clearly specify your research question and explain why it interesting or important.</li>
 <li><strong>Data and Variables Description</strong>: Mention and verbally describe the dataset you are using, your dependent variable, primary independent variable, and control variables. Your variables should be either continuous or binary. If your variable is categorical and has more than two categories, transform it into a meaningful binary variable using 1 and 0 as values. Remember to mention how the variables are named in your dataset. Mention if you constructed new variables or deleted observations. Also, note the number of observations in your data.</li>
 <li><strong>Summary Statistics</strong>: Present summary statistics for all your variables in a table. Comment on the averages of your variables and anything else you think is interesting or important. Be careful in properly describing the averages of your binary variables.</li>
 <li><strong>Relationship between the Dependent and Independent Variable</strong>: Present a graph showing the relationship between your dependent and primary independent variable. You should present a scatter plot if both of your variables are continuous. If any of the two variables is binary, use a bar plot. Properly label the axes. Summarize what you learn. Verify your observations from the plot by finding and reporting the correlation between your dependent variable and primary independent variable.</li>
@@ -206,18 +203,15 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="submission-checklist">Submission Checklist</h2>
 <p><strong>What needs to be submitted?</strong></p>
 <ul>
-<li>Filled cover sheet followed by a 2–4-page essay in PDF format that outlines the analysis you performed and summarizes your results. You should include all tables and figures in the body of your essay. (All tables and figures should have a name and number. Also, the write-up should be in essay format, with no bullet points.)</li>
+<li>A 2–4-page essay in PDF format that outlines the analysis you performed and summarizes your results. You should include all tables and figures in the body of your essay. (All tables and figures should have a name and number. Also, the write-up should be in essay format, with no bullet points.)</li>
 <li>Your R code that reproduces the analysis you performed.</li>
-<li>The dataset used in the analysis if you made significant changes to the data or are using an external dataset (in excel, csv, or rdata format).</li>
+<li>The dataset (in Excel, CSV, or RData format) used in the analysis, if there have been significant changes to the data since the first submission.</li>
 </ul>
-<p><em>Submissions need to be made on Canvas.</em></p>
+<p><em>Submissions need to be made on Canvas. Any member of the group can submit on your group’s behalf.</em></p>
 <p><strong>How to insert tables and figures in your write-up?</strong></p>
 <p>You should prepare your submission in Microsoft Word. You need to manually export all your tables and figures from R. For tables, you can copy from the output and format them as a table in Word (use a fixed-width font like Courier New). You need to export the figures from R and insert them in word. Finally, save your word document as a PDF once you are done.</p>
-</section>
-<section id="rubric" class="level2">
-<h2 class="anchored" data-anchor-id="rubric">Rubric</h2>
-<iframe src="submission1-rubric.html" width="100%" height="650px" scrolling="no">
-</iframe>
+<!-- ## Rubric
+<iframe src="submission1-rubric.html" width="100%" height= "650px" scrolling=no></iframe> -->
 
 
 </section>

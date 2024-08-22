@@ -1,0 +1,124 @@
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700&display=swap);
+
+.my-table {
+    display: block;
+    overflow-y: auto;
+    height: 650px; 
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #b7b7b7;
+}
+table.my-table, table.my-table th, table.my-table td {
+    font-family: Lato;
+}
+
+.my-table td {
+    border: 1px solid #b7b7b7; 
+    padding: 8px; 
+    text-align: left; 
+}
+
+.my-table th {
+    border: 1px solid #b7b7b7; 
+    padding: 8px; 
+    text-align: center; 
+}
+
+.my-table thead th {
+    border: 1px solid #b7b7b7; 
+    position: sticky;
+    top: 0;
+    background-color: #ddd; 
+    z-index: 2;
+}
+
+# Columns
+.my-table td:nth-child(1), .my-table th:nth-child(1) { width: 10%; } 
+.my-table td:nth-child(2), .my-table th:nth-child(1) { width: 25%; } 
+.my-table td:nth-child(3), .my-table th:nth-child(1) { width: 20%; } 
+.my-table td:nth-child(4), .my-table th:nth-child(1) { width: 18%; } 
+.my-table td:nth-child(5), .my-table th:nth-child(1) { width: 18%; } 
+
+</style>
+<table border="1" class="dataframe my-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Criteria</th>
+      <th>Excellent <br>
+(> 90%)</th>
+      <th>Good <br>
+(75-90%)</th>
+      <th>Satisfactory <br>
+(60-75%)</th>
+      <th>Unsatisfactory <br>
+(< 60%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cover Sheet (10 points)</td>
+      <td>Cover sheet completed correctly and attached to the submission.</td>
+      <td>Completed cover sheet attached, but few elements incomplete.</td>
+      <td>Cover sheet attached, but several elements missing or incorrect.</td>
+      <td>Cover sheet not attached.</td>
+    </tr>
+    <tr>
+      <td>Introduction (15 points)</td>
+      <td>Clearly states the research question in a manner that is engaging and relevant to an average reader, avoiding technical jargon or specific variable names from the data. Does an excellent job in persuading the reader why the research question is interesting and important.</td>
+      <td>Clearly states the research question but uses technical jargon or variable names not familiar to the average reader. Presents a coherent argument about why the research question is interesting and important. However, it could have been stated better or elaborated further.</td>
+      <td>Clearly states the research question. Discusses why the research question is interesting and important, but the argument is unclear or incoherent or uses personal anecdotes.</td>
+      <td>The research question is not clearly stated or fails to explain why the research question is interesting or important.</td>
+    </tr>
+    <tr>
+      <td>Data and Variables Description (10 points)</td>
+      <td>Provides a clear description of the data and its sources, and explicitly specifies the dependent variable, primary independent variable, and control variables. In addition, clearly and concisely describes any transformations applied to data or construction of new variables with a brief, intuitive reasoning. The description should include the exact names of variables as they appear in the dataset or subsequent tables.</td>
+      <td>Describes the data and its source(s) and specifies the dependent variable, primary independent variable, and control variables.</td>
+      <td>The data or variable description is mostly complete, but lacks a detail or two, or certain aspects may be unclear.</td>
+      <td>Data or variable description is incomplete, incorrect, or missing.</td>
+    </tr>
+    <tr>
+      <td>Summary Statistics (10 points)</td>
+      <td>Includes a well-formatted summary statistics table. Provides insightful comments on variable averages and highlights other interesting or important observations.</td>
+      <td>Summary statistics table included, with meaningful comments on variable averages.</td>
+      <td>Summary statistics table included, but the discussion is either inadequate or includes excessive irrelevant details.</td>
+      <td>Summary statistics table not included.</td>
+    </tr>
+    <tr>
+      <td>Relationship between the Dependent and Independent Variable (10 points)</td>
+      <td>Informative graph depicting the relationship between the dependent and primary independent variable, with properly labelled axes. Clear and insightful interpretation of the graph and correlation coefficient.</td>
+      <td>Graph included and meaningfully discussed. Correlation coefficient mentioned and discussed.</td>
+      <td>Graph included, but not mentioned in the text or incorrectly discussed or correlation coefficient missing.</td>
+      <td>Graph not included.</td>
+    </tr>
+    <tr>
+      <td>Exploring Other Variables (15 points)</td>
+      <td>Presents the correlation between all the variables and includes an insightful discussion of notable patterns. Clearly articulates how the omission of control variables could bias the results and provides a detailed explanation of the potential direction of bias.</td>
+      <td>Presents correlations for most variables and provides a satisfactory discussion of notable patterns. Discusses the potential bias resulting from omitting control variables, but lacks depth or clarity in the explanation.</td>
+      <td>Doesn't present some correlations or misses discussing some relevant patterns. Discussion on bias from omitting control variables is incomplete or incorrect.</td>
+      <td>Discussion on bias from omitting control variables is not included.</td>
+    </tr>
+    <tr>
+      <td>Format and Coherence (10 points)</td>
+      <td>All the tables and graphs are professionally formatted, appropriately labeled, and numbered, and presented in a manner that enhances clarity. They are strategically positioned where they are most relevant in the text, without disrupting the flow. The text is well-structured and organized in sections.</td>
+      <td>Most of the tables and graphs are professionally formatted, with appropriate labeling, numbering, and strategic placement within the text. The text is mostly well-structured and organized.</td>
+      <td>Some of the tables and graphs exhibit formatting issues, including missing labels and suboptimal placement within the text. The text lacks a coherent structure.</td>
+      <td>Most or all the tables and graphs exhibit formatting issues. The text lacks a coherent structure and is not divided into sections.</td>
+    </tr>
+    <tr>
+      <td>Writing and Grammar (10 points)</td>
+      <td>Writing is clear, coherent, and well-structured, demonstrating a logical and seamless progression of ideas. No grammatical or syntactical errors. Formal, academic writing style, conveying information in an objective and unbiased manner.</td>
+      <td>Writing is understandable but lacks clarity or coherence in one or two parts. Few grammatical or syntactical errors, but these do not detract from the overall readability of the paper. Writing style is mostly formal, with occasional deviations.</td>
+      <td>The writing is somewhat understandable, but several parts lack clarity or coherence. A moderate number of grammatical or syntactical errors, occasionally distracting the reader and affecting the clarity. Writing style is somewhat formal.</td>
+      <td>The writing is difficult to understand.  Frequent grammatical and syntactical errors significantly hinder readability. Writing style is informal.</td>
+    </tr>
+    <tr>
+      <td>R Code and Data Attached (10 points)</td>
+      <td>R code is complete, accurate, and runs without errors. The student utilizes an external dataset, which is either attached or linked. Alternatively, one of the compiled datasets for this class is used, eliminating the need for attachment.</td>
+      <td>R code is mostly correct and runs without major errors, but there may be minor issues. The student utilizes an external dataset, which is either attached or linked or student utilizes one of the compiled datasets.</td>
+      <td>R code is incomplete, incorrect, or fails to run due to significant errors or incorrect dataset attached.</td>
+      <td>R code or dataset not attached.</td>
+    </tr>
+  </tbody>
+</table>
