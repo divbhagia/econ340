@@ -37,40 +37,17 @@ Once your research question is set, the next step would be to identify the varia
 
 - **Primary Independent Variable**: This is the main variable you hypothesize as having an influence or effect on another. For instance, if you were studying the impact of weather on sales, temperature or rainfall would be your primary independent variable.
 - **Dependent Variable**: This is the variable affected by the independent variable. In the example of weather and sales, 'sales' would be the dependent variable.
-- **Control Variables**: These are variables that could influence the dependent variable and are potentially correlated with the independent variable. Including them in your analysis is crucial to isolate the effect of your primary independent variable. Continuing with our example, 'time of year' and 'store location' would be good control variables, as they are likely to be correlated with both weather conditions and sales.
+- **Control Variables**: These are variables that affect <u>both</u> the dependent and the independent variable, potentially confounding our primary relationship of interest. For example, 'month of sale' would be a confounding variable as it affects both sales and weather conditions. For instance, people tend to buy more gifts during the holiday season when the weather is also colder. So we might observe higher sales during colder months, but this could be due to the holiday season rather than the weather. To account for such confounding effects, you will incorporate the control variables you select later in your analysis.
 
-```{python}
-#| echo: false
-#| fig-align: 'center'
-import matplotlib.pyplot as plt
+```{mermaid}
+%%| fig-width: 1200px
+%%| fig-align: center
 
-# Initialise
-fig, ax = plt.subplots(figsize=(4, 1.25))
-ax.axis('off')
-
-# Text
-ax.text(0, 1, 'Independent Variable', ha='center', va='center', fontsize=14)
-ax.text(1, 1, 'Dependent Variable', ha='center', va='center', fontsize=14)
-ax.text(0.5, 0.1, 'Control Variables', ha='center', va='center', fontsize=14)
-
-# Independent Variable to Dependent Variable arrow
-ax.annotate('', xy=(0.675, 1), xytext=(0.375, 1), arrowprops=dict(arrowstyle='->', lw=1.5))
-
-# # Control Variables dashed arrow
-ax.annotate('',
-            xy=(1, 0.9), xycoords='axes fraction',
-            xytext=(0.775, 0.1), textcoords='axes fraction',
-            arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=.25", lw=1.5, linestyle='dashed'))
-ax.annotate('',
-            xy=(0, 0.9), xycoords='axes fraction',
-            xytext=(0.225, 0.1), textcoords='axes fraction',
-            arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=-.25", lw=1.5, linestyle='dashed'))
-# ax.annotate('', xy=(0.4, 0.2), xytext=(0.4, 0.5), arrowprops=dict(arrowstyle='-[', lw=1.5, linestyle='dashed'))
-# ax.annotate('', xy=(0.6, 0.5), xytext=(0.6, 0.2), arrowprops=dict(arrowstyle='-[' , lw=1.5, linestyle='dashed'))
-
-plt.show()
-
+flowchart LR
+    X(Primary Independent Variable) --> Y(Dependent Variable)
+    C(Control Variables) --> X & Y
 ```
+
 
 ### Dataset
 

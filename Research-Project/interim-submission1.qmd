@@ -4,12 +4,12 @@ title: "Research Project: Interim Submission I"
 
 ## Introduction
 
-This submission marks the beginning of your research project. For this submission, you need to describe your research question and the data you will use. You should highlight why your question is interesting and important, mention the source of your data, and highlight the variables you will use. 
+This submission marks the beginning of your research project and is worth 5% of your total grade. As part of this submission, you will identify your research question, the data you will use, and the variables you will analyze. You will also provide a brief justification for why your questions is interesting and important.
 
-Before proceeding, please review the [Research Project Overview](research-project.qmd) page for detailed guidance on selecting your research question and data. Here is a brief summary of the key criteria to consider:
+Before proceeding, you must review the [Research Project Overview](research-project.qmd) page for detailed guidance on selecting your research question and data. Here is a brief summary of the key criteria to consider:
 
 - Choose a question that is "causal" in nature. In particular, your question should examine the effect of one variable (**the primary independent variable**) on another (**the dependent variable**).
-- In addition to your primary independent and dependent variables, you should identify **at least two control variables** that are plausibly correlated with both the primary independent and dependent variables. See the [section on variables](research-project.qmd#variables) on the [overview](research-project.qmd) page for more details. 
+- In addition to your primary independent and dependent variables, you should identify **at least two control variables**. See the [section on variables](research-project.qmd#variables) on the [overview](research-project.qmd) page for more details. 
 - Use a dataset that includes **at least 100 observations** and all the variables you need for your analysis.
 
 ## Submission Checklist

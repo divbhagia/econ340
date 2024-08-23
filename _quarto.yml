@@ -46,3 +46,5 @@ format:
     toc: true
     link-external-newwindow: true
     css: assets/styles.css
+    mermaid:
+      theme: neutral 

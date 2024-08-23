@@ -10,9 +10,9 @@ Your final research paper should be structured as an essay that is divided into 
 
 At this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.
 
-Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading. 
+Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). 
 
-<!-- Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below. -->
+<!-- At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading. Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below. -->
 
 ## Structure and Content {#structure-and-content}
 
