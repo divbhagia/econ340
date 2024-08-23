@@ -6,11 +6,13 @@ title: "Research Project: Interim Submission II"
 
 For this submission, you need to perform a general analysis of your data in R. You need to report the essential numerical characteristics of your variables and do some visual analysis. The aim is to gain an overall understanding of the patterns in your data. Note that the first submission provided the foundational elements for writing the "Introduction" of your Research Paper. This assignment gives you the building blocks for the "Descriptive Analysis" section of your final paper.
 
-Below, I detail the specific [tasks](#tasks) you need to complete and what you are required to [submit](#submission-checklist). At the bottom of the page, you'll also find a [rubric](#rubric) that will be used for grading. Finally, here is an [example submission](submission2-example.pdf) with it's corresponding [R code](submission2-example-code.R) to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.  
+Below, I outline the specific [tasks](#tasks) you must complete and the items you are required to [submit](#submission-checklist). If you are working with a partner, communicate with them and decide how to divide tasks before beginning. While doing so, fill out the [Teamwork Task Division](submission2-task-form.docx) form. You can come back and edit this form later if needed, but it will help you have a clear plan before you start working.
+
+At the bottom of the page, you'll also find a [rubric](#rubric) that will be used for grading. Finally, here is an [example submission](submission2-example.pdf) with it's corresponding [R code](submission2-example-code.R) to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.  
 
 ## Tasks 
 
-For all tasks except the first one, ensure your responses are structured in paragraphs and categorized into sections. Consult the example submission for formatting guidance.
+For all the tasks, make sure that your responses are structured in paragraphs and categorized into sections. Consult the example submission for formatting guidance.
 
 1. **Data and Variables Description**: Mention and verbally describe the dataset you are using, your dependent variable, primary independent variable, and control variables. Your variables should be either continuous or binary. If your variable is categorical and has more than two categories, transform it into a meaningful binary variable using 1 and 0 as values. Remember to mention how the variables are named in your dataset. Mention if you constructed new variables or deleted observations. Also, note the number of observations in your data.
 2. **Summary Statistics**: Present summary statistics for all your variables in a table. Comment on the averages of your variables and anything else you think is interesting or important. Be careful in properly describing the averages of your binary variables. 
@@ -24,6 +26,7 @@ For all tasks except the first one, ensure your responses are structured in para
 - A 2–4-page essay in PDF format that outlines the analysis you performed and summarizes your results. You should include all tables and figures in the body of your essay. (All tables and figures should have a name and number. Also, the write-up should be in essay format, with no bullet points.)
 - Your R code that reproduces the analysis you performed.
 - The dataset (in Excel, CSV, or RData format) used in the analysis, if there have been significant changes to the data since the first submission.
+- Teamwork Task Division form (if working with a partner).
   
 *Submissions need to be made on Canvas. Any member of the group can submit on your group's behalf.* 
 

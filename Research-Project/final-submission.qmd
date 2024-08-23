@@ -10,7 +10,9 @@ Your final research paper should be structured as an essay that is divided into 
 
 At this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.
 
-Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading. Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below.
+Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading. 
+
+<!-- Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below. -->
 
 ## Structure and Content {#structure-and-content}
 
@@ -24,7 +26,7 @@ Below, I elaborate on the expected [structure and content](#structure-and-conten
 
 -   Review the literature to identify existing studies on the topic that are related to your paper in some manner. For instance, you may cite a paper that uncovers similar findings in a different context, or papers that offer a counter view, or even reference papers that study a different but related question if insights from those papers and your paper, together, can help you make broader conclusions.
 -   The literature review should ideally include more than two academic papers. You should look for papers on [Google Scholar](https://scholar.google.com).
--   Cite sources using the Chicago Manual of Style Author-Date system format and attach a reference list at the end of your write-up. Click [here](https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html#cg-journal) to learn more. 
+-   Cite sources using the APA (American Psychological Association) format and attach a reference list at the end of your write-up. Click [here](https://www.mendeley.com/guides/apa-citation-guide/) to learn more. 
 
 #### III. Descriptive Analysis (about 1-2 pages, including relevant figures and tables)
 
@@ -61,7 +63,7 @@ stargazer (model1, model2, model3, type="text", keep.stat = c("n","adj.rsq"))
 
 #### References
 
-Write down a References List using using the [Chicago Manual of Style Author-Date system format](https://www.chicagomanualofstyle.org/tools_citationguide/citation-guide-2.html#cg-journal), where you cite the papers you referenced in the Literature Review section.
+Write down a References List using the [APA format](https://www.mendeley.com/guides/apa-citation-guide/), where you cite the papers you referenced in the Literature Review section.
 
 #### Appendix (optional)
 
