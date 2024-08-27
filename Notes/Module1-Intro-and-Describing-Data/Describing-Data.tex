@@ -13,15 +13,15 @@ A \textit{variable} is multiple observations of the same measurement. Variables 
 \end{itemize}
 A categorical variable with two categories is called a \textit{binary} variable. 
 
-Many questions in economics and other social sciences are concerned with cause-and-effect relationships. When studying such questions, we refer to the cause as the \textit{independent} variable. The \textit{dependent} variable is the effect. Its value depends on changes in the independent variable. Finally, a \textit{control} variable is a variable that might be associated with both the \textit{dependent} and the \textit{independent} variables, and we might want to account for it while studying our causal relationship of interest. 
+Many questions in economics and other social sciences are concerned with cause-and-effect relationships. When studying such questions, we refer to the cause as the \textit{independent} variable. The \textit{dependent} variable is the effect. Its value depends on changes in the independent variable. Finally, a \textit{control} variable is a variable that might affect \underline{both} the \textit{dependent} and the \textit{independent} variables, and we might want to account for it while studying our causal relationship of interest. 
 \begin{center}
 \begin{tikzpicture}
 \node (1) at (0,0) {Control Variables};
 \node (2) at (-3,1.75) {Independent Variable};
 \node (3) at (3,1.75) {Dependent Variable};
 \path (2) edge  (3);
-\path[bidirected] (1) edge[bend left=20] (2);
-\path[bidirected] (3) edge[bend left=20] (1);
+\path[->] (1) edge[bend left=20] (2);
+\path[->] (1) edge[bend right=20] (3);
 \end{tikzpicture}	
 \end{center}
 

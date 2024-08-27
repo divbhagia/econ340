@@ -1,0 +1,124 @@
+\documentclass{./../../Latex/handout}
+
+\fancyhf{}
+\fancyheadoffset{1cm}
+\lhead{ECON 340: Economic Research Methods}
+\rhead{Div Bhagia}
+\rfoot{\center \thepage}
+
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+\framebox{
+\vbox{
+\vspace{0.1em}
+\Large \sc Handout for Lecture 10 \\ \vspace{0.1em}
+\large Normal Distribution and Z-Score \\
+\vspace{0.5em}
+\small ECON 340: Economic Research Methods \hfill Instructor: Div Bhagia
+}
+}
+\end{center}	
+
+If $X \sim N(\mu, \sigma^2)$, then the standardized random variable,
+$$ Z = \frac{X-\mu}{\sigma} \sim N(0,1) $$
+
+Given $X \sim N(\mu, \sigma^2)$, to find $Pr(x_0<X<x_1)$: \vspace{-1em}
+\begin{itemize}
+\item Find $z_0 = (x_0-\mu)/\sigma$ and $z_1 = (x_1-\mu)/\sigma$
+\item Use standard normal table to find $Pr(z_0<Z<z_1)$ \\~\\
+\end{itemize}
+
+\textit{Exercises}: Refer to the standard normal table to answer the following.
+\begin{enumerate}
+\item Given $X \sim N(3, 16)$, find $Pr(2<X<5)$. 
+$$\Pr(2<X<5)=\Pr\left(\frac{2-3}{4}<Z<\frac{5-3}{4}\right)=\Pr(-0.25<Z<0.5)$$
+From the standard normal table, $\Pr(Z<-0.25)=0.4013$ and $\Pr(Z<-0.5) = \Pr(Z>0.5) = 0.3085$. So $\Pr(-0.25<Z<0.5) = 1-0.4013-0.3085 = 0.2902$.
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+	no markers, domain=-1.5:1.5, samples=100,
+	axis x line=bottom, axis y line=none,
+	xlabel=, ylabel=,
+	height=6cm, width=12cm,
+	xtick={-0.25, 0, 0.5}, ytick=\empty,
+	enlargelimits=false, clip=false, axis on top,
+]
+\addplot [fill=gray!20, draw=none, domain=-0.25:0.5] {gauss(0, 0.4)} \closedcycle;
+\addplot [very thick, black, -] {gauss(0, 0.4)}; 
+\draw[->, line width=1pt](axis cs: 0.1, 0.7)--(axis cs: 0.5, 0.7);
+\node at (axis cs: 1.1, 0.7) { $\Pr(-0.25<Z<0.5)$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\item Given $X \sim N(15, 100)$, find $Pr(X>-3)$. 
+$$\Pr(X>-3)=\Pr\left(\frac{X-15}{10}>\frac{-3-15}{10}\right)=\Pr(Z>-1.8)$$
+Note that, 
+$$ \Pr(Z>-1.8) = 1- \Pr(Z<-1.8) = 1 - 0.0359 = 0.9641 $$
+Here, I got $\Pr(Z<-1.8)$ from the standard normal table. Alternatively,
+$$ \Pr(Z>-1.8) = \Pr(Z<1.8) = 0.9641 $$ 
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+	no markers, domain=-4:4, samples=100,
+	axis x line=bottom, axis y line=none,
+	xlabel=, ylabel=,
+	height=4cm, width=8cm,
+	xtick={-1.8, 0}, ytick=\empty,
+	enlargelimits=false, clip=false, axis on top,
+]
+\addplot [fill=gray!20, draw=none, domain=-1.8:4] {gauss(0, 1)} \closedcycle;
+\addplot [very thick, black, -] {gauss(0, 1)}; 
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\end{enumerate}
+
+\newpage
+Given $X \sim N(\mu, \sigma^2)$ and $Pr(X<x)=p$, to find $x$ : \vspace{-1em}
+\begin{itemize}
+\item Use standard normal table to find $z$ where $Pr(Z<z)=p$ 
+\item Find $x = \mu + z \cdot \sigma $  \vspace{-1em}
+\end{itemize}
+Follows analogously for when we are given $Pr(X>x)=p$. \\~\\ \vspace{-0.25cm}
+
+\textit{Exercises}: Refer to the standard normal table to answer the following.
+\begin{enumerate}
+\item Given $Pr(Z>z) = 0.95 $. Find $z$. 
+\item[] From the standard normal table, $\Pr(Z<1.645)=0.95$. Since the normal distribution is symmetric, $\Pr(Z>-1.645)=0.95$. So, $z=-1.645$
+\item Given  $X \sim N(3, 16)$ and $Pr(X<x) = 0.95 $. Find $x$. 
+\item[] From the standard normal table, $\Pr(Z<1.645)=0.95$. Note that,
+$$ Z=\frac{X-\mu}{\sigma} \rightarrow X = \mu + Z.\sigma $$
+So here, $x = 3 + 1.645 \times 4 = 9.58$.
+\item Given $Pr(|Z|>z) = 0.10 $. Find $z$. \\ \vspace{-0.25cm}
+
+\textit{Note:} Since the normal distribution is symmetric $Pr(Z>z)=Pr(Z<-z)$, so we have that: $Pr(|Z|>z) = 2 Pr(Z>z) = 2 Pr(Z<-z) $. 
+\item[] First note that, $$Pr(|Z|>z) = Pr(Z>z) + Pr(Z<-z) = 2 Pr(Z<-z) $$
+Since, $Pr(|Z|>z)=0.1$, we are trying to find a $z$ such that $Pr(Z<-z)=0.05$.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+	no markers, domain=-4:4, samples=100,
+	axis x line=bottom, axis y line=none,
+	xlabel=, ylabel=,
+	height=4cm, width=8cm,
+	xtick={-1.5, 1.5}, ytick=\empty,
+	xticklabels = {-z, z},
+	enlargelimits=false, clip=false, axis on top,
+]
+\addplot [fill=gray!20, draw=none, domain=-4:-1.5] {gauss(0, 1)} \closedcycle;
+\addplot [fill=gray!20, draw=none, domain=1.5:4] {gauss(0, 1)} \closedcycle;
+\addplot [very thick, black, -] {gauss(0, 1)}; 
+\draw[->, line width=1pt](axis cs: 1.8, 0.04)--(axis cs: 2.25, 0.15);
+\node at (axis cs: 2.3, 0.2) {0.05};
+\draw[->, line width=1pt](axis cs: -1.8, 0.04)--(axis cs: -2.25, 0.15);
+\node at (axis cs: -2.3, 0.2) {0.05};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+ From the standard normal table, $z=1.645$. 
+\end{enumerate}
+\end{document}
