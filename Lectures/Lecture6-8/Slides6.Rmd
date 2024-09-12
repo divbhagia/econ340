@@ -34,21 +34,21 @@ library(kableExtra)
 ### Interface
 ![](interface.png){width="90%"}
 
-### Getting Started
+<!-- ### Getting Started
 - Open RStudio and open the project `Econ340_R`:\
     File $\rightarrow$ Open Project $\rightarrow$ Select the folder `Econ340_R`
 - An R project is simply a *working directory* with some additional details so you can pick up where you left easily
 - Since we have this project open, R will save and retrieve files from this folder now
-- It is good practice to keep all files (code, data, output, etc.) related to a project in one folder 
+- It is good practice to keep all files (code, data, output, etc.) related to a project in one folder  -->
 
 ### Getting Started
--   Now let's create a new R Script:\
+-   To get started, let's create a new R Script:\
     File $\rightarrow$ New File $\rightarrow$ R Script
 -   This should create a new untitled file in your window.
 -   Save this file to the `Econ340_R` folder:\
     File $\rightarrow$ Save as $\rightarrow$ Type *getting_started* $\rightarrow$ Save
 -   We will write all of our code in this script and execute it using the Run button on the top right
--   From next time, you can also just click on the .Rproj file that got created in the folder to open the project
+<!--  - From next time, you can also just click on the .Rproj file that got created in the folder to open the project -->
 
 
 ### Installing Packages
@@ -64,7 +64,7 @@ Tools $\rightarrow$ Install Packages $\rightarrow$ Install from Repository (CRAN
     library(tidyverse)
     ```
 
-<!-- ### File Management
+### File Management
 -   It is good practice to keep all files related to a project in one folder 
 -   Essentially you want R to use this folder as your *working directory*
 -   Working directory is the folder where R will save files and retrieve files from
@@ -81,11 +81,11 @@ Three ways to set the working directory:
 ```{r, echo=T, eval=F}
 # Manually set directory
 setwd("/Users/dbhagia/myfolder")
- ```
+```
 
 -   On a Mac, you can right click on any folder and click *Get Info* to get the path
 -   On a Windows computer, you can find the location in the address bar on the top (replace "\\" with "/")
--   Alternatively, you can find your path by opening the folder under Files on bottom-left in R Studio and clicking: More $\rightarrow$ Copy Folder Path to Clipboard -->
+-   Alternatively, you can find your path by opening the folder under Files on bottom-left in R Studio and clicking: More $\rightarrow$ Copy Folder Path to Clipboard
 
 ### Importing Data
 -   We can import data from all kinds of format in R
