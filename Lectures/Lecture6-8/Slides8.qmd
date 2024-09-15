@@ -2,15 +2,14 @@
 title: |
   | ECON 340  
   | Economics Research Methods
-author: "Div Bhagia"
-date: |
-  | Lecture 8: Data Analysis in R
+author: Div Bhagia 
+institute: "Lecture 8: Data Analysis in R"
 documentclass: slidesLight
-output:
-  beamer_presentation
+format: beamer
 header-includes:
   - \renewcommand{\tightlist}{\setlength{\itemsep}{10pt}\setlength{\parskip}{0pt}}
 urlcolor: blue
+pdf-engine: pdflatex
 ---
 
 ```{r setup, include=FALSE}
@@ -19,6 +18,7 @@ library(kableExtra)
 ```
 
 ### Let's get started
+
 ```{r}
 # Load Packages
 library(tidyverse)
@@ -39,11 +39,13 @@ data <- data %>%
 -   So here `hcomp` takes value 1 whenever computers per student are above the median, and 0 otherwise. What should be the output from `mean(data$hcomp)`?
 
 ### Factor Variables
+
 -   Variables can be continous (like `testscr`) or discrete (like `hcomp` and `gr_span`)
--   When the categorical variable is numeric (like `hcomp`) sometimes it is useful to store it as a _factor_ variable
+-   When the categorical variable is numeric (like `hcomp`) sometimes it is useful to store it as a *factor* variable
 -   This helps prevent R from treating it as a continous variable
 
 ### Factor Variables
+
 To factorize `hcomp`
 
 ```{r}
@@ -53,6 +55,7 @@ data$hcompf <- factor(data$hcomp,
 ```
 
 Or simply,
+
 ```{r}
 data$hcompf2 <- factor(data$hcomp)
 ```
@@ -64,21 +67,21 @@ data$hcompf2 <- factor(data$hcomp)
 -   You start with a layer and then add layers (using +s) of annotations and statistical summaries
 
 ### Histogram: Discrete Variable
-\vspace{-0.75em}
+
 ```{r, fig.height = 2.25, fig.width=3}
 ggplot(data=data, aes(x=gr_span)) +
   geom_bar()
 ```
 
 ### Histogram: Continous Variable
-\vspace{-0.75em}
+
 ```{r, fig.height = 2.25, fig.width=3}
 ggplot(data=data, aes(x=str)) +
   geom_histogram()
 ```
 
 ### Making things pretty
-\vspace{-0.75em}
+
 ```{r, fig.height = 1.8, fig.width=3}
 ggplot(data=data, aes(x=str)) +
   geom_histogram(color="black",fill="blue",alpha=0.25) +
@@ -87,51 +90,70 @@ ggplot(data=data, aes(x=str)) +
 ```
 
 ### Scatterplot
-\vspace{-0.75em}
+
 ```{r, fig.height = 2.25, fig.width=3}
 ggplot(data, aes(x=str, y=testscr)) +
   geom_point(shape=1) +
   theme_classic()
 ```
 
-
 ### Saving output
 
-- To save graphs produced by `ggplot()`, use `ggsave()`
-- Saves the last graph that was produced in your working directory unless specified otherwise
-- Let's try it 
+-   To save graphs produced by `ggplot()`, use `ggsave()`
+
+-   Saves the last graph that was produced in your working directory unless specified otherwise
+
+-   Let's try it
+
     ```{r, fig.height = 1.8, fig.width=3}
     ggsave("myplot.png")
     ```
-- Can even specify the height and width of our graphs
+
+-   Can even specify the height and width of our graphs
+
     ```{r, fig.height = 1.8, fig.width=3}
     ggsave("myplot.png", width = 4, height = 3)
     ```
 
 ### Another Useful Package: Stargazer
-\vspace{-0.75em}
-```{r}
+
+```{r, eval=F}
 library(stargazer)
 data %>%
   select(testscr, str, comp_stu, meal_pct) %>%
   stargazer(type = 'text')
 ```
 
+\small
+
+\vspace{-1em}
+
+```{r, echo = F}
+library(stargazer)
+data %>%
+  select(testscr, str, comp_stu, meal_pct) %>%
+  stargazer(type = 'text')
+```
 
 ### Real Data is Messier
+
 -   Missing values are stored as `NA` in R
+
 -   If a value is missing, `mean()` and other functions will give an error, so use option `na.rm=TRUE`
+
 -   logical `is.na()` returns `TRUE` if value is missing and `FALSE` otherwise
+
 -   So you can use `filter()` as follows to delete missing values on some variable `var`
+
     ```{r, eval=F}
     data  <- data  %>% 
       filter(is.na(var) = FALSE)
-    ``` 
-
+    ```
 
 ### Real Data is Messier
-- Often we need to combine two different datasets 
-- To merge two data sets on the basis of a common unit, use `merge()`
-- To append data sets, say, across years, can use `rbind()`
-- Problem set 2 will have you deal with some of this
-- Next week: Back to theory
+
+-   Often we need to combine two different datasets
+-   To merge two data sets on the basis of a common unit, use `merge()`
+-   To append data sets, say, across years, can use `rbind()`
+-   Problem set 2 will have you deal with some of this
+-   Next week: Back to theory

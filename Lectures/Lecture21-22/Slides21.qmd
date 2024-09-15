@@ -2,17 +2,14 @@
 title: |
   | ECON 340  
   | Economics Research Methods
-author: |
-  | Div Bhagia
-  |
-  | Lecture 21: Regression Analysis in R
-date: |
+author: Div Bhagia 
+institute: "Lecture 21: Regression Analysis in R"
 documentclass: slidesLight
-output:
-  beamer_presentation
+format: beamer
 header-includes:
   - \renewcommand{\tightlist}{\setlength{\itemsep}{10pt}\setlength{\parskip}{0pt}}
 urlcolor: blue
+pdf-engine: pdflatex
 ---
 
 ```{r setup, include=FALSE}
@@ -31,6 +28,7 @@ data <- read.csv("caschool.csv")
 ```
 
 ### Scatterplot
+
 \vspace{-1em}
 
 ```{r, fig.height = 2.1, fig.width=3}
@@ -40,6 +38,7 @@ ggplot(data, aes(x=str, y=testscr)) +
 ```
 
 ### Scatterplot
+
 \vspace{-1em}
 
 ```{r, fig.height = 2.1, fig.width=3}
@@ -48,85 +47,109 @@ ggplot(data, aes(x=str, y=testscr)) +
   labs(x="Student-Teacher Ratio", y="Test Score")
 ```
 
-### Linear Regression 
-- `lm()` is a function used to fit linear regression models
-- Syntax: `lm(y ~ x1 + x2 + ... , data = mydata)`
-- Useful to store it as an object
-```{r}
-model <- lm(testscr ~ str, data)
-```
+### Linear Regression
 
-- Apply `summary()` function to the stored result from output
+-   `lm()` is a function used to fit linear regression models
+
+-   Syntax: `lm(y ~ x1 + x2 + ... , data = mydata)`
+
+-   Useful to store it as an object
+
+    ```{r}
+    model <- lm(testscr ~ str, data)
+    ```
+
+-   Apply `summary()` function to the stored result from output
 
 ### Regression Output
+
 ```{r, results='hide'}
 summary(model)
 ```
+
 \includegraphics[scale=0.3]{./../../output/reg_output.png}
 
-### Regression Output
-- Fitted model: $$ \hat{testscr} = 698.93 - 2.28 \cdot str  $$
-- $R^2 = 0.05$ implies that 5\% of variation in test scores explained by student teacher ratio
-- Standard errors (deviations): $$ SE_{\hat{\beta_0}} = 9.47, \quad SE_{\hat{\beta_1}} = 0.48 $$
+![](/Output/reg_output.png){fig-align="center"}
 
 ### Regression Output
-- Often interested in testing the hypothesis: $H_0: \beta_1 = 0 \text{ against } H_1: \beta_1 \neq 0$
-- Corresponding t-value: $$ t_0 = \frac{\hat{\beta_1}}{SE_{\hat{\beta_1}}} = \frac{- 2.28}{0.48} = -4.75$$
-- p-value: $p = 2 Pr(Z>t_0)$
-- If $p<\alpha$, coefficient significant at $\alpha \%$ level of significance
+
+-   Fitted model: $$ \hat{testscr} = 698.93 - 2.28 \cdot str  $$
+-   $R^2 = 0.05$ implies that 5% of variation in test scores explained by student teacher ratio
+-   Standard errors (deviations): $$ SE_{\hat{\beta_0}} = 9.47, \quad SE_{\hat{\beta_1}} = 0.48 $$
+
+### Regression Output
+
+-   Often interested in testing the hypothesis: $H_0: \beta_1 = 0 \text{ against } H_1: \beta_1 \neq 0$
+-   Corresponding t-value: $$ t_0 = \frac{\hat{\beta_1}}{SE_{\hat{\beta_1}}} = \frac{- 2.28}{0.48} = -4.75$$
+-   p-value: $p = 2 Pr(Z>t_0)$
+-   If $p<\alpha$, coefficient significant at $\alpha \%$ level of significance
 
 ### Confidence Intervals
-- $(1-\alpha)\%$ confidence interval is given by: $\hat{\beta_1} \pm z_{\alpha/2} \cdot SE_{\hat{\beta_1}}$
-- Note that $z_{0.025}=1.96$, so the 95\% confidence interval: $$-2.28 \pm 1.96 \cdot 0.48$$
+
+-   $(1-\alpha)\%$ confidence interval is given by: $\hat{\beta_1} \pm z_{\alpha/2} \cdot SE_{\hat{\beta_1}}$
+
+-   Note that $z_{0.025}=1.96$, so the 95% confidence interval: $$-2.28 \pm 1.96 \cdot 0.48$$
+
     ```{r, results}
     confint(model)
     ```
 
 ### Predicted and Residual Values
+
 ```{r}
 data$yhat <- predict(model)
 data$uhat <- residuals(model)
 ```
+
 Should the average of `testscr` and `yhat` be the same?
+
 ```{r, results='hide'}
 mean(data$testscr)
 mean(data$yhat)
 ```
+
 What should be the average of `uhat`?
+
 ```{r, results='hide'}
 mean(data$uhat)
 ```
 
 ### Predicted and Residual Values
+
 What is the predicted value when `str`=21?
+
 ```{r}
 data %>% select(testscr, str, yhat, uhat) %>% 
   filter(str==21)
 ```
-Remember: 
-$$ \hat{testscr} = 698.93 - 2.28 \cdot str  $$
-Note that: $\hat{u_i} = Y_i-\hat{Y}_i$
+
+Remember: $$ \hat{testscr} = 698.93 - 2.28 \cdot str  $$ Note that: $\hat{u_i} = Y_i-\hat{Y}_i$
 
 ### Plotting the Fitted Line
+
 ```{r, fig.height = 2.1, fig.width=3}
 ggplot(data, aes(x=str, y=testscr)) +
   geom_point(shape=1) + theme_classic() +
   geom_line(aes(y=yhat)) 
 ```
+
 ### Output using Stargazer
+
 \vspace{-0.5em}
+
 ```{r, results='hide'}
 stargazer(model, type="text", 
           keep.stat = c("n", "adj.rsq"))
 ```
-\vspace{-1em}
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\begin{center}")
 stargazer(model, keep.stat = c("n", "adj.rsq"), header = F, float=F, font.size = "small")
+cat("\\end{center}")
 ```
-\end{center}
 
 ### Output from Multiple Models
+
 ```{r, results='hide'}
 model1 <- lm(math_scr ~ str, data)
 model2 <- lm(read_scr ~ str, data)
@@ -135,34 +158,37 @@ stargazer(model1, model2, type="text",
 ```
 
 ### Output from Multiple Models
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\centering")
 stargazer(model1, model2, keep.stat = c("n", "adj.rsq"),
           header = F, float=F, font.size = "small")
 ```
-\end{center}
 
-### Multiple Regression Model 
+### Multiple Regression Model
+
 ```{r, results='hide'}
 model3 <- lm(testscr ~ str + comp_stu, data)
 stargazer(model, model3, type="text", 
           keep.stat = c("n", "adj.rsq"))
 ```
-- Note: Use the adjusted $R^2$ to compare two models with different number of variables
 
-### Multiple Regression Model 
-\begin{center}
+-   Note: Use the adjusted $R^2$ to compare two models with different number of variables
+
+### Multiple Regression Model
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\centering")
 stargazer(model, model3, keep.stat = c("n", "adj.rsq"),
           header = F, float=F, font.size = "small", keep=c('str','comp_stu'))
 ```
-\end{center}
 
 ### Omitted Variable Bias
-- Negative coefficient on `str` smaller in magnitude after controlling for `comp_stu`
-- Lower `comp_stu` $\rightarrow$ Lower `testscr`
-- Lower `comp_stu` $\leftrightarrow$ Higher `str`
-- So `comp_stu` explains some of the relationship between `str` and `testscr`
+
+-   Negative coefficient on `str` smaller in magnitude after controlling for `comp_stu`
+-   Lower `comp_stu` $\rightarrow$ Lower `testscr`
+-   Lower `comp_stu` $\leftrightarrow$ Higher `str`
+-   So `comp_stu` explains some of the relationship between `str` and `testscr`
 
 ### Omitted Variable Bias
 
@@ -187,6 +213,7 @@ ggplot(dag, aes(x=x, y=y, xend = xend, yend = yend)) +
 ```
 
 ### Next Class
-- For the next class download and load `acs2019` dataset from the Dropbox folder
-- We will continue with linear regression in R
-- Come prepared so we can start quickly
+
+-   For the next class download and load `acs2019` dataset from the Dropbox folder
+-   We will continue with linear regression in R
+-   Come prepared so we can start quickly

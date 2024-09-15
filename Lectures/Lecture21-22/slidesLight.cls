@@ -4,6 +4,9 @@
 \LoadClass[14pt, aspectratio=169, t]{beamer}
 \usetheme{default}
 
+% Increase font size of institute
+\setbeamerfont{institute}{size=\normalsize}
+
 % misc
 \newcommand{\heart}{\large\color{RubineRed}{\ensuremath\heartsuit}}
 

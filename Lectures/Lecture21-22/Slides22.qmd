@@ -2,17 +2,14 @@
 title: |
   | ECON 340  
   | Economics Research Methods
-author: |
-  | Div Bhagia
-  |
-  | Lecture 22: Regression Analysis in R
-date: |
+author: Div Bhagia 
+institute: "Lecture 22: Regression Analysis in R"
 documentclass: slidesLight
-output:
-  beamer_presentation
+format: beamer
 header-includes:
   - \renewcommand{\tightlist}{\setlength{\itemsep}{10pt}\setlength{\parskip}{0pt}}
 urlcolor: blue
+pdf-engine: pdflatex
 ---
 
 ```{r setup, include=FALSE}
@@ -31,6 +28,7 @@ data <- read.csv("acs2019.csv")
 ```
 
 ### Preparing the data
+
 ```{r}
 # Select sample and variables
 data <- data %>% 
@@ -42,17 +40,20 @@ data <- na.omit(data)
 ```
 
 ### Hourly wage and age
+
 ```{r, fig.height = 2.1, fig.width=3}
 ggplot(data, aes(x=age, y=hrly_wage)) +
   geom_point() + theme_classic()
 ```
 
 ### Hourly wage and age
-- Too much data to make sense
-- Better to plot average hourly wage at each wage
-- use `stat_summary()` and specify `fun` as `mean`
+
+-   Too much data to make sense
+-   Better to plot average hourly wage at each wage
+-   use `stat_summary()` and specify `fun` as `mean`
 
 ### Average wages by age
+
 ```{r, fig.height = 2.1, fig.width=3}
 ggplot(data, aes(x=age, y=hrly_wage)) +
       stat_summary(fun = mean, geom = "point") + 
@@ -60,32 +61,40 @@ ggplot(data, aes(x=age, y=hrly_wage)) +
 ```
 
 ### Hourly wage and age
-- To fit a quadratic model, generate age-squared term
+
+-   To fit a quadratic model, generate age-squared term
+
     ```{r}
     data <- data %>% 
       mutate(age.sq = age*age)
     ```
-- Fit linear and quadratic model
+
+-   Fit linear and quadratic model
+
     ```{r}
     mdl.lnr <- lm(hrly_wage ~ age, data)
     mdl.qdr <- lm(hrly_wage ~ age + age.sq, data)
     ```
-- Output using `stargazer()`
+
+-   Output using `stargazer()`
+
     ```{r, results='hide'}
     stargazer(mdl.lnr, mdl.qdr, type="text")
     ```
-    
+
 ### Hourly wage and age
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\centering")
 stargazer(mdl.lnr, mdl.qdr, keep.stat = c("n", "adj.rsq"), 
           header = F, float=F, font.size = "small", 
           keep=c('age', 'age.sq'))
 ```
-\end{center}
 
 ### Plotting the fitted curve
+
 \vspace{-1em}
+
 ```{r, fig.height = 2.1, fig.width=3}
 data$prd.qdr <- predict(mdl.qdr)
 ggplot(data, aes(x=age, y=hrly_wage)) +
@@ -93,13 +102,15 @@ ggplot(data, aes(x=age, y=hrly_wage)) +
       geom_line(aes(y=prd.qdr)) + theme_classic()
 ```
 
-
 ### Dummy variables
+
 ```{r}
 data %>% group_by(female) %>% 
   summarise(avg_wages=mean(hrly_wage))
 ```
+
 ### Dummy variables
+
 ```{r, results='hide'}
 mdl1 <- lm(hrly_wage ~ female, data)
 mdl2 <- lm(hrly_wage ~ female + yrs_educ, data)
@@ -109,17 +120,18 @@ stargazer(mdl1, mdl2, mdl3, type="text")
 ```
 
 ### Dummy variables
-\vspace{-1em}
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\centering")
 stargazer(mdl1, mdl2, mdl3, keep.stat= c("n", "adj.rsq"), 
           header = F, float=F, font.size = "small", 
           omit=c('Constant'))
 ```
-\end{center}
 
 ### Model 2
+
 \vspace{-0.5em}
+
 ```{r, fig.height = 2.1, fig.width=3}
 data$prd2 <- predict(mdl2)
 ggplot(data, aes(x=yrs_educ, y=prd2, group=female)) +
@@ -127,8 +139,11 @@ ggplot(data, aes(x=yrs_educ, y=prd2, group=female)) +
 ```
 
 ### Factor variables
-- R thinks of all variables as numeric unless you tell it otherwise
-- To create a factor variable (specifying levels and labels is optional)
+
+-   R thinks of all variables as numeric unless you tell it otherwise
+
+-   To create a factor variable (specifying levels and labels is optional)
+
     ```{r}
     data$fem.fct <- factor(data$female, levels = c(0,1), 
                        labels = c('Female', 'Male'))
@@ -136,6 +151,7 @@ ggplot(data, aes(x=yrs_educ, y=prd2, group=female)) +
     ```
 
 ### Model 3
+
 \vspace{-0.5em}
 
 ```{r, fig.height = 2.1, fig.width=3}
@@ -145,36 +161,41 @@ ggplot(data, aes(x=yrs_educ, y=prd3, group=fem.fct)) +
 ```
 
 ### More Interaction Terms
+
 \vspace{-0.5em}
 
 ```{r, results='hide'}
 mdl.int1 <- lm(hrly_wage ~ female*married, data)
 stargazer(mdl.int1, type="text")
 ```
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\begin{center}")
 stargazer(mdl.int1, keep.stat= c("n", "adj.rsq"), 
           header = F, float=F, font.size = "small", 
           omit=c('Constant'))
+cat("\\end{center}")
 ```
-\end{center}
 
 ### More Interaction Terms
+
 \vspace{-0.5em}
 
 ```{r, results='hide'}
 mdl.int2 <- lm(hrly_wage ~ black*female, data)
 stargazer(mdl.int2, type="text")
 ```
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\begin{center}")
 stargazer(mdl.int2, keep.stat= c("n", "adj.rsq"), 
           header = F, float=F, font.size = "small", 
           omit=c('Constant'))
+cat("\\end{center}")
 ```
-\end{center}
 
 ### Variables with several categories
+
 ```{r}
 # Specify levels and labels
 levs <- c(1, 2, 3, 4, 5)
@@ -188,36 +209,45 @@ data$educ.fct <- factor(data$educ_cat,
 ```
 
 ### Variables with several categories
+
 ```{r}
 data %>% group_by(educ.fct) %>%
   summarise(m = mean(hrly_wage))
 ```
 
 ### Variables with several categories
-- Want to specify to R to treat education as a categorical variable
-- Which of the following models is correct?
+
+-   Want to specify to R to treat education as a categorical variable
+
+-   Which of the following models is correct?
+
     ```{r, results='hide'}
     summary(lm(hrly_wage ~ educ_cat, data))
     summary(lm(hrly_wage ~ as.factor(educ_cat), data))
     summary(lm(hrly_wage ~ educ.fct, data))
     ```
-- Coefficients capture mean differences from the baseline
-    
+
+-   Coefficients capture mean differences from the baseline
+
 ### Variables with several categories
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
+cat("\\centering")
 mdl <- lm(hrly_wage ~ educ.fct, data)
 stargazer(mdl, keep.stat= c("n", "adj.rsq"), 
           header = F, float=F, font.size = "scriptsize")
 ```
-\end{center}
 
 ### Log Transformations
-- Create transformed variable
+
+-   Create transformed variable
+
     ```{r}
     data$lwage <- log(data$hrly_wage)
     ```
-- Fit the model and output results  
+
+-   Fit the model and output results
+
     ```{r, results='hide'}
     mdl.lnr <- lm(hrly_wage ~ yrs_educ, data)
     mdl.log <- lm(lwage ~ yrs_educ, data)
@@ -225,35 +255,41 @@ stargazer(mdl, keep.stat= c("n", "adj.rsq"),
     ```
 
 ### Log Transformations
-\begin{center}
+
 ```{r, echo=FALSE, include=TRUE, results='asis'}
-stargazer(mdl.lnr, mdl.log, keep.stat= c("n", "adj.rsq"), 
-          header = F, float=F, font.size = "small")
+cat("\\centering")
+stargazer(mdl.lnr, mdl.log, keep.stat= c("n", "adj.rsq"), header = F, float=F, font.size = "small")
 ```
-\end{center}
 
 ### Log Transformations
+
 How much does hourly wage change going from 10 to 11 years of education?
 
-- Linear model: \$2.52
-- Log-level model: 100 $\times$ 0.086 = 8.6\% of \$18.87 = \$1.68
+-   Linear model: \$2.52
+
+-   Log-level model: 100 $\times$ 0.086 = 8.6% of \$18.87 = \$1.68
+
     ```{r}
     data %>% filter(yrs_educ==10) %>% 
       summarise(m = mean(hrly_wage))
     ```
 
 ### Log Transformations
-- What about going from 13 to 14 years of education?
-- Fitting a linear model between log wages and years of education $\rightarrow$ non-linear model between wages and years of education
+
+-   What about going from 13 to 14 years of education?
+
+-   Fitting a linear model between log wages and years of education $\rightarrow$ non-linear model between wages and years of education
+
     ```{r}
     # Predictions from the log-level model
     data$lw.hat <- predict(mdl.log) 
-    
+
     # Convert predictions back to levels
     data$w.hat <- exp(data$lw.hat)
     ```
 
 ### Log Transformations
+
 ```{r, fig.height = 2.1, fig.width=3}
 ggplot(data, aes(x=yrs_educ, y=w.hat)) +
   geom_line() + theme_classic()

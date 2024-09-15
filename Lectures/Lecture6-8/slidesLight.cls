@@ -7,6 +7,9 @@
 % misc
 \newcommand{\heart}{\large\color{RubineRed}{\ensuremath\heartsuit}}
 
+% Increase font size of institute
+\setbeamerfont{institute}{size=\normalsize}
+
 % Spacing
 \usepackage{setspace}
 \setstretch{1}

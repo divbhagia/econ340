@@ -2,15 +2,14 @@
 title: |
   | ECON 340  
   | Economics Research Methods
-author: "Div Bhagia"
-date: |
-  | Lecture 7: Data Analysis in R
+author: Div Bhagia 
+institute: "Lecture 7: Data Analysis in R"
 documentclass: slidesLight
-output:
-  beamer_presentation
+format: beamer
 header-includes:
   - \renewcommand{\tightlist}{\setlength{\itemsep}{10pt}\setlength{\parskip}{0pt}}
 urlcolor: blue
+pdf-engine: pdflatex
 ---
 
 ```{r setup, include=FALSE}
@@ -19,6 +18,9 @@ library(kableExtra)
 ```
 
 ### So far
+
+Ensure that your working directory is set correctly.
+
 ```{r}
 # Load Packages
 library(tidyverse)
@@ -26,6 +28,7 @@ library(tidyverse)
 # Import data
 data <- read.csv("caschool.csv")
 ```
+
 You can clear your environment before starting by using the broom on the top-right. Or add `rm(list=ls())` command on top of your R-script.
 
 ### Tabulating Variables
@@ -75,6 +78,7 @@ data %>% select(computer, enrl_tot)
 # Base R
 cor(data$computer, data$enrl_tot)
 ```
+
 ```{r}
 # Tidy way
 data %>% select(computer, enrl_tot) %>% cor() 
@@ -87,18 +91,22 @@ data %>% select(gr_span, computer) %>%
   filter(gr_span=="KK-06")  
 ```
 
-### _And_ and _Or_ in R
+### *And* and *Or* in R
 
 To select schools in Orange county with enrollment over 5000
+
 ```{r}
 data1 <- data %>% 
   filter(county=="Orange" & enrl_tot>=5000)
 ```
+
 To select schools that are either in Orange country or in LA county
+
 ```{r}
 data2 <- data %>% 
   filter(county=="Orange" | county=="Los Angeles")
 ```
+
 ### Summarize Variables
 
 ```{r}
@@ -116,9 +124,9 @@ data %>% summarise(sd = sd(computer),
 data <- data %>% 
   mutate(log_enrl = log(enrl_tot))
 ```
-- The code takes `data` and adds a new column `log_enrl`, which is the log of `enrl_tot` 
-- It then updates the original data with this new column.
 
+-   The code takes `data` and adds a new column `log_enrl`, which is the log of `enrl_tot`
+-   It then updates the original data with this new column.
 
 ### Creating New Variables
 
@@ -132,6 +140,7 @@ data <- data %>%
 -   So here `hcomp` takes value 1 whenever computers per student are above the median, and 0 otherwise. What should be the output from `mean(data$hcomp)`?
 
 ### Combining `group_by()` and `summarise()`
+
 ```{r}
 data %>% 
   group_by(hcomp) %>% 
@@ -139,11 +148,15 @@ data %>%
 ```
 
 ### Excercise for you
+
 Find the county with the highest average number of computers per student (`comp_stu`) (Hint: Use `group_by(county)` and `summarise()`)
 
-<!-- ### What's next?
+### What's next?
 
-- Next class we will continue with R
-- Problem set 2 is available on Canvas and is due next Tuesday (09/19)
-- Get in touch with your research group partner(s) and start thinking about your project
-- Research Paper First Submission is due in two weeks (09/26) -->
+-   Next class we will continue with R
+
+-   Problem set 2 is due next week on Tuesday
+
+-   Get in touch with your research group partner(s) and start thinking about your project
+
+-   Research Paper First Submission is due in two weeks
