@@ -2,8 +2,8 @@ library(rsconnect)
 setwd('/Users/dbhagia/Dropbox (CSU Fullerton)/Teaching/Econ340/ShinyApps/CLT')
 
 # test
-#library(shiny)
-#runApp()
+# library(shiny)
+# runApp()
 
 # Deploy app
 rsconnect::setAccountInfo(name='dbhagia', 

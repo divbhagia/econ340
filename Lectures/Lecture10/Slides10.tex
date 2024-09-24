@@ -112,38 +112,39 @@ What's special about it? \\
 \begin{frame}{Standardized Random Variables}
 A random variable can be transformed into a random variable with mean 0 and variance 1 by subtracting its mean and then dividing by its standard deviation, a process called standardization. \\~\\
 $$ Z = \frac{X-\mu_X}{\sigma_X} $$
+Here, $E(Z) = 0$ and $\sigma_Z = 1$.
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%
-\begin{frame}{Transformations of Random Variables}
-\vskip-0.5em
-\begin{witemize}
-  \item Say, $X$ is a random variable with mean $\mu_X$, variance $\sigma^2_X$, and standard deviation $\sigma_X$
-  \item If we transform $X$ to create a new random variable $$ Y = a + bX $$
-\item Then $Y$ is a random variable that has a distribution with the same shape as $X$ and with \vskip0.15em
-\begin{mitemize}
-\normalsize
-  \item Mean: $\mu_Y = a + b \cdot \mu_X \quad  $
-  \item Variance: $\sigma^2_Y = b^2 \cdot \sigma^2_X$
-  \item SD:  $\sigma_Y = b \cdot \sigma_X  $
-\end{mitemize}
-\end{witemize}
-\end{frame}
-
-%%%%%%%%%%%%
-\begin{frame}{Z-Score}
-\begin{witemize}
-  \item We can rearrange the terms in the Z-score
-  $$ Z =  \frac{X-\mu_X}{\sigma_X} \quad \rightarrow \quad Z = \frac{-\mu_X}{\sigma_X} + \frac{1}{\sigma_X} \cdot X $$
-  \item So here $ Z = a + b \cdot X $ with 
-  $ a = \frac{-\mu_X}{\sigma_X}$ and $b= \frac{1}{\sigma_X} $
-  \item Since $Z$ is a transformed random variable:
-  $$ \mu_Z = a + b \cdot \mu_X = \frac{-\mu_X}{\sigma_X} + \frac{1}{\sigma_X} \cdot \mu_X = 0   $$
-    $$ \sigma^2_Z = b^2 \cdot \sigma_X^2 =  \left(\frac{1}{\sigma_X}\right)^2 \cdot \sigma_X^2  = 1   $$
-
-\end{witemize}
-
-\end{frame}
+%\begin{frame}{Transformations of Random Variables}
+%\vskip-0.5em
+%\begin{witemize}
+%  \item Say, $X$ is a random variable with mean $\mu_X$, variance $\sigma^2_X$, and standard deviation $\sigma_X$
+%  \item If we transform $X$ to create a new random variable $$ Y = a + bX $$
+%\item Then $Y$ is a random variable that has a distribution with the same shape as $X$ and with \vskip0.15em
+%\begin{mitemize}
+%\normalsize
+%  \item Mean: $\mu_Y = a + b \cdot \mu_X \quad  $
+%  \item Variance: $\sigma^2_Y = b^2 \cdot \sigma^2_X$
+%  \item SD:  $\sigma_Y = b \cdot \sigma_X  $
+%\end{mitemize}
+%\end{witemize}
+%\end{frame}
+%
+%%%%%%%%%%%%%
+%\begin{frame}{Z-Score}
+%\begin{witemize}
+%  \item We can rearrange the terms in the Z-score
+%  $$ Z =  \frac{X-\mu_X}{\sigma_X} \quad \rightarrow \quad Z = \frac{-\mu_X}{\sigma_X} + \frac{1}{\sigma_X} \cdot X $$
+%  \item So here $ Z = a + b \cdot X $ with 
+%  $ a = \frac{-\mu_X}{\sigma_X}$ and $b= \frac{1}{\sigma_X} $
+%  \item Since $Z$ is a transformed random variable:
+%  $$ \mu_Z = a + b \cdot \mu_X = \frac{-\mu_X}{\sigma_X} + \frac{1}{\sigma_X} \cdot \mu_X = 0   $$
+%    $$ \sigma^2_Z = b^2 \cdot \sigma_X^2 =  \left(\frac{1}{\sigma_X}\right)^2 \cdot \sigma_X^2  = 1   $$
+%
+%\end{witemize}
+%
+%\end{frame}
 
 
 %%%%%%%%%%%%

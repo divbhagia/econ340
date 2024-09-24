@@ -1,0 +1,10 @@
+name: randomsample
+title:
+username: dbhagia
+account: dbhagia
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12813621
+bundleId: 9140780
+url: https://dbhagia.shinyapps.io/randomsample/
+version: 1

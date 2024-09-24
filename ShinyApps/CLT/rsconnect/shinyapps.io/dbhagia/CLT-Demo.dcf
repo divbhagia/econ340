@@ -5,7 +5,5 @@ account: dbhagia
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11371656
-bundleId: 8314446
+bundleId: 9140681
 url: https://dbhagia.shinyapps.io/CLT-Demo/
-when: 1709258138.07057
-lastSyncTime: 1709258138.07059
