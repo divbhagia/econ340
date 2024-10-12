@@ -2,8 +2,8 @@
 
 \begin{document}
 \thispagestyle{plain}
-\myheader{Sample Midterm: Solutions}
-\rhead{Sample Midterm: Solutions}
+\myheader{Sample 1: Midterm Solutions}
+\rhead{Sample 1: Midterm Solutions}
 \vspace{0.5em}
 \testHeader{70}{20}
 
@@ -22,13 +22,7 @@ What is the correlation between these variables?
 \item[$\text{\rlap{$\checkmark$}}\square$] $\rho = -0.6$
 \item[$\square$] $\rho = 0$ \\
 \end{enumerate}
-%\item[(b).] (Select all that apply) Suppose a survey of 500 people found that 300 of them prefer coffee over tea. Suppose we define a variable X that takes a value of 1 if a person said they prefer coffee and 0 otherwise. The sample mean of $X$ is given as:
-%\begin{enumerate}
-%\item[$\square$] $1/500(1\cdot 300 + 0\cdot 200) $ 
-%\item[$\square$] $(1/500)\sum_{i=1}^{500} X_i$
-%\item[$\square$] $300/500$
-%\item[$\square$] $1\cdot (3/5) + 0\cdot (2/5) $ \\
-%\end{enumerate}
+
 \item[(b).] If the average height in the world is 169 cm with a standard deviation of 6 cm, and my height is 167 cm, how many standard deviations below the mean am I?
 \begin{enumerate}
 \item[$\square$] $1.24$
@@ -64,10 +58,11 @@ What is the correlation between these variables?
 \underline{\textit{Question 2: Things you can explain (6 pts)}} \\
 \begin{enumerate}
 \item[(a).] (2 pts) \textit{In most countries across the world mean earnings are greater than median earnings. Why do you think this is true?}  \\~\\
-In most countries around the world, average earnings exceed median earnings. This discrepancy arises because a small fraction of people earn exceptionally high salaries, skewing the average upwards. For instance, in the United States, the earnings of the top 5\% account for 28\% of total earnings. \footnote{Estimates from Social Security Data for the year 2017.}  If we plot a histogram of earnings, we will notice that the distribution of earnings is right-skewed. The mean is affected by such outliers as it depends on all values in the data, while the median is less sensitive to extreme values as it only depends on values in the center of the data. \\~\\
+In most countries around the world, average earnings exceed median earnings. This discrepancy arises because a small fraction of people earn exceptionally high salaries, skewing the average upwards. For instance, in the United States, the earnings of the top 5\% account for 28\% of total earnings. \footnote{Estimates from Social Security Data for the year 2017.}  If we plot a histogram of earnings, we will notice that the distribution of earnings is right-skewed. The mean is affected by such outliers as it depends on all values in the data, while the median is less sensitive to extreme values as it only depends on values in the center of the data. \\
 \item[(b).] (2 pts) \textit{There is a strong positive correlation between immigrant flows and online job vacancies across metropolitan areas in the US. Does this imply that immigration leads to job creation? } \\~\\
 No, this does not imply that immigration leads to job creation because correlation does not imply causation. Immigrants may choose to move to places in response to job vacancies, resulting in a positive correlation between immigrant flows and online job vacancies. This is called reverse casualty. \\~\\
-Alternative answer: No, this does not imply that immigration leads to job creation because correlation does not imply causation. Immigrants may settle in areas with [\textit{insert characteristic}] and areas with [\textit{insert characteristic}] also attract more jobs which would result in a positive correlation between immigrant flows and online job vacancies. \\~\\
+Alternative answer: No, this does not imply that immigration leads to job creation because correlation does not imply causation. Immigrants may settle in areas with [\textit{insert characteristic}] and areas with [\textit{insert characteristic}] also attract more jobs which would result in a positive correlation between immigrant flows and online job vacancies. \\
+\newpage
 \item[(c).] (2 pts) \textit{As long as our sample is random (no matter how small or large), the sample mean is going to give us an unbiased estimate of the true population mean. Why do we still care about having a large sample?} \\~\\
 We care about having a large sample because the variance of the sample mean given by $\sigma^2/n$ is lower when the sample size $n$ is greater. Unbiasedness implies that, on average, we will get a sample mean equal to the true population mean. It is still very possible to get a sample mean far from the true mean in any given sample; how far depends on the variance of our estimate. Another benefit of having a large sample is that by the Central Limit Theorem, the sample mean distribution in large samples is normal even when the population is non-normal. Knowing the sample mean distribution enables us to construct confidence intervals and perform hypothesis tests.
 \end{enumerate}
@@ -99,29 +94,27 @@ We cannot directly say that 70\% of the US population voted in the last election
 \vspace{1em} \\
 \item[(c).] (2 pts) \textit{Fill in the fifth and the sixth column of the above frequency distribution table and calculate $S^2_X$,  the sample variance of $X_i$. Specify the formula you will use and then plug in the values to calculate your answer. } 
 $$ S_X^2 = \frac{n}{n-1} \sum_{i=1}^k f_i (X_i-\bar{X})^2 = \frac{200}{199}\cdot 0.21 = 0.211$$
-\item[(d).] (3 pts) \textit{You read a headline in LA times that says that the voter turnout last year was 60\%. Test this hypothesis at a 5\% level of significance. State the null and alternative hypothesis, specify the formula for your test statistic, indicate the rejection region, and finally answer whether you reject or fail to reject the null hypothesis. } \\~\\
-Null and Alternative Hypothesis: 
-$$ H_0: \mu = 0.6 \quad \quad  H_1: \mu \neq 0.6 $$
-We calculate the $t$-statistic since we don't know the population variance:
-$$ t_0 = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = \frac{0.7-0.6}{\sqrt{0.211/200}}=\frac{0.1}{0.0325} =3.07 $$ \\
-Since $n=200 >100$, we can just look for the critical value in the $Z$ table. At 5\% level of significance, we will reject the null if $|t_0|>1.96$. Here $t_0=3.07$, so we reject the null.
+\item[(d).] (2 pts) Construct a 90\% confidence interval for voter turnout in the U.S. population.
 
-\vspace{5cm}
+Note: $Pr(Z>1.645) = 0.05$, $Pr(Z>1.96) = 0.025$, $Pr(Z>2.33) = 0.01$ \\
+
+Here, \(1-\alpha =0.9\), so the critical value we need to use for the confidence interval is \(t_{199, 0.05}\). Since the \(t\) distribution with large degrees of freedom can be approximated using the standard normal distribution, we have \(t_{199, 0.05} \approx z_{0.05}=1.645\). Therefore, our confidence interval is calculated as follows:
+\[
+\bar{x} \pm t_{199,0.05} \cdot \frac{S}{\sqrt{n}} = 0.7 \pm 1.645 \cdot \sqrt{\frac{0.211}{200}}
+\]
+So the 90\% confidence interval for voter turnout is given by: [0.647, 0.753].
+\item[(e).] (1 pt) Interpret the confidence interval you’ve constructed in part (d). What does it reflect in this case? 
+
+The confidence interval implies that we are 90\% confident that between 64.7\% to 75.3\% of the population voted in the last election.
+%\item[(d).] (3 pts) \textit{You read a headline in LA times that says that the voter turnout last year was 60\%. Test this hypothesis at a 5\% level of significance. State the null and alternative hypothesis, specify the formula for your test statistic, indicate the rejection region, and finally answer whether you reject or fail to reject the null hypothesis. } \\~\\
+%Null and Alternative Hypothesis: 
+%$$ H_0: \mu = 0.6 \quad \quad  H_1: \mu \neq 0.6 $$
+%We calculate the $t$-statistic since we don't know the population variance:
+%$$ t_0 = \frac{\bar{X}-\mu_0}{S/\sqrt{n}} = \frac{0.7-0.6}{\sqrt{0.211/200}}=\frac{0.1}{0.0325} =3.07 $$ \\
+%Since $n=200 >100$, we can just look for the critical value in the $Z$ table. At 5\% level of significance, we will reject the null if $|t_0|>1.96$. Here $t_0=3.07$, so we reject the null.
 \end{enumerate}
 
-%\item (2 pts) 
-%  \begin{enumerate}
-%\item 
-%\end{enumerate}
-%\item As long as our sample is random (no matter how small or large), the sample mean is going to give us an unbiased estimate for the true mean. Why do we still care about having a large sample?
-%\item (1 pt) An estimator $\hat{\theta}$ is an unbiased estimator of $\theta$. If
-%\begin{enumerate}
-%\item $\hat{\theta} = \theta$ in all samples. 
-%\item $\hat{\theta} = \theta$ on average across samples. 
-%\item $E(\hat{\theta}) = 0$ 
-%\item All of the above
-% Show scatter plot and show covariance or why covariance formula works 
-%\end{enumerate}
+
 
 
 

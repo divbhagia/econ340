@@ -15,11 +15,11 @@ Details for the research project submissions can be found on the [Project](Resea
 
 ### Midterm Material
 
-- [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
 - [Midterm Review Slides](Lectures/Midterm-Review/midterm_review.pdf)
-- [Sample Exam](Exams/Midterm/midterm_sample.pdf)
-- [Sample Exam Solutions](Exams/Midterm/midterm_sample_solutions.pdf)
+- [Study Guide](Exams/Midterm/midterm_study_guide.pdf)
 - [Formula Sheet](Exams/Midterm/midterm_formula_sheet.pdf)<br>
+- [Sample Exam 1](Exams/Midterm/midterm_sample1.pdf) ([Solutions](Exams/Midterm/midterm_sample1_solutions.pdf))
+- [Sample Exam 2](Exams/Midterm/midterm_sample2.pdf) ([Solutions](Exams/Midterm/midterm_sample2_solutions.pdf))
 
 Compiled material for Modules I, II, IV: [Notes](Notes/Part1-Compiled-Notes.pdf), [Handouts](Lectures/Part1-Compiled-Handouts.pdf), [Slides](Lectures/Part1-Compiled-Slides.pdf)
 <br>
