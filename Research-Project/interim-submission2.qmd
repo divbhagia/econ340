@@ -8,7 +8,9 @@ For this submission, you need to perform a general analysis of your data in R. Y
 
 Below, I outline the specific [tasks](#tasks) you must complete and the items you are required to [submit](#submission-checklist). If you are working with a partner, communicate with them and decide how to divide tasks before beginning. While doing so, fill out the [Teamwork Task Division](submission2-task-form.docx) form. You can come back and edit this form later if needed, but it will help you have a clear plan before you start working.
 
-At the bottom of the page, you'll also find a [rubric](#rubric) that will be used for grading. Finally, here is an [example submission](submission2-example.pdf) with it's corresponding [R code](submission2-example-code.R) to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.  
+<!-- At the bottom of the page, you'll also find a [rubric](#rubric) that will be used for grading.  -->
+
+Finally, here is an [example submission](submission2-example.pdf) with it's corresponding [R code](submission2-example-code.R) to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.  
 
 ## Tasks 
 

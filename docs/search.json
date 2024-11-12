@@ -95,7 +95,7 @@
     "href": "Research-Project/final-submission.html",
     "title": "Research Project: Final Submission",
     "section": "",
-    "text": "Your final research paper should be structured as an essay that is divided into sections. Your paper should demonstrate your writing ability and ability to properly perform and interpret statistical analyses.\nAt this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.\nBelow, I elaborate on the expected structure and content of your paper, as well as instructions regarding formatting and submission.",
+    "text": "Your final research paper should be structured as an essay that is divided into sections. Your paper should demonstrate your writing ability and ability to properly perform and interpret statistical analyses.\nAt this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.\nBelow, I elaborate on the expected structure and content of your paper, as well as instructions regarding formatting and submission. At the bottom of the page, you’ll also find a rubric that will be used for grading.",
     "crumbs": [
       "Project",
       "Final Submission"
@@ -106,7 +106,7 @@
     "href": "Research-Project/final-submission.html#introduction",
     "title": "Research Project: Final Submission",
     "section": "",
-    "text": "Your final research paper should be structured as an essay that is divided into sections. Your paper should demonstrate your writing ability and ability to properly perform and interpret statistical analyses.\nAt this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.\nBelow, I elaborate on the expected structure and content of your paper, as well as instructions regarding formatting and submission.",
+    "text": "Your final research paper should be structured as an essay that is divided into sections. Your paper should demonstrate your writing ability and ability to properly perform and interpret statistical analyses.\nAt this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.\nBelow, I elaborate on the expected structure and content of your paper, as well as instructions regarding formatting and submission. At the bottom of the page, you’ll also find a rubric that will be used for grading.",
     "crumbs": [
       "Project",
       "Final Submission"
@@ -135,11 +135,22 @@
     ]
   },
   {
+    "objectID": "Research-Project/final-submission.html#rubric",
+    "href": "Research-Project/final-submission.html#rubric",
+    "title": "Research Project: Final Submission",
+    "section": "Rubric",
+    "text": "Rubric",
+    "crumbs": [
+      "Project",
+      "Final Submission"
+    ]
+  },
+  {
     "objectID": "Research-Project/interim-submission2.html",
     "href": "Research-Project/interim-submission2.html",
     "title": "Research Project: Interim Submission II",
     "section": "",
-    "text": "For this submission, you need to perform a general analysis of your data in R. You need to report the essential numerical characteristics of your variables and do some visual analysis. The aim is to gain an overall understanding of the patterns in your data. Note that the first submission provided the foundational elements for writing the “Introduction” of your Research Paper. This assignment gives you the building blocks for the “Descriptive Analysis” section of your final paper.\nBelow, I outline the specific tasks you must complete and the items you are required to submit. If you are working with a partner, communicate with them and decide how to divide tasks before beginning. While doing so, fill out the Teamwork Task Division form. You can come back and edit this form later if needed, but it will help you have a clear plan before you start working.\nAt the bottom of the page, you’ll also find a rubric that will be used for grading. Finally, here is an example submission with it’s corresponding R code to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.",
+    "text": "For this submission, you need to perform a general analysis of your data in R. You need to report the essential numerical characteristics of your variables and do some visual analysis. The aim is to gain an overall understanding of the patterns in your data. Note that the first submission provided the foundational elements for writing the “Introduction” of your Research Paper. This assignment gives you the building blocks for the “Descriptive Analysis” section of your final paper.\nBelow, I outline the specific tasks you must complete and the items you are required to submit. If you are working with a partner, communicate with them and decide how to divide tasks before beginning. While doing so, fill out the Teamwork Task Division form. You can come back and edit this form later if needed, but it will help you have a clear plan before you start working.\n\nFinally, here is an example submission with it’s corresponding R code to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.",
     "crumbs": [
       "Project",
       "Interim Submission II"
@@ -150,7 +161,7 @@
     "href": "Research-Project/interim-submission2.html#introduction",
     "title": "Research Project: Interim Submission II",
     "section": "",
-    "text": "For this submission, you need to perform a general analysis of your data in R. You need to report the essential numerical characteristics of your variables and do some visual analysis. The aim is to gain an overall understanding of the patterns in your data. Note that the first submission provided the foundational elements for writing the “Introduction” of your Research Paper. This assignment gives you the building blocks for the “Descriptive Analysis” section of your final paper.\nBelow, I outline the specific tasks you must complete and the items you are required to submit. If you are working with a partner, communicate with them and decide how to divide tasks before beginning. While doing so, fill out the Teamwork Task Division form. You can come back and edit this form later if needed, but it will help you have a clear plan before you start working.\nAt the bottom of the page, you’ll also find a rubric that will be used for grading. Finally, here is an example submission with it’s corresponding R code to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.",
+    "text": "For this submission, you need to perform a general analysis of your data in R. You need to report the essential numerical characteristics of your variables and do some visual analysis. The aim is to gain an overall understanding of the patterns in your data. Note that the first submission provided the foundational elements for writing the “Introduction” of your Research Paper. This assignment gives you the building blocks for the “Descriptive Analysis” section of your final paper.\nBelow, I outline the specific tasks you must complete and the items you are required to submit. If you are working with a partner, communicate with them and decide how to divide tasks before beginning. While doing so, fill out the Teamwork Task Division form. You can come back and edit this form later if needed, but it will help you have a clear plan before you start working.\n\nFinally, here is an example submission with it’s corresponding R code to guide you. Please use this as a reference only; any sentences directly copied from the example submission will be considered plagiarism.",
     "crumbs": [
       "Project",
       "Interim Submission II"
