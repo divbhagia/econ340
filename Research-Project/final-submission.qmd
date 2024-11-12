@@ -10,11 +10,9 @@ Your final research paper should be structured as an essay that is divided into 
 
 At this point, all of you already have one dependent variable, one main independent variable, and at least two control variables. You are free to modify your research question or variables if you think that doing so would result in a better paper. Additionally, you may incorporate extra variables to your analysis as deemed appropriate.
 
-Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading.
+Below, I elaborate on the expected [structure and content](#structure-and-content) of your paper, as well as instructions regarding [formatting and submission](#format-and-submission). You can also find the rubric that will be used for grading by clicking [here](final-rubric.html).
 
-<!-- You can also find the rubric that will be used for grading by clicking [here](final-rubric.html). -->
-
-<!--  Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below. -->
+<!--  At the bottom of the page, you’ll also find a [rubric](#rubric) that will be used for grading. Finally, here are some [slides](final-submission-slides.pdf) that briefly go over the instructions provided below. -->
 
 ## Structure and Content {#structure-and-content}
 
@@ -78,7 +76,7 @@ If you think that some of the tables and graphs you produced in the Descriptive
 -   Tables and figures should be within the main body of the paper. All figures and tables must have a title and be numbered. (e.g., Table 1: Summary Statistics on Income). Tables and figures should appear shortly before or after you mention them in the text for the first time. You should refer to the figures and tables when commenting on your descriptive analyses and results. (e.g., As we can see from Table 1, the average income in my sample is…)
 -   Your submission consists of your write-up in PDF format, which should be submitted on Canvas.
 
-## Rubric {#rubric}
+<!-- ## Rubric {#rubric}
 
 <iframe src="final-rubric.html" width="100%" height="800px" scrolling="no">
-</iframe>
+</iframe> -->
