@@ -82,5 +82,17 @@ Your course grade will be determined according to the following breakdown:
   </tr>
 </table>
 
+## Schedule
+
+```{python}
+#| echo: false
+from IPython.display import display, HTML
+from bs4 import BeautifulSoup
+html_table = open('./Syllabus/schedule.html', 'r').read()
+soup = BeautifulSoup(html_table, 'html.parser')
+html_table_modified = str(soup)
+display(HTML(html_table_modified))
+```
+
 
 :::

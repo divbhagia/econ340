@@ -95,10 +95,10 @@ topics["sampest"] = [
 
 # Topics: Linear Regression
 topics["linreg"] = [
-    "Ordinary least squares (OLS), Goodness of fit: $R^2$",
+    "Ordinary least squares (OLS), Goodness of fit",
     "Prediction vs. causal inference",
     "Inference (p-values, t-stats, confidence intervals)",
-    "Omitted variable bias; Multiple regression model; Adjusted $R^2$",
+    "Omitted variable bias; Multiple regression model",
     "Categorical variables; Interaction terms",
     "Quadratic and log functional forms",
     "Recap and synthesis",
@@ -284,5 +284,8 @@ for row in range(len(lines)):
 with open("Syllabus/schedule.tex", "w") as f:
     for line in lines:
         f.write(line + "\n")
+
+# Create HTML version
+df.to_html("Syllabus/schedule.html", index=False, escape=False)
 
 #################################################
