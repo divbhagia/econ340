@@ -6,11 +6,11 @@ title: "Research Project Overview"
 
 As a part of this class, you will write an empirical research paper. You can work individually or with a partner. You will pick a question and a dataset and use the tools from this class to answer your question. Over the semester, you will need to meet the following milestones: 
 
-- **Sep 5**: Finalize the Team
-- **Oct 1**: Interim Submission I
-- **Oct 22**: Research Project Feedback Meeting
-- **Nov 5**: Interim Submission II
-- **Dec 10**: Final Submission
+- **Feb 6**: Finalize the Team
+- **Feb 25**: Interim Submission I
+- **March 18**: Research Project Feedback Meeting
+- **April 8**: Interim Submission II
+- **May 6**: Final Submission
 
 The first interim submission is worth 5% of your total grade, while the second is worth 10%. The final submission is worth 15%. I will also meet with you mid-semester to give feedback on your project, which you should incorporate into your final paper.
 
