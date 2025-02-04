@@ -18,6 +18,8 @@ Additional Reading: [NYT Article 2016 Elections](Readings/NYT-Article-2016-Elect
 ### Module II: Coding in R
 Here are the [instructions](Notes/How-to-install-R.pdf) for installing R and R Studio. You can find the datasets used in class in the Dropbox folder: [Econ340 Datasets](https://www.dropbox.com/sh/9x7ac4qwnddl650/AAAP1FdTpFp2rXyZ6t-9-qqTa?dl=0).
 
+Click [here](Data/lectures6-8.zip) to download the folder containing the dataset and initial R script for lectures 6-8.
+
 - Lecture 6: Getting Started with R [[slides](Lectures/Lecture6-8/Slides6.pdf)]
 - Lecture 7: Data Analysis in R [[slides](Lectures/Lecture6-8/Slides7.pdf)]
 - Lecture 8: Data Analysis in R [[slides](Lectures/Lecture6-8/Slides8.pdf)]
@@ -50,6 +52,8 @@ Notes: [Lectures 15-17](Notes/Module5-Linear-Regression/Simple-Linear-Regression
 - Lecture 20: Quadratic and Log Functional Forms [[slides](Lectures/Lecture20/Slides20.pdf), [handout](Lectures/Lecture20/ClassHandout20.pdf) [(filled)](Lectures/Lecture20/ClassHandout20_Filled.pdf)]
 - Lecture 21: Regression Analysis in R [[slides](Lectures/Lecture21-22/Slides21.pdf)]
 - Lecture 22: Regression Analysis in R [[slides](Lectures/Lecture21-22/Slides22.pdf)]
+
+Click [here](Data/lectures21-22.zip) to download the folder containing the datasets and R scripts for lectures 21 and 22.
 
 ### Module VI: Advanced Topics
 - Lecture 23: Experiments and Quasi-Experimental Methods [[slides](Lectures/Lecture23/Slides23.pdf)]
