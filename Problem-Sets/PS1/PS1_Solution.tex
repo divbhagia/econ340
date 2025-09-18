@@ -44,7 +44,7 @@ $$ 1400, 1800, 2000, 2200, 2600 $$
 \begin{enumerate}
 \item The mean calorie consumption is given by 
 \begin{align*}
- \bar{x} = \frac{\sum_{i=1}^5 X_i}{5}  & = \frac{1400+1800+2000+2200+2600}{5} \\
+ \mu  = \frac{\sum_{i=1}^5 X_i}{5}  & = \frac{1400+1800+2000+2200+2600}{5} \\
  & = \frac{10000}{5} = 2000 
  \end{align*}
 \item Since $n=5$ is odd, the median calorie consumption for this group is given by 
@@ -53,9 +53,9 @@ $ \frac{n+1}{2}$ th term which is 2000.
 \textit{We added one more individual to the data set whose calorie consumption is $4100$.}
 \begin{enumerate}
 \item[(c)] Since we added another individual to the data 
-$$  \bar{x}_{new} = \frac{\sum_{i=1}^6 X_i}{6} = \frac{10000+4100}{6} = \frac{14100}{6} = 2350 $$
-\textit{Aside:} If we were not given the calorie consumption of the first five individuals but just their mean $\bar{x}_{old} = 2000$, we could still find the new mean with the addition of one more person. How?
-$$ \bar{x}_{new} = \frac{\sum_{i=1}^6 X_i}{6} = \frac{\sum_{i=1}^5 X_i + 4100}{6} = \frac{5 \bar{x}_{old}  + 4100}{6}$$ 
+$$  \mu_{new} = \frac{\sum_{i=1}^6 X_i}{6} = \frac{10000+4100}{6} = \frac{14100}{6} = 2350 $$
+\textit{Aside:} If we were not given the calorie consumption of the first five individuals but just their mean $\mu_{old} = 2000$, we could still find the new mean with the addition of one more person. How?
+$$ \mu_{new} = \frac{\sum_{i=1}^6 X_i}{6} = \frac{\sum_{i=1}^5 X_i + 4100}{6} = \frac{5 \mu_{old}  + 4100}{6}$$ 
 \item[(d)]  Now $n=6$ is even so the median calorie consumption is average of $\frac{n}{2}$th and $\frac{n}{2}+1$th term. So the median is 
 $$ \frac{2000+2200}{2} = 2100 $$
 \item[(e)] Mean is more susceptible to outliers than the median. This is because every observation contributes to the mean with a weight of $\frac{1}{n}$. So if an observation is disproportionately larger (smaller) than others, it can pull the mean upwards (downwards). Whereas the median only depends on observations in the center of the data. 
