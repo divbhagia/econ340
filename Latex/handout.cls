@@ -10,7 +10,7 @@
 \fancyhf{}
 \fancyheadoffset{1cm}
 \lhead{ECON 340: Economic Research Methods}
-\rhead{Div Bhagia}
+\rhead{\mytitle}
 \rfoot{\center \thepage}
 \pagestyle{fancy}
 
